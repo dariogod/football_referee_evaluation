@@ -24,7 +24,7 @@ def create_video_from_frames(input_folder: str, output_file: str, fps: int = 25)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     video_writer = cv2.VideoWriter(output_file, fourcc, fps, (width, height))
     
-    for frame_file in tqdm(frame_files, desc="Converting frames to video"):
+    for frame_file in tqdm(frame_files, desc=f"Converting frames to video for {input_folder}"):
         frame = cv2.imread(frame_file)
         video_writer.write(frame)
     
