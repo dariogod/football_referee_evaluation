@@ -6,6 +6,11 @@ pydantic==2.11.4
 scikit-learn==1.6.1
 scikit-image==0.25.2
 lap==0.5.12
+fastapi==0.115.12
+uvicorn==0.34.2
+python-multipart==0.0.20
+requests==2.32.3
+tqdm==4.67.1
 
 # transformers from source to include D-FINE model
 git+https://github.com/huggingface/transformers@0f77ca72cae3565632bafd7e06080b2c19920f06

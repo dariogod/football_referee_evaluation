@@ -15,6 +15,11 @@ RUN pip install -r requirements.txt
 
 COPY src/ src/
 
+
 ENV PYTHONPATH="${PYTHONPATH}:/app"
 
-CMD ["python", "src/evaluate_referee.py"]
+# Expose port for FastAPI
+EXPOSE 4321
+
+# Run FastAPI app with uvicorn
+CMD ["uvicorn", "src.app:app", "--host", "0.0.0.0", "--port", "4321"]
