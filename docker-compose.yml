@@ -1,0 +1,14 @@
+services:
+  app:
+    image: app:latest
+    container_name: app
+    ports:
+      - "4321:4321"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4

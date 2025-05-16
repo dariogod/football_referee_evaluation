@@ -1,4 +1,5 @@
 data/SoccerNet/
+data/predictions/
 
 # Mac OS
 .DS_Store

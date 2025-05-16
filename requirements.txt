@@ -1,0 +1,11 @@
+numpy==2.1.1
+opencv-python==4.11.0.86
+ultralytics==8.3.116
+torch==2.7.0
+pydantic==2.11.4
+scikit-learn==1.6.1
+scikit-image==0.25.2
+lap==0.5.12
+
+# transformers from source to include D-FINE model
+git+https://github.com/huggingface/transformers@0f77ca72cae3565632bafd7e06080b2c19920f06
