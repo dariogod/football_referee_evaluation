@@ -9,6 +9,8 @@ from src.player_tracker import YoloPlayerTracker, DFinePlayerTracker
 from src.color_assigner import ColorAssigner
 from src.utils.custom_types import FrameDetections
 from src.coordinate_transformer import CoordinateTransformer
+from src.role_assigner import RoleAssigner
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -33,6 +35,9 @@ async def initialize_models():
 
     global coordinate_transformer
     coordinate_transformer = CoordinateTransformer()
+
+    global role_assigner
+    role_assigner = RoleAssigner()
 
 def detections_json(detections: list[FrameDetections]) -> list[dict]:
     return [frame.model_dump() for frame in detections]
@@ -137,4 +142,29 @@ async def transform_coordinates(request: TransformCoordinatesRequest) -> JSONRes
             "results": detections_json(detections),
         }
     )
-    
+
+class RoleAssignRequest(BaseModel):
+    video_path: str
+    detections: list[FrameDetections]
+    results_path: str | None = None
+
+@app.post("/assign-roles")
+async def assign_roles(request: RoleAssignRequest) -> JSONResponse:
+    logger.info(f"Starting role assignment for video: {request.video_path}")
+
+    validate_video_path(request.video_path)
+    if request.results_path is not None:
+        validate_results_path(request.results_path)
+
+    detections = await asyncio.to_thread(
+        role_assigner.assign_roles,
+        input_path=request.video_path,
+        detections=request.detections,
+        intermediate_results_folder=request.results_path if request.results_path is not None else None
+    )
+
+    return JSONResponse(
+        content={
+            "results": detections_json(detections),
+        }
+    )
