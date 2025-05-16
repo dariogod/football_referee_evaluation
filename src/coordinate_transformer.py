@@ -41,29 +41,25 @@ class CoordinateTransformer:
         # Resize input image to match the dimensions used in homography calculation
         resized_image = cv2.resize(image, (1280, 720))
         
-        # Create output image of desired size
-        warped = np.zeros((dst_h, dst_w, 3), dtype=np.uint8)
+        # Create transformation matrix for pitch coordinates to output size
+        # Scale matrix to convert from pitch dimensions (115x74) to target dimensions
+        scale_matrix = np.array([
+            [dst_w/115, 0, 0],
+            [0, dst_h/74, 0],
+            [0, 0, 1]
+        ])
         
-        # For each pixel in the output image
-        for y_out in range(dst_h):
-            for x_out in range(dst_w):
-                # Convert output coordinates to pitch coordinates (115x74)
-                x_pitch = x_out * 115 / dst_w
-                y_pitch = y_out * 74 / dst_h
-                
-                # Apply inverse homography to get input image coordinates
-                point = np.array([x_pitch, y_pitch, 1])
-                inv_warped = np.dot(np.linalg.inv(M), point)
-                inv_warped = inv_warped[:2] / inv_warped[2]
-                
-                # Scale back to input image coordinates
-                x_in = int(inv_warped[0])
-                y_in = int(inv_warped[1])
-                
-                # Copy pixel if within bounds
-                if 0 <= x_in < 1280 and 0 <= y_in < 720:
-                    warped[y_out, x_out] = resized_image[y_in, x_in]
-                    
+        # Combine homography with scaling
+        combined_transform = scale_matrix @ M
+        
+        # Use OpenCV's warpPerspective for efficient transformation
+        warped = cv2.warpPerspective(
+            resized_image, 
+            combined_transform, 
+            (dst_w, dst_h), 
+            flags=cv2.INTER_LINEAR
+        )
+        
         return warped
         
     def transform(
@@ -117,21 +113,16 @@ class CoordinateTransformer:
             if not ret:
                 break
                 
-            # Calculate homography matrix every 2 frames to save processing time
+            # you can change this to a positive number to save processing time
             if processed_frames % 2 == 0:
                 M, warped_image = self.perspective_transform.homography_matrix(frame)
                 last_M = M
                 homography_data[str(processed_frames)] = M.tolist()
                 
                 # Save warped image if storing results
-                if intermediate_results_folder is not None:
-                    image_filename = f"frame_{processed_frames:06d}.jpg"
-                    warped_image_path = os.path.join(warped_images_dir, image_filename)
-                    cv2.imwrite(warped_image_path, warped_image)
-                    
-                    # Save high-res warped image
+                if intermediate_results_folder is not None and processed_frames % 10 == 0:
                     warped_image_high_res = self.transform_image(M, frame, (540, 960))
-                    warped_image_high_res_path = os.path.join(warped_images_dir, f"frame_{processed_frames:06d}_high_res.jpg")
+                    warped_image_high_res_path = os.path.join(warped_images_dir, f"frame_{processed_frames:06d}.jpg")
                     cv2.imwrite(warped_image_high_res_path, warped_image_high_res)
             else:
                 # Use the last calculated homography matrix
