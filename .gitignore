@@ -1,6 +1,6 @@
-data/SoccerNet/
-data/predictions/
-models/
+/data/SoccerNet/
+/data/predictions/
+/models/
 
 # Mac OS
 .DS_Store

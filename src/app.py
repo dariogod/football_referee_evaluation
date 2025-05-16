@@ -8,7 +8,7 @@ import asyncio
 from src.player_tracker import YoloPlayerTracker, DFinePlayerTracker
 from src.color_assigner import ColorAssigner
 from src.utils.custom_types import FrameDetections
-
+from src.coordinate_transformer import CoordinateTransformer
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -16,15 +16,6 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Football Referee Evaluation API")
 
-class TrackRequest(BaseModel):
-    video_path: str
-    model: Literal["yolo", "dfine"]
-    results_path: str | None = None
-
-class ColorAssignRequest(BaseModel):
-    video_path: str
-    detections: list[FrameDetections]
-    results_path: str | None = None
 
 @app.get("/")
 async def root():
@@ -39,6 +30,9 @@ async def initialize_models():
 
     global color_assigner
     color_assigner = ColorAssigner()
+
+    global coordinate_transformer
+    coordinate_transformer = CoordinateTransformer()
 
 def detections_json(detections: list[FrameDetections]) -> list[dict]:
     return [frame.model_dump() for frame in detections]
@@ -57,6 +51,10 @@ def validate_results_path(results_path: str) -> None:
     if not str(results_path_obj).startswith("data/"):
         raise HTTPException(status_code=400, detail="Results path must start with 'data/'")
 
+class TrackRequest(BaseModel):
+    video_path: str
+    model: Literal["yolo", "dfine"]
+    results_path: str | None = None
 
 @app.post("/track")
 async def track_players(request: TrackRequest) -> JSONResponse:
@@ -87,6 +85,11 @@ async def track_players(request: TrackRequest) -> JSONResponse:
         }
     )
 
+class ColorAssignRequest(BaseModel):
+    video_path: str
+    detections: list[FrameDetections]
+    results_path: str | None = None
+
 @app.post("/assign-colors")
 async def assign_colors(request: ColorAssignRequest) -> JSONResponse:
     logger.info(f"Starting color assignment for video: {request.video_path}")
@@ -108,6 +111,30 @@ async def assign_colors(request: ColorAssignRequest) -> JSONResponse:
             "results": detections_json(detections),
         }
     )
-    
-    
+
+class TransformCoordinatesRequest(BaseModel):
+    video_path: str
+    detections: list[FrameDetections]
+    results_path: str | None = None
+
+@app.post("/transform-coordinates")
+async def transform_coordinates(request: TransformCoordinatesRequest) -> JSONResponse:
+    logger.info(f"Starting coordinate transformation for video: {request.video_path}")
+
+    validate_video_path(request.video_path)
+    if request.results_path is not None:
+        validate_results_path(request.results_path)
+
+    detections = await asyncio.to_thread(
+        coordinate_transformer.transform,
+        input_path=request.video_path,
+        detections=request.detections,
+        intermediate_results_folder=request.results_path if request.results_path is not None else None
+    )
+
+    return JSONResponse(
+        content={
+            "results": detections_json(detections),
+        }
+    )
     
