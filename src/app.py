@@ -10,6 +10,7 @@ from src.color_assigner import ColorAssigner
 from src.utils.custom_types import FrameDetections
 from src.coordinate_transformer import CoordinateTransformer
 from src.role_assigner import RoleAssigner
+from src.visualizer import Visualizer
 
 
 # Configure logging
@@ -38,6 +39,9 @@ async def initialize_models():
 
     global role_assigner
     role_assigner = RoleAssigner()
+
+    global visualizer
+    visualizer = Visualizer()
 
 def detections_json(detections: list[FrameDetections]) -> list[dict]:
     return [frame.model_dump() for frame in detections]
@@ -166,5 +170,31 @@ async def assign_roles(request: RoleAssignRequest) -> JSONResponse:
     return JSONResponse(
         content={
             "results": detections_json(detections),
+        }
+    )
+
+class VisualizeRequest(BaseModel):
+    video_path: str
+    detections: list[FrameDetections]
+    results_path: str | None = None
+
+@app.post("/visualize")
+async def visualize(request: VisualizeRequest) -> JSONResponse:
+    logger.info(f"Starting visualization for video: {request.video_path}")
+
+    validate_video_path(request.video_path)
+    if request.results_path is not None:
+        validate_results_path(request.results_path)
+
+    output_video_path = await asyncio.to_thread(
+        visualizer.visualize,
+        input_path=request.video_path,
+        detections=request.detections,
+        intermediate_results_folder=request.results_path if request.results_path is not None else None
+    )
+
+    return JSONResponse(
+        content={
+            "output_video_path": output_video_path,
         }
     )
