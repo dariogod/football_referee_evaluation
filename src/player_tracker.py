@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import os
 import torch
+import shutil
 from typing import Dict, List, Optional, Literal, Any
 from ultralytics import YOLO
 from transformers import DFineForObjectDetection, AutoImageProcessor
@@ -165,11 +166,8 @@ class YoloPlayerTracker(BasePlayerTracker):
         
         if not os.path.exists(model_path):
             logger.info(f"Model file {model_path} not found. Downloading...")
-            # YOLO automatically downloads and caches the model if it doesn't exist
-            self.model = YOLO("yolov11n.pt")  # This will download from Ultralytics
-            # Save the model to the specified path
-            os.makedirs(os.path.dirname(model_path), exist_ok=True)
-            torch.save(self.model.model.state_dict(), model_path)
+            self.model = YOLO("yolo11n.pt")  # This will download from Ultralytics
+            shutil.move("yolo11n.pt", model_path)
             logger.info(f"Model downloaded and saved to {model_path}")
         else:
             self.model = YOLO(model_path)
@@ -272,14 +270,14 @@ class DFinePlayerTracker(BasePlayerTracker):
         os.makedirs(model_save_path, exist_ok=True)
         os.makedirs(processor_save_path, exist_ok=True)
         
-        model_exists = os.path.exists(os.path.join(model_save_path, 'config.json'))
-        processor_exists = os.path.exists(os.path.join(processor_save_path, 'config.json'))
+        model_exists = os.path.exists(os.path.join(model_save_path, 'config.json')) and os.path.exists(os.path.join(model_save_path, 'model.safetensors'))
+        processor_exists = os.path.exists(os.path.join(processor_save_path, 'preprocessor_config.json'))
         
         if not model_exists or not processor_exists:
             logger.info("D-FINE model or processor not found locally. Downloading from Hugging Face...")
             
             # Download model and processor from Hugging Face
-            remote_model_name = "IDEA-Research/D-FINE"
+            remote_model_name = "ustc-community/dfine_x_coco"
             
             # Download and save the model
             if not model_exists:
