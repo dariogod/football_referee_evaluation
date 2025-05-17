@@ -28,7 +28,8 @@ class RoleAssigner:
         track_ids: Set[int] = set()
         for frame_detections in detections:
             for detection in frame_detections.detections:
-                track_ids.add(detection.track_id)
+                if detection.track_id is not None:
+                    track_ids.add(detection.track_id)
         return list(track_ids)
     
     def _remove_outliers(self, colors: List[RGBColor255]) -> List[RGBColor255]:
@@ -486,6 +487,8 @@ class RoleAssigner:
 
         for frame_detections in detections:
             for detection in frame_detections.detections:
+                if detection.track_id is None:
+                    continue
                 role_assignment = next((role for role in role_assignments if role.track_id == detection.track_id), None)
                 if role_assignment is None:
                     msg = f"No role assignment found for track ID {detection.track_id}"
