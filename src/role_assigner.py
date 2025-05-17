@@ -383,7 +383,7 @@ class RoleAssigner:
 
             goal_width = 7.32
 
-            middle_y = x_max / 2
+            middle_y = y_max / 2
             lower_box_boundary_y = middle_y - (goal_width / 2) * scale - 16.5 * scale
             upper_box_boundary_y = middle_y + (goal_width / 2) * scale + 16.5 * scale
 
