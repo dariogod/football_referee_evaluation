@@ -15,6 +15,3 @@ asyncio==3.4.3
 
 # transformers from source to include D-FINE model
 git+https://github.com/huggingface/transformers@0f77ca72cae3565632bafd7e06080b2c19920f06
-
-# For the video player
-PyQt5==5.15.11
