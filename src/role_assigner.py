@@ -15,8 +15,11 @@ class RoleAssigner:
     def __init__(self) -> None:
         self.cluster_centers: Dict[int, Dict[str, Any]] = {}
 
-    def _roi_is_overlapping(self, roi_bbox: BBox, other_roi_bboxes: List[BBox]) -> bool:
+    def _roi_is_overlapping(self, roi_bbox: BBox | None, other_roi_bboxes: List[BBox | None]) -> bool:
         """Check if a region of interest overlaps with any other regions."""
+        if roi_bbox is None:
+            return False
+        other_roi_bboxes = [roi for roi in other_roi_bboxes if roi is not None]
         return any(
             roi_bbox.x1 < other_roi.x2 and roi_bbox.x2 > other_roi.x1 and 
             roi_bbox.y1 < other_roi.y2 and roi_bbox.y2 > other_roi.y1
@@ -65,7 +68,8 @@ class RoleAssigner:
                         other_roi_bboxes = [d.roi_bbox for d in frame_detections.detections if d.track_id != track_id]
                         if self._roi_is_overlapping(detection.roi_bbox, other_roi_bboxes):
                             continue
-                    track_colors.append(detection.jersey_color)
+                    if detection.jersey_color is not None:
+                        track_colors.append(detection.jersey_color)
 
         # Remove outliers using dbscan
         if len(track_colors) > 3:
