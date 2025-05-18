@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.cluster import KMeans, DBSCAN
 import os
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # Import for 3D plotting
 from typing import Dict, List, Set, Any
 import json
 from collections import Counter
@@ -240,9 +241,9 @@ class RoleAssigner:
         return clustering_result
     
     def _plot_clustering_results(self, input_path: str, clustering_result: ClusteringResult, avg_lab_colors: Dict[int, LABColor], intermediate_results_folder: str) -> None:
-        """Plot clustering results in LAB color space."""
-        plt.figure(figsize=(12, 10))
-        ax = plt.subplot(111)
+        """Plot clustering results in 3D LAB color space."""
+        plt.figure(figsize=(14, 12))
+        ax = plt.subplot(111, projection='3d')  # Use 3D projection
         
         # Get team colors
         team_a_color = None
@@ -260,8 +261,9 @@ class RoleAssigner:
                         lab_color = avg_lab_colors[track_id]
                         norm_color = tuple(c/255 for c in lab_to_rgb_255(lab_color).to_array())
                         ax.scatter(
-                            lab_color.a,
-                            lab_color.b,
+                            lab_color.a,  # a* dimension (x-axis)
+                            lab_color.l,  # L* dimension (y-axis)
+                            lab_color.b,  # b* dimension (z-axis)
                             color=norm_color,
                             marker='o',
                             s=100
@@ -270,20 +272,12 @@ class RoleAssigner:
             # Plot team A center
             ax.scatter(
                 clustering_result.team_a_center.a,
+                clustering_result.team_a_center.l,
                 clustering_result.team_a_center.b,
                 color=team_a_norm_color,
                 marker='*',
                 s=300,
                 edgecolors='black'
-            )
-            
-            # Add text label
-            ax.text(
-                clustering_result.team_a_center.a,
-                clustering_result.team_a_center.b,
-                "Team A",
-                fontsize=12,
-                weight='bold'
             )
         
         # Plot Team B points and center
@@ -299,6 +293,7 @@ class RoleAssigner:
                         norm_color = tuple(c/255 for c in lab_to_rgb_255(lab_color).to_array())
                         ax.scatter(
                             lab_color.a,
+                            lab_color.l,
                             lab_color.b,
                             color=norm_color,
                             marker='s',
@@ -308,20 +303,12 @@ class RoleAssigner:
             # Plot team B center
             ax.scatter(
                 clustering_result.team_b_center.a,
+                clustering_result.team_b_center.l,
                 clustering_result.team_b_center.b,
                 color=team_b_norm_color,
                 marker='*',
                 s=300,
                 edgecolors='black'
-            )
-            
-            # Add text label
-            ax.text(
-                clustering_result.team_b_center.a,
-                clustering_result.team_b_center.b,
-                "Team B",
-                fontsize=12,
-                weight='bold'
             )
         
         # Plot outliers if available
@@ -332,30 +319,38 @@ class RoleAssigner:
                     norm_color = tuple(c/255 for c in lab_to_rgb_255(lab_color).to_array())
                     ax.scatter(
                         lab_color.a,
+                        lab_color.l,
                         lab_color.b,
                         color=norm_color,
                         marker='x',
                         s=100
                     )
         
-        # Add labels and title
+        # Add labels and title for 3D plot
         ax.set_xlabel('a* (Green-Red)')
-        ax.set_ylabel('b* (Blue-Yellow)')
+        ax.set_ylabel('L* (Lightness)')
+        ax.set_zlabel('b* (Blue-Yellow)')
+        
         clustering_technique = list(clustering_result.params.keys())[0]
         params = [f"{key} = {str(value)}" for key, value in clustering_result.params[clustering_technique].items()]
-        ax.set_title(f'Clustering Technique: {clustering_technique}. Params: {", ".join(params)}')
+        ax.set_title(f'3D LAB Color Space - {clustering_technique}. Params: {", ".join(params)}')
         
         # Create legend
         legend_elements = []
         if team_a_color:
             legend_elements.append(plt.Line2D([0], [0], marker='o', color="w", markerfacecolor=team_a_norm_color, markersize=10, label='Team A'))
+            legend_elements.append(plt.Line2D([0], [0], marker='*', color="w", markerfacecolor=team_a_norm_color, markersize=15, markeredgecolor='black', label='Team A Cluster Center'))
         if team_b_color:
             legend_elements.append(plt.Line2D([0], [0], marker='s', color="w", markerfacecolor=team_b_norm_color, markersize=10, label='Team B'))
+            legend_elements.append(plt.Line2D([0], [0], marker='*', color="w", markerfacecolor=team_b_norm_color, markersize=15, markeredgecolor='black', label='Team B Cluster Center'))
         if clustering_result.outlier_track_ids:
             legend_elements.append(plt.Line2D([0], [0], marker='x', color='w', markeredgecolor='black', markersize=10, label='Outliers (Ref/GK)'))
         
         if legend_elements:
             ax.legend(handles=legend_elements)
+        
+        # Set best viewing angle for 3D plot
+        ax.view_init(elev=30, azim=45)
         
         # Create output directory if it doesn't exist
         os.makedirs(intermediate_results_folder, exist_ok=True)
