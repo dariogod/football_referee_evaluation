@@ -13,9 +13,10 @@ from matplotlib.image import imread
 
 # Base path for test directories
 base_path = "data/predictions/SoccerNet/SN-GSR-2025/test"
+model = "dfine" # "yolo" or "dfine"
 
 # Create output directory for plots if it doesn't exist
-output_dir = "plots"
+output_dir = os.path.join("plots", model)
 os.makedirs(output_dir, exist_ok=True)
 
 # Initialize dictionaries to store metrics
@@ -35,7 +36,7 @@ sngs_folders = glob.glob(os.path.join(base_path, "SNGS-*"))
 # Process each SNGS folder
 processed_files = 0
 for sngs_folder in sngs_folders:
-    results_file = os.path.join(sngs_folder, "evaluator_yolo", "evaluation_results.json")
+    results_file = os.path.join(sngs_folder, f"evaluator_{model}", "evaluation_results.json")
     
     # Skip if the file doesn't exist
     if not os.path.exists(results_file):
