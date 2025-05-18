@@ -138,7 +138,28 @@ class RoleAssigner:
         
         # Ensure result is between 2-5
         optimal_clusters = max(2, min(5, elbow_point + 1))
-        return optimal_clusters
+        return optimal_clusters, K, distortions
+
+    def _plot_elbow_method(self, K, distortions, optimal_clusters, intermediate_results_folder):
+        """Create and save a plot visualizing the elbow method for cluster selection."""
+        plt.figure(figsize=(10, 6))
+        plt.plot(K, distortions, 'bo-')
+        plt.plot(optimal_clusters, distortions[optimal_clusters-1], 'ro', markersize=12, 
+                label=f'Optimal clusters: {optimal_clusters}')
+        
+        plt.xlabel('Number of clusters (k)')
+        plt.ylabel('Distortion (Inertia)')
+        plt.title('Elbow Method for Optimal k Selection')
+        plt.xticks(K)
+        plt.grid(True, linestyle='--', alpha=0.7)
+        plt.legend()
+        
+        # Create output directory if it doesn't exist
+        os.makedirs(intermediate_results_folder, exist_ok=True)
+        
+        # Save the plot
+        plt.savefig(os.path.join(intermediate_results_folder, 'elbow_method.png'), dpi=150, bbox_inches='tight')
+        plt.close()
 
     def _cluster_tracks_dbscan(self, input_path: str, avg_lab_colors: Dict[int, LABColor], intermediate_results_folder: str | None = None) -> ClusteringResult:
         """Cluster track colors using DBSCAN with dynamic eps adjustment to find teams and outliers."""
@@ -146,7 +167,11 @@ class RoleAssigner:
         lab_colors = np.array([avg_lab_colors[track_id].to_array() for track_id in track_ids])
 
         # First determine optimal number of clusters using elbow method
-        optimal_clusters = self._determine_optimal_clusters(lab_colors)
+        optimal_clusters, K, distortions = self._determine_optimal_clusters(lab_colors)
+        
+        # Plot elbow method if intermediate results folder is provided
+        if intermediate_results_folder:
+            self._plot_elbow_method(K, distortions, optimal_clusters, intermediate_results_folder)
         
         # DBSCAN parameters
         min_samples = max([3, math.floor(0.25 * len(track_ids))])
