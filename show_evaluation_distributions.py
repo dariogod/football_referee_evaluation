@@ -10,10 +10,11 @@ from scipy.optimize import curve_fit
 from matplotlib import cm
 from scipy.interpolate import griddata
 from matplotlib.image import imread
+import math
 
 # Base path for test directories
 base_path = "data/predictions/SoccerNet/SN-GSR-2025/test"
-model = "dfine" # "yolo" or "dfine"
+model = "yolo" # "yolo" or "dfine"
 
 # Create output directory for plots if it doesn't exist
 output_dir = os.path.join("plots", model)
@@ -29,6 +30,10 @@ referee_positions_x = []
 referee_positions_y = []
 pitch_width = 0
 pitch_height = 0
+
+# Arrays to store paired distance and angle for duels (for scatter plot)
+duel_distances = []
+duel_angles = []
 
 # Find all SNGS-XXX folders in the test directory
 sngs_folders = glob.glob(os.path.join(base_path, "SNGS-*"))
@@ -78,10 +83,38 @@ for sngs_folder in sngs_folders:
             pitch_width = max(pitch_width, x_max)
             pitch_height = max(pitch_height, y_max)
         
-        # Extract referee distance and angle for each duel
-        for duel in frame_data.get("duels", []):
-            if "referee_angle" in duel:
-                referee_angles.append(duel["referee_angle"])
+        # Extract referee angle for the closest 2 duels that are between 5 and 20 meters away
+        if "duels" in frame_data and len(frame_data["duels"]) > 0 and scale is not None:
+            filtered_duels = []
+            for duel in frame_data["duels"]:
+                # Calculate referee distance if not present
+                if "referee_distance" not in duel and "player_1" in duel and "player_2" in duel:
+                    # Calculate center point of the duel
+                    duel_x = (duel["player_1"]["x"] + duel["player_2"]["x"]) / 2
+                    duel_y = (duel["player_1"]["y"] + duel["player_2"]["y"]) / 2
+                    
+                    # Calculate distance from referee to duel center
+                    dx = duel_x - x
+                    dy = duel_y - y
+                    duel["referee_distance"] = math.sqrt(dx**2 + dy**2) / scale
+                    filtered_duels.append(duel)
+            
+                # Store paired distance and angle for each duel that has both metrics
+                if "referee_distance" in duel and "referee_angle" in duel:
+                    distance_in_meters = duel["referee_distance"]
+                    duel_distances.append(distance_in_meters)
+                    duel_angles.append(duel["referee_angle"])
+                    
+            # Sort filtered duels by distance
+            sorted_duels = sorted(filtered_duels, 
+                                 key=lambda d: d.get("referee_distance", float('inf')))
+            
+            # Take only the closest 2 duels within the distance range
+            closest_duels = sorted_duels[:min(len(sorted_duels), len(sorted_duels))]
+            
+            for duel in closest_duels:
+                if "referee_angle" in duel:
+                    referee_angles.append(duel["referee_angle"])
         
         # Extract distance from potential action points and convert to meters
         if scale is None:
@@ -125,12 +158,12 @@ plt.ylabel('Number of Frames')
 plt.grid(True, alpha=0.3)
 
 # 4. Distance vs Angle Scatter Plot (if both metrics are available)
-if referee_distances and referee_angles:
+if duel_distances and duel_angles:
     # Take the minimum of the lengths to avoid index errors
-    min_length = min(len(referee_distances), len(referee_angles))
+    assert len(duel_distances) == len(duel_angles)
     plt.subplot(2, 2, 4)
-    plt.scatter(referee_distances[:min_length], referee_angles[:min_length], alpha=0.5, s=10)
-    plt.title('Referee Distance vs Angle')
+    plt.scatter(duel_distances, duel_angles, alpha=0.5, s=10)
+    plt.title('Referee Distance vs Angle (Duels)')
     plt.xlabel('Distance (meters)')
     plt.ylabel('Angle (degrees)')
     plt.grid(True, alpha=0.3)
@@ -164,14 +197,16 @@ plt.savefig(os.path.join(output_dir, 'aggregated_detailed_distance_distribution.
 plt.close()
 
 # 2. Histogram of angles with a vertical line for the average
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(12, 12))  # Changed to square figure
 plt.hist(referee_angles, bins=50, alpha=0.7, color='green')
 plt.axvline(x=np.mean(referee_angles), color='red', linestyle='dashed', linewidth=2, label=f'Mean: {np.mean(referee_angles):.2f}')
 plt.axvline(x=np.median(referee_angles), color='blue', linestyle='dashed', linewidth=2, label=f'Median: {np.median(referee_angles):.2f}')
-plt.title('Detailed Distribution of Referee Angles to Duels (Aggregated)')
-plt.xlabel('Angle (degrees)')
-plt.ylabel('Frequency')
-plt.legend()
+plt.title('Detailed Distribution of Referee Angles to Duels', fontsize=22)  # Increased title size
+plt.xlabel('Angle (degrees)', fontsize=20)  # Increased label size
+plt.ylabel('Frequency', fontsize=20)  # Increased label size
+plt.xticks([0, 15, 30, 45, 60, 75, 90], fontsize=20)  # Set specific x-axis ticks
+plt.yticks(fontsize=14)  # Increased tick label size
+plt.legend(fontsize=20)  # Increased legend text size
 plt.grid(True, alpha=0.3)
 plt.savefig(os.path.join(output_dir, 'aggregated_detailed_angle_distribution.png'), dpi=300)
 plt.close()
@@ -214,7 +249,7 @@ def gamma_distribution(x, shape, scale):
     return stats.gamma.pdf(x, shape, scale=scale)
 
 # Create histogram for the distances
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(12, 12))  # Changed to square figure
 n, bins, _ = plt.hist(referee_distances, bins=40, density=True, alpha=0.6, color='blue', label='Data')
 
 # Calculate bin centers for curve fitting
@@ -227,7 +262,10 @@ try:
     gamma_curve = gamma_distribution(bin_centers, *gamma_params)
     
     # Plot the fitted curve
-    plt.plot(bin_centers, gamma_curve, 'r-', lw=2, label=f'Gamma Distribution (shape={gamma_params[0]:.2f}, scale={gamma_params[1]:.2f})')
+    # Create a smoother curve with more points for plotting
+    x_smooth = np.linspace(min(bin_centers), max(bin_centers), 1000)
+    gamma_curve_smooth = gamma_distribution(x_smooth, *gamma_params)
+    plt.plot(x_smooth, gamma_curve_smooth, 'r-', lw=4, label=f'Gamma Distribution (α={gamma_params[0]:.2f}, θ={gamma_params[1]:.2f})')
     
     # Calculate mean and median
     mean_distance = np.mean(referee_distances)
@@ -243,18 +281,20 @@ try:
     ss_tot = np.sum((n - np.mean(n))**2)
     r_squared_gamma = 1 - (ss_res_gamma / ss_tot)
     
-    plt.text(0.05, 0.95, f'Gamma R²: {r_squared_gamma:.3f}', 
-             transform=plt.gca().transAxes, fontsize=10, verticalalignment='top',
+    plt.text(0.25, 0.95, f'Gamma R²: {r_squared_gamma:.3f}', 
+             transform=plt.gca().transAxes, fontsize=20, verticalalignment='top',  # Increased text size
              bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
     
 except Exception as e:
     print(f"Error fitting distance distribution: {e}")
 
-plt.title('Referee Distance Distribution with Fitted Gamma Curve')
-plt.xlabel('Distance (meters)')
-plt.ylabel('Probability Density')
+plt.title('Referee Distance Distribution with Fitted Gamma Curve', fontsize=22)  # Increased title size
+plt.xlabel('Distance (meters)', fontsize=20)  # Increased label size
+plt.ylabel('Probability Density', fontsize=20)  # Increased label size
 plt.grid(True, alpha=0.3)
-plt.legend()
+plt.legend(fontsize=20)  # Increased legend text size
+plt.xticks(fontsize=20)  # Increased tick label size
+plt.yticks(fontsize=14)  # Increased tick label size
 plt.savefig(os.path.join(output_dir, 'distance_distribution_fitted.png'), dpi=300)
 plt.close()
 
