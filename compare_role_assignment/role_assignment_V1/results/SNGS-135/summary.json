@@ -1,0 +1,38 @@
+{
+    "video_name": "SNGS-135",
+    "num_frames": 750,
+    "num_tracks": 23,
+    "track_roles": {
+        "1": "TEAM B",
+        "2": "TEAM B",
+        "3": "TEAM B",
+        "4": "TEAM B",
+        "5": "REF",
+        "6": "TEAM B",
+        "7": "TEAM B",
+        "8": "TEAM B",
+        "9": "TEAM B",
+        "10": "GK",
+        "11": "TEAM A",
+        "12": "TEAM A",
+        "13": "TEAM A",
+        "14": "TEAM A",
+        "15": "TEAM A",
+        "16": "TEAM A",
+        "17": "TEAM A",
+        "18": "TEAM A",
+        "19": "TEAM A",
+        "20": "TEAM A",
+        "21": "TEAM A",
+        "23": "TEAM B",
+        "24": "TEAM B"
+    },
+    "role_counts": {
+        "TEAM A": 11,
+        "TEAM B": 10,
+        "REF": 1,
+        "GK": 1,
+        "OOB": 0,
+        "UNK": 0
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "video_name": "SNGS-125",
+    "num_frames": 750,
+    "num_tracks": 25,
+    "track_roles": {
+        "1": "TEAM A",
+        "2": "TEAM B",
+        "3": "TEAM B",
+        "4": "TEAM A",
+        "5": "TEAM A",
+        "6": "TEAM A",
+        "7": "OOB",
+        "9": "OOB",
+        "10": "TEAM B",
+        "11": "TEAM B",
+        "12": "TEAM A",
+        "13": "TEAM A",
+        "14": "TEAM A",
+        "15": "TEAM A",
+        "16": "TEAM A",
+        "17": "TEAM B",
+        "18": "TEAM B",
+        "19": "TEAM A",
+        "20": "TEAM B",
+        "21": "TEAM A",
+        "22": "TEAM A",
+        "23": "TEAM B",
+        "24": "TEAM A",
+        "25": "REF",
+        "26": "TEAM B"
+    },
+    "role_counts": {
+        "TEAM A": 13,
+        "TEAM B": 9,
+        "REF": 1,
+        "GK": 0,
+        "OOB": 2,
+        "UNK": 0
+    }
+}

@@ -1,0 +1,3079 @@
+{
+    "total_videos": 49,
+    "successful": 48,
+    "failed": 1,
+    "results": [
+        {
+            "video_name": "SNGS-116",
+            "num_frames": 750,
+            "num_tracks": 26,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM B",
+                "4": "REF",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM B",
+                "8": "TEAM A",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "23": "TEAM A",
+                "24": "TEAM A",
+                "25": "GK",
+                "26": "TEAM A",
+                "27": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 12,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-116"
+        },
+        {
+            "video_name": "SNGS-117",
+            "num_frames": 750,
+            "num_tracks": 29,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM B",
+                "3": "REF",
+                "4": "TEAM B",
+                "5": "TEAM A",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "9": "TEAM A",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM B",
+                "14": "TEAM A",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM A",
+                "21": "GK",
+                "22": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM B",
+                "25": "TEAM A",
+                "26": "TEAM B",
+                "27": "TEAM A",
+                "28": "TEAM A",
+                "29": "TEAM A",
+                "30": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 15,
+                "TEAM B": 12,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-117"
+        },
+        {
+            "video_name": "SNGS-118",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "REF",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM A",
+                "22": "TEAM B",
+                "23": "TEAM B",
+                "24": "TEAM A",
+                "25": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-118"
+        },
+        {
+            "video_name": "SNGS-119",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM A",
+                "7": "TEAM B",
+                "8": "REF",
+                "9": "TEAM A",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "REF",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "GK",
+                "23": "TEAM B",
+                "24": "TEAM A",
+                "25": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 10,
+                "REF": 2,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-119"
+        },
+        {
+            "error": "list index out of range",
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-120"
+        },
+        {
+            "video_name": "SNGS-121",
+            "num_frames": 750,
+            "num_tracks": 22,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM A",
+                "6": "TEAM B",
+                "7": "TEAM A",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "REF",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "17": "TEAM A",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "23": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-121"
+        },
+        {
+            "video_name": "SNGS-122",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "REF",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "23": "TEAM B",
+                "24": "TEAM B",
+                "25": "REF",
+                "26": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 11,
+                "REF": 2,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-122"
+        },
+        {
+            "video_name": "SNGS-123",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "REF",
+                "11": "GK",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM B",
+                "16": "GK",
+                "17": "TEAM B",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM A",
+                "22": "TEAM B",
+                "23": "TEAM B",
+                "24": "TEAM B",
+                "25": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-123"
+        },
+        {
+            "video_name": "SNGS-124",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "REF",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "TEAM A",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "16": "TEAM B",
+                "17": "REF",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "23": "TEAM B",
+                "24": "TEAM A",
+                "25": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 11,
+                "REF": 2,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-124"
+        },
+        {
+            "video_name": "SNGS-125",
+            "num_frames": 750,
+            "num_tracks": 25,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "OOB",
+                "9": "OOB",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM A",
+                "22": "TEAM A",
+                "23": "TEAM B",
+                "24": "TEAM A",
+                "25": "REF",
+                "26": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 13,
+                "TEAM B": 9,
+                "REF": 1,
+                "GK": 0,
+                "OOB": 2,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-125"
+        },
+        {
+            "video_name": "SNGS-126",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM A",
+                "10": "REF",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "REF",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM B",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "23": "TEAM A",
+                "24": "TEAM B",
+                "25": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 11,
+                "REF": 2,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-126"
+        },
+        {
+            "video_name": "SNGS-127",
+            "num_frames": 750,
+            "num_tracks": 21,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM A",
+                "18": "REF",
+                "20": "TEAM A",
+                "21": "GK",
+                "22": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 9,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-127"
+        },
+        {
+            "video_name": "SNGS-128",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM A",
+                "5": "REF",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM A",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM B",
+                "18": "TEAM A",
+                "19": "GK",
+                "20": "TEAM B",
+                "21": "TEAM A",
+                "22": "TEAM A",
+                "23": "TEAM B",
+                "24": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-128"
+        },
+        {
+            "video_name": "SNGS-129",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM B",
+                "20": "REF",
+                "22": "TEAM B",
+                "23": "TEAM A",
+                "24": "TEAM B",
+                "25": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 11,
+                "REF": 1,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-129"
+        },
+        {
+            "video_name": "SNGS-130",
+            "num_frames": 750,
+            "num_tracks": 20,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM A",
+                "6": "TEAM B",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM A",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "REF",
+                "18": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 9,
+                "REF": 1,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-130"
+        },
+        {
+            "video_name": "SNGS-131",
+            "num_frames": 750,
+            "num_tracks": 22,
+            "track_roles": {
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "REF",
+                "20": "TEAM A",
+                "21": "TEAM A",
+                "22": "TEAM B",
+                "23": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-131"
+        },
+        {
+            "video_name": "SNGS-132",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "REF",
+                "2": "GK",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM A",
+                "15": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM B",
+                "20": "TEAM B",
+                "21": "GK",
+                "22": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM A",
+                "25": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 9,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-132"
+        },
+        {
+            "video_name": "SNGS-133",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM A",
+                "7": "TEAM B",
+                "8": "REF",
+                "9": "TEAM A",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "GK",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM B",
+                "21": "TEAM B",
+                "22": "GK",
+                "23": "TEAM A",
+                "24": "TEAM B",
+                "25": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-133"
+        },
+        {
+            "video_name": "SNGS-134",
+            "num_frames": 750,
+            "num_tracks": 22,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM B",
+                "5": "REF",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "13": "GK",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM B",
+                "19": "TEAM B",
+                "20": "TEAM B",
+                "21": "TEAM B",
+                "22": "TEAM A",
+                "23": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 9,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-134"
+        },
+        {
+            "video_name": "SNGS-135",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "REF",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "GK",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM A",
+                "23": "TEAM B",
+                "24": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-135"
+        },
+        {
+            "video_name": "SNGS-136",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM A",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "13": "REF",
+                "14": "TEAM A",
+                "15": "TEAM B",
+                "16": "TEAM A",
+                "17": "TEAM A",
+                "18": "TEAM B",
+                "19": "GK",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 9,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-136"
+        },
+        {
+            "video_name": "SNGS-137",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM B",
+                "6": "TEAM A",
+                "7": "TEAM B",
+                "8": "GK",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "12": "TEAM B",
+                "13": "REF",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "23": "TEAM A",
+                "24": "TEAM B",
+                "25": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-137"
+        },
+        {
+            "video_name": "SNGS-138",
+            "num_frames": 750,
+            "num_tracks": 22,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM B",
+                "3": "GK",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM A",
+                "8": "TEAM B",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "REF",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM B",
+                "22": "TEAM A",
+                "23": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-138"
+        },
+        {
+            "video_name": "SNGS-139",
+            "num_frames": 750,
+            "num_tracks": 19,
+            "track_roles": {
+                "1": "REF",
+                "2": "TEAM B",
+                "3": "TEAM A",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "GK",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "17": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM B",
+                "21": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 9,
+                "TEAM B": 8,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-139"
+        },
+        {
+            "video_name": "SNGS-140",
+            "num_frames": 750,
+            "num_tracks": 22,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "REF",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM A",
+                "23": "REF"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 9,
+                "REF": 2,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-140"
+        },
+        {
+            "video_name": "SNGS-141",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "REF",
+                "2": "TEAM A",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM B",
+                "22": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-141"
+        },
+        {
+            "video_name": "SNGS-142",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM B",
+                "3": "REF",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "GK",
+                "23": "TEAM B",
+                "24": "TEAM B",
+                "25": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-142"
+        },
+        {
+            "video_name": "SNGS-143",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "GK",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "12": "REF",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "GK",
+                "22": "TEAM B",
+                "23": "TEAM B",
+                "24": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 9,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-143"
+        },
+        {
+            "video_name": "SNGS-144",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "GK",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "GK",
+                "23": "TEAM B",
+                "25": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 9,
+                "REF": 0,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-144"
+        },
+        {
+            "video_name": "SNGS-145",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "REF",
+                "19": "GK",
+                "20": "TEAM B",
+                "22": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM A",
+                "25": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 11,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-145"
+        },
+        {
+            "video_name": "SNGS-146",
+            "num_frames": 750,
+            "num_tracks": 21,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "REF",
+                "16": "TEAM A",
+                "17": "GK",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "GK",
+                "21": "TEAM A",
+                "22": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 8,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-146"
+        },
+        {
+            "video_name": "SNGS-147",
+            "num_frames": 750,
+            "num_tracks": 25,
+            "track_roles": {
+                "1": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM B",
+                "5": "TEAM A",
+                "6": "TEAM B",
+                "7": "TEAM A",
+                "8": "GK",
+                "9": "TEAM A",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM B",
+                "14": "REF",
+                "15": "TEAM B",
+                "16": "TEAM A",
+                "17": "TEAM B",
+                "18": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "24": "TEAM A",
+                "25": "TEAM B",
+                "26": "GK",
+                "27": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 11,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-147"
+        },
+        {
+            "video_name": "SNGS-148",
+            "num_frames": 750,
+            "num_tracks": 22,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM A",
+                "4": "REF",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "16": "TEAM A",
+                "17": "TEAM B",
+                "18": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM B",
+                "21": "TEAM A",
+                "22": "TEAM A",
+                "23": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 9,
+                "REF": 1,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-148"
+        },
+        {
+            "video_name": "SNGS-149",
+            "num_frames": 750,
+            "num_tracks": 22,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "REF",
+                "8": "GK",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "23": "TEAM A",
+                "24": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-149"
+        },
+        {
+            "video_name": "SNGS-150",
+            "num_frames": 750,
+            "num_tracks": 25,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "9": "TEAM A",
+                "10": "GK",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "REF",
+                "15": "TEAM A",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM A",
+                "19": "TEAM B",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM A",
+                "23": "REF",
+                "24": "TEAM B",
+                "25": "TEAM B",
+                "28": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 11,
+                "REF": 2,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-150"
+        },
+        {
+            "video_name": "SNGS-187",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM B",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM A",
+                "7": "REF",
+                "8": "TEAM A",
+                "9": "TEAM B",
+                "10": "TEAM A",
+                "11": "GK",
+                "12": "TEAM A",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM A",
+                "17": "TEAM A",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM A",
+                "22": "TEAM B",
+                "23": "TEAM A",
+                "24": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-187"
+        },
+        {
+            "video_name": "SNGS-188",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM A",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM A",
+                "22": "TEAM B",
+                "23": "TEAM A",
+                "24": "TEAM B",
+                "25": "TEAM A",
+                "26": "TEAM B",
+                "27": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 11,
+                "REF": 0,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-188"
+        },
+        {
+            "video_name": "SNGS-189",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "21": "TEAM A",
+                "22": "TEAM B",
+                "23": "TEAM A",
+                "24": "TEAM A",
+                "25": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 13,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-189"
+        },
+        {
+            "video_name": "SNGS-190",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "OOB",
+                "8": "TEAM B",
+                "9": "OOB",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "OOB",
+                "14": "OOB",
+                "15": "OOB",
+                "16": "REF",
+                "18": "OOB",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM A",
+                "22": "GK",
+                "23": "TEAM A",
+                "24": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 9,
+                "TEAM B": 5,
+                "REF": 1,
+                "GK": 2,
+                "OOB": 6,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-190"
+        },
+        {
+            "video_name": "SNGS-191",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM B",
+                "20": "TEAM A",
+                "21": "TEAM A",
+                "22": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 13,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-191"
+        },
+        {
+            "video_name": "SNGS-192",
+            "num_frames": 750,
+            "num_tracks": 25,
+            "track_roles": {
+                "1": "GK",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM B",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM A",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM A",
+                "23": "TEAM B",
+                "24": "TEAM B",
+                "25": "TEAM A",
+                "26": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 13,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-192"
+        },
+        {
+            "video_name": "SNGS-193",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM B",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM A",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM B",
+                "19": "GK",
+                "22": "TEAM A",
+                "23": "TEAM B",
+                "24": "TEAM B",
+                "25": "TEAM B",
+                "26": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 13,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-193"
+        },
+        {
+            "video_name": "SNGS-194",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "GK",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM B",
+                "7": "TEAM B",
+                "8": "TEAM A",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM B",
+                "22": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-194"
+        },
+        {
+            "video_name": "SNGS-195",
+            "num_frames": 750,
+            "num_tracks": 21,
+            "track_roles": {
+                "1": "GK",
+                "2": "TEAM A",
+                "3": "TEAM B",
+                "4": "TEAM A",
+                "5": "TEAM B",
+                "6": "TEAM A",
+                "7": "TEAM B",
+                "8": "TEAM B",
+                "10": "TEAM A",
+                "11": "TEAM B",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM B"
+            },
+            "role_counts": {
+                "TEAM A": 10,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-195"
+        },
+        {
+            "video_name": "SNGS-196",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "GK",
+                "2": "TEAM B",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM B",
+                "6": "TEAM B",
+                "7": "TEAM A",
+                "8": "TEAM B",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "12": "TEAM B",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM A",
+                "19": "TEAM A",
+                "20": "TEAM B",
+                "21": "TEAM B",
+                "22": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-196"
+        },
+        {
+            "video_name": "SNGS-197",
+            "num_frames": 750,
+            "num_tracks": 23,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM A",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM B",
+                "12": "TEAM B",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM A",
+                "18": "TEAM B",
+                "19": "TEAM B",
+                "20": "TEAM A",
+                "21": "TEAM B",
+                "22": "TEAM B",
+                "24": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-197"
+        },
+        {
+            "video_name": "SNGS-198",
+            "num_frames": 750,
+            "num_tracks": 25,
+            "track_roles": {
+                "1": "TEAM A",
+                "2": "TEAM B",
+                "3": "TEAM A",
+                "4": "TEAM B",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM B",
+                "10": "TEAM B",
+                "11": "TEAM B",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "GK",
+                "21": "TEAM A",
+                "23": "TEAM A",
+                "24": "TEAM A",
+                "25": "TEAM A",
+                "26": "GK"
+            },
+            "role_counts": {
+                "TEAM A": 13,
+                "TEAM B": 10,
+                "REF": 0,
+                "GK": 2,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-198"
+        },
+        {
+            "video_name": "SNGS-199",
+            "num_frames": 750,
+            "num_tracks": 24,
+            "track_roles": {
+                "1": "TEAM B",
+                "3": "TEAM A",
+                "4": "TEAM A",
+                "5": "GK",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM A",
+                "12": "TEAM A",
+                "13": "TEAM A",
+                "14": "TEAM B",
+                "15": "TEAM B",
+                "16": "TEAM B",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM B",
+                "20": "TEAM B",
+                "21": "TEAM A",
+                "22": "TEAM B",
+                "23": "TEAM B",
+                "24": "TEAM A",
+                "25": "REF"
+            },
+            "role_counts": {
+                "TEAM A": 12,
+                "TEAM B": 10,
+                "REF": 1,
+                "GK": 1,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-199"
+        },
+        {
+            "video_name": "SNGS-200",
+            "num_frames": 750,
+            "num_tracks": 19,
+            "track_roles": {
+                "1": "TEAM B",
+                "2": "TEAM B",
+                "3": "TEAM B",
+                "4": "TEAM A",
+                "5": "TEAM A",
+                "6": "TEAM A",
+                "7": "TEAM A",
+                "8": "TEAM A",
+                "9": "TEAM A",
+                "10": "TEAM A",
+                "11": "TEAM B",
+                "12": "TEAM A",
+                "13": "TEAM B",
+                "14": "TEAM B",
+                "15": "TEAM A",
+                "17": "TEAM B",
+                "18": "TEAM B",
+                "19": "TEAM A",
+                "20": "TEAM A"
+            },
+            "role_counts": {
+                "TEAM A": 11,
+                "TEAM B": 8,
+                "REF": 0,
+                "GK": 0,
+                "OOB": 0,
+                "UNK": 0
+            },
+            "video_path": "data/SoccerNet/SN-GSR-2025/test/SNGS-200"
+        }
+    ],
+    "overall_metrics": {
+        "player": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 45529,
+            "tn": 6299,
+            "accuracy": 0.12153662113143475,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+        },
+        "goalkeeper": {
+            "tp": 633,
+            "fp": 874,
+            "fn": 1284,
+            "tn": 49037,
+            "accuracy": 0.9583622752180289,
+            "precision": 0.42003981420039815,
+            "recall": 0.3302034428794992,
+            "f1_score": 0.3697429906542056
+        },
+        "referee": {
+            "tp": 2016,
+            "fp": 1,
+            "fn": 2366,
+            "tn": 47445,
+            "accuracy": 0.9543297059504515,
+            "precision": 0.9995042141794744,
+            "recall": 0.46006389776357826,
+            "f1_score": 0.630098452883263
+        }
+    },
+    "per_video_metrics": [
+        {
+            "video_name": "SNGS-116",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 955,
+                    "tn": 118
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 12,
+                    "fn": 60,
+                    "tn": 1001
+                },
+                "referee": {
+                    "tp": 46,
+                    "fp": 0,
+                    "fn": 12,
+                    "tn": 1015
+                }
+            },
+            "num_comparisons": 1073
+        },
+        {
+            "video_name": "SNGS-117",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 737,
+                    "tn": 106
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 39,
+                    "fn": 22,
+                    "tn": 782
+                },
+                "referee": {
+                    "tp": 45,
+                    "fp": 0,
+                    "fn": 39,
+                    "tn": 759
+                }
+            },
+            "num_comparisons": 843
+        },
+        {
+            "video_name": "SNGS-118",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 875,
+                    "tn": 138
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 64,
+                    "tn": 949
+                },
+                "referee": {
+                    "tp": 69,
+                    "fp": 0,
+                    "fn": 5,
+                    "tn": 939
+                }
+            },
+            "num_comparisons": 1013
+        },
+        {
+            "video_name": "SNGS-119",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 671,
+                    "tn": 101
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 30,
+                    "fn": 33,
+                    "tn": 709
+                },
+                "referee": {
+                    "tp": 38,
+                    "fp": 1,
+                    "fn": 30,
+                    "tn": 703
+                }
+            },
+            "num_comparisons": 772
+        },
+        {
+            "video_name": "SNGS-121",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 965,
+                    "tn": 106
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 36,
+                    "tn": 1035
+                },
+                "referee": {
+                    "tp": 70,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1001
+                }
+            },
+            "num_comparisons": 1071
+        },
+        {
+            "video_name": "SNGS-122",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 975,
+                    "tn": 114
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 36,
+                    "tn": 1053
+                },
+                "referee": {
+                    "tp": 78,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1011
+                }
+            },
+            "num_comparisons": 1089
+        },
+        {
+            "video_name": "SNGS-123",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1043,
+                    "tn": 130
+                },
+                "goalkeeper": {
+                    "tp": 5,
+                    "fp": 22,
+                    "fn": 38,
+                    "tn": 1108
+                },
+                "referee": {
+                    "tp": 65,
+                    "fp": 0,
+                    "fn": 22,
+                    "tn": 1086
+                }
+            },
+            "num_comparisons": 1173
+        },
+        {
+            "video_name": "SNGS-124",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 781,
+                    "tn": 117
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 35,
+                    "tn": 863
+                },
+                "referee": {
+                    "tp": 82,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 816
+                }
+            },
+            "num_comparisons": 898
+        },
+        {
+            "video_name": "SNGS-125",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 742,
+                    "tn": 125
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 57,
+                    "tn": 810
+                },
+                "referee": {
+                    "tp": 9,
+                    "fp": 0,
+                    "fn": 59,
+                    "tn": 799
+                }
+            },
+            "num_comparisons": 867
+        },
+        {
+            "video_name": "SNGS-126",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 821,
+                    "tn": 160
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 60,
+                    "tn": 921
+                },
+                "referee": {
+                    "tp": 100,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 881
+                }
+            },
+            "num_comparisons": 981
+        },
+        {
+            "video_name": "SNGS-127",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1274,
+                    "tn": 111
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 36,
+                    "fn": 0,
+                    "tn": 1349
+                },
+                "referee": {
+                    "tp": 75,
+                    "fp": 0,
+                    "fn": 36,
+                    "tn": 1274
+                }
+            },
+            "num_comparisons": 1385
+        },
+        {
+            "video_name": "SNGS-128",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1196,
+                    "tn": 132
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 47,
+                    "fn": 10,
+                    "tn": 1271
+                },
+                "referee": {
+                    "tp": 75,
+                    "fp": 0,
+                    "fn": 47,
+                    "tn": 1206
+                }
+            },
+            "num_comparisons": 1328
+        },
+        {
+            "video_name": "SNGS-129",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1033,
+                    "tn": 136
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 50,
+                    "tn": 1119
+                },
+                "referee": {
+                    "tp": 67,
+                    "fp": 0,
+                    "fn": 19,
+                    "tn": 1083
+                }
+            },
+            "num_comparisons": 1169
+        },
+        {
+            "video_name": "SNGS-130",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 950,
+                    "tn": 138
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 63,
+                    "tn": 1025
+                },
+                "referee": {
+                    "tp": 75,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1013
+                }
+            },
+            "num_comparisons": 1088
+        },
+        {
+            "video_name": "SNGS-131",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1161,
+                    "tn": 171
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 29,
+                    "fn": 67,
+                    "tn": 1236
+                },
+                "referee": {
+                    "tp": 75,
+                    "fp": 0,
+                    "fn": 29,
+                    "tn": 1228
+                }
+            },
+            "num_comparisons": 1332
+        },
+        {
+            "video_name": "SNGS-132",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 933,
+                    "tn": 134
+                },
+                "goalkeeper": {
+                    "tp": 3,
+                    "fp": 37,
+                    "fn": 30,
+                    "tn": 997
+                },
+                "referee": {
+                    "tp": 64,
+                    "fp": 0,
+                    "fn": 37,
+                    "tn": 966
+                }
+            },
+            "num_comparisons": 1067
+        },
+        {
+            "video_name": "SNGS-133",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 958,
+                    "tn": 150
+                },
+                "goalkeeper": {
+                    "tp": 8,
+                    "fp": 65,
+                    "fn": 2,
+                    "tn": 1033
+                },
+                "referee": {
+                    "tp": 75,
+                    "fp": 0,
+                    "fn": 65,
+                    "tn": 968
+                }
+            },
+            "num_comparisons": 1108
+        },
+        {
+            "video_name": "SNGS-134",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 722,
+                    "tn": 115
+                },
+                "goalkeeper": {
+                    "tp": 16,
+                    "fp": 57,
+                    "fn": 0,
+                    "tn": 764
+                },
+                "referee": {
+                    "tp": 42,
+                    "fp": 0,
+                    "fn": 57,
+                    "tn": 738
+                }
+            },
+            "num_comparisons": 837
+        },
+        {
+            "video_name": "SNGS-135",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1039,
+                    "tn": 140
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 37,
+                    "fn": 49,
+                    "tn": 1093
+                },
+                "referee": {
+                    "tp": 54,
+                    "fp": 0,
+                    "fn": 37,
+                    "tn": 1088
+                }
+            },
+            "num_comparisons": 1179
+        },
+        {
+            "video_name": "SNGS-136",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 739,
+                    "tn": 112
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 23,
+                    "fn": 44,
+                    "tn": 784
+                },
+                "referee": {
+                    "tp": 45,
+                    "fp": 0,
+                    "fn": 23,
+                    "tn": 783
+                }
+            },
+            "num_comparisons": 851
+        },
+        {
+            "video_name": "SNGS-137",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 733,
+                    "tn": 89
+                },
+                "goalkeeper": {
+                    "tp": 17,
+                    "fp": 9,
+                    "fn": 20,
+                    "tn": 776
+                },
+                "referee": {
+                    "tp": 43,
+                    "fp": 0,
+                    "fn": 9,
+                    "tn": 770
+                }
+            },
+            "num_comparisons": 822
+        },
+        {
+            "video_name": "SNGS-138",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1061,
+                    "tn": 119
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 44,
+                    "fn": 0,
+                    "tn": 1136
+                },
+                "referee": {
+                    "tp": 75,
+                    "fp": 0,
+                    "fn": 44,
+                    "tn": 1061
+                }
+            },
+            "num_comparisons": 1180
+        },
+        {
+            "video_name": "SNGS-139",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 885,
+                    "tn": 103
+                },
+                "goalkeeper": {
+                    "tp": 52,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 936
+                },
+                "referee": {
+                    "tp": 51,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 937
+                }
+            },
+            "num_comparisons": 988
+        },
+        {
+            "video_name": "SNGS-140",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1133,
+                    "tn": 128
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 65,
+                    "tn": 1196
+                },
+                "referee": {
+                    "tp": 63,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1198
+                }
+            },
+            "num_comparisons": 1261
+        },
+        {
+            "video_name": "SNGS-141",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 897,
+                    "tn": 79
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 37,
+                    "tn": 939
+                },
+                "referee": {
+                    "tp": 37,
+                    "fp": 0,
+                    "fn": 5,
+                    "tn": 934
+                }
+            },
+            "num_comparisons": 976
+        },
+        {
+            "video_name": "SNGS-142",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 900,
+                    "tn": 136
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 25,
+                    "fn": 55,
+                    "tn": 956
+                },
+                "referee": {
+                    "tp": 56,
+                    "fp": 0,
+                    "fn": 25,
+                    "tn": 955
+                }
+            },
+            "num_comparisons": 1036
+        },
+        {
+            "video_name": "SNGS-143",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 603,
+                    "tn": 82
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 44,
+                    "fn": 29,
+                    "tn": 612
+                },
+                "referee": {
+                    "tp": 38,
+                    "fp": 0,
+                    "fn": 15,
+                    "tn": 632
+                }
+            },
+            "num_comparisons": 685
+        },
+        {
+            "video_name": "SNGS-144",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 797,
+                    "tn": 125
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 95,
+                    "fn": 30,
+                    "tn": 797
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 95,
+                    "tn": 827
+                }
+            },
+            "num_comparisons": 922
+        },
+        {
+            "video_name": "SNGS-145",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 773,
+                    "tn": 123
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 42,
+                    "fn": 52,
+                    "tn": 802
+                },
+                "referee": {
+                    "tp": 29,
+                    "fp": 0,
+                    "fn": 42,
+                    "tn": 825
+                }
+            },
+            "num_comparisons": 896
+        },
+        {
+            "video_name": "SNGS-146",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 567,
+                    "tn": 106
+                },
+                "goalkeeper": {
+                    "tp": 50,
+                    "fp": 13,
+                    "fn": 0,
+                    "tn": 610
+                },
+                "referee": {
+                    "tp": 43,
+                    "fp": 0,
+                    "fn": 13,
+                    "tn": 617
+                }
+            },
+            "num_comparisons": 673
+        },
+        {
+            "video_name": "SNGS-147",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 466,
+                    "tn": 90
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 17,
+                    "fn": 57,
+                    "tn": 482
+                },
+                "referee": {
+                    "tp": 16,
+                    "fp": 0,
+                    "fn": 17,
+                    "tn": 523
+                }
+            },
+            "num_comparisons": 556
+        },
+        {
+            "video_name": "SNGS-148",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 832,
+                    "tn": 118
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 14,
+                    "tn": 936
+                },
+                "referee": {
+                    "tp": 43,
+                    "fp": 0,
+                    "fn": 61,
+                    "tn": 846
+                }
+            },
+            "num_comparisons": 950
+        },
+        {
+            "video_name": "SNGS-149",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 865,
+                    "tn": 122
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 43,
+                    "fn": 12,
+                    "tn": 932
+                },
+                "referee": {
+                    "tp": 67,
+                    "fp": 0,
+                    "fn": 43,
+                    "tn": 877
+                }
+            },
+            "num_comparisons": 987
+        },
+        {
+            "video_name": "SNGS-150",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 860,
+                    "tn": 163
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 41,
+                    "fn": 52,
+                    "tn": 930
+                },
+                "referee": {
+                    "tp": 70,
+                    "fp": 0,
+                    "fn": 41,
+                    "tn": 912
+                }
+            },
+            "num_comparisons": 1023
+        },
+        {
+            "video_name": "SNGS-187",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1272,
+                    "tn": 129
+                },
+                "goalkeeper": {
+                    "tp": 47,
+                    "fp": 7,
+                    "fn": 0,
+                    "tn": 1347
+                },
+                "referee": {
+                    "tp": 75,
+                    "fp": 0,
+                    "fn": 7,
+                    "tn": 1319
+                }
+            },
+            "num_comparisons": 1401
+        },
+        {
+            "video_name": "SNGS-188",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1496,
+                    "tn": 149
+                },
+                "goalkeeper": {
+                    "tp": 11,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1634
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 138,
+                    "tn": 1507
+                }
+            },
+            "num_comparisons": 1645
+        },
+        {
+            "video_name": "SNGS-189",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1042,
+                    "tn": 164
+                },
+                "goalkeeper": {
+                    "tp": 23,
+                    "fp": 0,
+                    "fn": 25,
+                    "tn": 1158
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 116,
+                    "tn": 1090
+                }
+            },
+            "num_comparisons": 1206
+        },
+        {
+            "video_name": "SNGS-190",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 935,
+                    "tn": 165
+                },
+                "goalkeeper": {
+                    "tp": 49,
+                    "fp": 60,
+                    "fn": 0,
+                    "tn": 991
+                },
+                "referee": {
+                    "tp": 56,
+                    "fp": 0,
+                    "fn": 60,
+                    "tn": 984
+                }
+            },
+            "num_comparisons": 1100
+        },
+        {
+            "video_name": "SNGS-191",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1069,
+                    "tn": 93
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 21,
+                    "tn": 1141
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 72,
+                    "tn": 1090
+                }
+            },
+            "num_comparisons": 1162
+        },
+        {
+            "video_name": "SNGS-192",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 922,
+                    "tn": 166
+                },
+                "goalkeeper": {
+                    "tp": 36,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1052
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 130,
+                    "tn": 958
+                }
+            },
+            "num_comparisons": 1088
+        },
+        {
+            "video_name": "SNGS-193",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1024,
+                    "tn": 145
+                },
+                "goalkeeper": {
+                    "tp": 43,
+                    "fp": 0,
+                    "fn": 7,
+                    "tn": 1119
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 95,
+                    "tn": 1074
+                }
+            },
+            "num_comparisons": 1169
+        },
+        {
+            "video_name": "SNGS-194",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1299,
+                    "tn": 144
+                },
+                "goalkeeper": {
+                    "tp": 22,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1421
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 122,
+                    "tn": 1321
+                }
+            },
+            "num_comparisons": 1443
+        },
+        {
+            "video_name": "SNGS-195",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1073,
+                    "tn": 196
+                },
+                "goalkeeper": {
+                    "tp": 55,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1214
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 141,
+                    "tn": 1128
+                }
+            },
+            "num_comparisons": 1269
+        },
+        {
+            "video_name": "SNGS-196",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 906,
+                    "tn": 153
+                },
+                "goalkeeper": {
+                    "tp": 33,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1026
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 120,
+                    "tn": 939
+                }
+            },
+            "num_comparisons": 1059
+        },
+        {
+            "video_name": "SNGS-197",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1170,
+                    "tn": 143
+                },
+                "goalkeeper": {
+                    "tp": 37,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1276
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 106,
+                    "tn": 1207
+                }
+            },
+            "num_comparisons": 1313
+        },
+        {
+            "video_name": "SNGS-198",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1193,
+                    "tn": 199
+                },
+                "goalkeeper": {
+                    "tp": 70,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1322
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 129,
+                    "tn": 1263
+                }
+            },
+            "num_comparisons": 1392
+        },
+        {
+            "video_name": "SNGS-199",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 1205,
+                    "tn": 123
+                },
+                "goalkeeper": {
+                    "tp": 56,
+                    "fp": 0,
+                    "fn": 0,
+                    "tn": 1272
+                },
+                "referee": {
+                    "tp": 5,
+                    "fp": 0,
+                    "fn": 62,
+                    "tn": 1261
+                }
+            },
+            "num_comparisons": 1328
+        },
+        {
+            "video_name": "SNGS-200",
+            "metrics": {
+                "player": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 981,
+                    "tn": 193
+                },
+                "goalkeeper": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 52,
+                    "tn": 1122
+                },
+                "referee": {
+                    "tp": 0,
+                    "fp": 0,
+                    "fn": 141,
+                    "tn": 1033
+                }
+            },
+            "num_comparisons": 1174
+        }
+    ]
+}

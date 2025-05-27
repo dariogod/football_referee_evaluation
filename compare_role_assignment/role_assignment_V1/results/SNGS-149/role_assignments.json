@@ -1,0 +1,90 @@
+[
+    {
+        "track_id": 1,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 2,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 3,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 4,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 5,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 6,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 19,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 20,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 23,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 24,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 9,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 10,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 11,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 12,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 13,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 14,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 15,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 18,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 21,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 22,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 7,
+        "role": "REF"
+    },
+    {
+        "track_id": 8,
+        "role": "GK"
+    }
+]

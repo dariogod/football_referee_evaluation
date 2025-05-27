@@ -1,0 +1,306 @@
+[
+  {
+    "id": "3136003732",
+    "track_id": 1,
+    "bbox": [
+      1762,
+      649,
+      66,
+      175
+    ],
+    "true_role": "player",
+    "true_jersey": "16",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.7624478340148926,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003733",
+    "track_id": 5,
+    "bbox": [
+      1503,
+      364,
+      54,
+      85
+    ],
+    "true_role": "player",
+    "true_jersey": "4",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.6302356719970703,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003734",
+    "track_id": 7,
+    "bbox": [
+      804,
+      397,
+      43,
+      88
+    ],
+    "true_role": "player",
+    "true_jersey": "7",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.6860854625701904,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003735",
+    "track_id": 10,
+    "bbox": [
+      1758,
+      400,
+      46,
+      99
+    ],
+    "true_role": "player",
+    "true_jersey": "4",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.575652599334717,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003736",
+    "track_id": 11,
+    "bbox": [
+      1550,
+      366,
+      33,
+      91
+    ],
+    "true_role": "player",
+    "true_jersey": "3",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.037252187728882,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003738",
+    "track_id": 13,
+    "bbox": [
+      1305,
+      437,
+      55,
+      107
+    ],
+    "true_role": "referee",
+    "true_jersey": null,
+    "true_team": null,
+    "predicted_role": "referee",
+    "role_confidence": 5.20928955078125,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003739",
+    "track_id": 14,
+    "bbox": [
+      1077,
+      406,
+      52,
+      106
+    ],
+    "true_role": "player",
+    "true_jersey": "14",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.512143850326538,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003740",
+    "track_id": 15,
+    "bbox": [
+      1185,
+      386,
+      42,
+      88
+    ],
+    "true_role": "player",
+    "true_jersey": "14",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.6766228675842285,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003741",
+    "track_id": 16,
+    "bbox": [
+      787,
+      382,
+      52,
+      82
+    ],
+    "true_role": "player",
+    "true_jersey": "33",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.6663012504577637,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003742",
+    "track_id": 17,
+    "bbox": [
+      976,
+      370,
+      53,
+      72
+    ],
+    "true_role": "player",
+    "true_jersey": "50",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.8459110260009766,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003743",
+    "track_id": 18,
+    "bbox": [
+      961,
+      477,
+      43,
+      123
+    ],
+    "true_role": "player",
+    "true_jersey": "10",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.846794366836548,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003744",
+    "track_id": 19,
+    "bbox": [
+      891,
+      336,
+      29,
+      74
+    ],
+    "true_role": "referee",
+    "true_jersey": null,
+    "true_team": null,
+    "predicted_role": "referee",
+    "role_confidence": 4.47302770614624,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003745",
+    "track_id": 20,
+    "bbox": [
+      712,
+      470,
+      55,
+      119
+    ],
+    "true_role": "player",
+    "true_jersey": "36",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.6577298641204834,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003746",
+    "track_id": 21,
+    "bbox": [
+      882,
+      373,
+      38,
+      62
+    ],
+    "true_role": "player",
+    "true_jersey": "9",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.528865098953247,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003747",
+    "track_id": 22,
+    "bbox": [
+      843,
+      365,
+      34,
+      72
+    ],
+    "true_role": "player",
+    "true_jersey": "5",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.535529851913452,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3136003748",
+    "track_id": 23,
+    "bbox": [
+      622,
+      400,
+      58,
+      89
+    ],
+    "true_role": "player",
+    "true_jersey": "15",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.6492598056793213,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  }
+]

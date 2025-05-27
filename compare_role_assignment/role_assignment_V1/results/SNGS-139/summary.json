@@ -1,0 +1,34 @@
+{
+    "video_name": "SNGS-139",
+    "num_frames": 750,
+    "num_tracks": 19,
+    "track_roles": {
+        "1": "REF",
+        "2": "TEAM B",
+        "3": "TEAM A",
+        "4": "TEAM B",
+        "5": "TEAM B",
+        "6": "TEAM A",
+        "7": "TEAM A",
+        "8": "TEAM A",
+        "9": "TEAM A",
+        "10": "TEAM A",
+        "11": "GK",
+        "12": "TEAM B",
+        "13": "TEAM B",
+        "14": "TEAM A",
+        "15": "TEAM A",
+        "17": "TEAM A",
+        "19": "TEAM B",
+        "20": "TEAM B",
+        "21": "TEAM B"
+    },
+    "role_counts": {
+        "TEAM A": 9,
+        "TEAM B": 8,
+        "REF": 1,
+        "GK": 1,
+        "OOB": 0,
+        "UNK": 0
+    }
+}

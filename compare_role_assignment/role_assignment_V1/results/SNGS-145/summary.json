@@ -1,0 +1,39 @@
+{
+    "video_name": "SNGS-145",
+    "num_frames": 750,
+    "num_tracks": 24,
+    "track_roles": {
+        "1": "TEAM A",
+        "2": "TEAM A",
+        "3": "TEAM A",
+        "4": "TEAM A",
+        "5": "TEAM A",
+        "6": "TEAM A",
+        "7": "TEAM A",
+        "8": "TEAM B",
+        "9": "TEAM B",
+        "10": "TEAM B",
+        "11": "TEAM B",
+        "12": "TEAM B",
+        "13": "TEAM B",
+        "14": "TEAM B",
+        "15": "TEAM B",
+        "16": "TEAM B",
+        "17": "TEAM B",
+        "18": "REF",
+        "19": "GK",
+        "20": "TEAM B",
+        "22": "TEAM A",
+        "23": "TEAM A",
+        "24": "TEAM A",
+        "25": "TEAM A"
+    },
+    "role_counts": {
+        "TEAM A": 11,
+        "TEAM B": 11,
+        "REF": 1,
+        "GK": 1,
+        "OOB": 0,
+        "UNK": 0
+    }
+}

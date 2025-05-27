@@ -1,0 +1,40 @@
+{
+    "video_name": "SNGS-150",
+    "num_frames": 750,
+    "num_tracks": 25,
+    "track_roles": {
+        "1": "TEAM A",
+        "2": "TEAM A",
+        "3": "TEAM A",
+        "4": "TEAM A",
+        "5": "TEAM B",
+        "6": "TEAM B",
+        "7": "TEAM B",
+        "8": "TEAM B",
+        "9": "TEAM A",
+        "10": "GK",
+        "12": "TEAM A",
+        "13": "TEAM A",
+        "14": "REF",
+        "15": "TEAM A",
+        "16": "TEAM B",
+        "17": "TEAM B",
+        "18": "TEAM A",
+        "19": "TEAM B",
+        "20": "TEAM A",
+        "21": "TEAM B",
+        "22": "TEAM A",
+        "23": "REF",
+        "24": "TEAM B",
+        "25": "TEAM B",
+        "28": "TEAM B"
+    },
+    "role_counts": {
+        "TEAM A": 11,
+        "TEAM B": 11,
+        "REF": 2,
+        "GK": 1,
+        "OOB": 0,
+        "UNK": 0
+    }
+}

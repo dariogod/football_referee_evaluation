@@ -1,0 +1,38 @@
+{
+    "video_name": "SNGS-187",
+    "num_frames": 750,
+    "num_tracks": 23,
+    "track_roles": {
+        "1": "TEAM A",
+        "2": "TEAM B",
+        "4": "TEAM B",
+        "5": "TEAM B",
+        "6": "TEAM A",
+        "7": "REF",
+        "8": "TEAM A",
+        "9": "TEAM B",
+        "10": "TEAM A",
+        "11": "GK",
+        "12": "TEAM A",
+        "13": "TEAM B",
+        "14": "TEAM B",
+        "15": "TEAM B",
+        "16": "TEAM A",
+        "17": "TEAM A",
+        "18": "TEAM B",
+        "19": "TEAM A",
+        "20": "TEAM B",
+        "21": "TEAM A",
+        "22": "TEAM B",
+        "23": "TEAM A",
+        "24": "GK"
+    },
+    "role_counts": {
+        "TEAM A": 10,
+        "TEAM B": 10,
+        "REF": 1,
+        "GK": 2,
+        "OOB": 0,
+        "UNK": 0
+    }
+}

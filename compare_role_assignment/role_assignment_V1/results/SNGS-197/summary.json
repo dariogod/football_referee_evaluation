@@ -1,0 +1,38 @@
+{
+    "video_name": "SNGS-197",
+    "num_frames": 750,
+    "num_tracks": 23,
+    "track_roles": {
+        "1": "TEAM A",
+        "2": "TEAM A",
+        "3": "TEAM A",
+        "4": "TEAM A",
+        "5": "TEAM A",
+        "6": "TEAM A",
+        "7": "TEAM A",
+        "8": "TEAM A",
+        "9": "TEAM A",
+        "10": "TEAM A",
+        "11": "TEAM B",
+        "12": "TEAM B",
+        "13": "TEAM B",
+        "14": "TEAM B",
+        "15": "TEAM B",
+        "16": "TEAM B",
+        "17": "TEAM A",
+        "18": "TEAM B",
+        "19": "TEAM B",
+        "20": "TEAM A",
+        "21": "TEAM B",
+        "22": "TEAM B",
+        "24": "GK"
+    },
+    "role_counts": {
+        "TEAM A": 12,
+        "TEAM B": 10,
+        "REF": 0,
+        "GK": 1,
+        "OOB": 0,
+        "UNK": 0
+    }
+}

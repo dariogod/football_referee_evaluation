@@ -1,0 +1,39 @@
+{
+    "video_name": "SNGS-123",
+    "num_frames": 750,
+    "num_tracks": 24,
+    "track_roles": {
+        "1": "TEAM A",
+        "2": "TEAM A",
+        "3": "TEAM A",
+        "4": "TEAM A",
+        "5": "TEAM A",
+        "6": "TEAM B",
+        "7": "TEAM B",
+        "8": "TEAM B",
+        "9": "TEAM B",
+        "10": "REF",
+        "11": "GK",
+        "13": "TEAM A",
+        "14": "TEAM A",
+        "15": "TEAM B",
+        "16": "GK",
+        "17": "TEAM B",
+        "18": "TEAM A",
+        "19": "TEAM A",
+        "20": "TEAM B",
+        "21": "TEAM A",
+        "22": "TEAM B",
+        "23": "TEAM B",
+        "24": "TEAM B",
+        "25": "TEAM A"
+    },
+    "role_counts": {
+        "TEAM A": 11,
+        "TEAM B": 10,
+        "REF": 1,
+        "GK": 2,
+        "OOB": 0,
+        "UNK": 0
+    }
+}

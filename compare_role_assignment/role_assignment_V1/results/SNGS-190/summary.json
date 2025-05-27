@@ -1,0 +1,38 @@
+{
+    "video_name": "SNGS-190",
+    "num_frames": 750,
+    "num_tracks": 23,
+    "track_roles": {
+        "1": "TEAM A",
+        "2": "TEAM A",
+        "3": "TEAM A",
+        "4": "TEAM A",
+        "5": "TEAM A",
+        "6": "TEAM A",
+        "7": "OOB",
+        "8": "TEAM B",
+        "9": "OOB",
+        "10": "TEAM B",
+        "11": "TEAM B",
+        "12": "TEAM B",
+        "13": "OOB",
+        "14": "OOB",
+        "15": "OOB",
+        "16": "REF",
+        "18": "OOB",
+        "19": "TEAM A",
+        "20": "TEAM B",
+        "21": "TEAM A",
+        "22": "GK",
+        "23": "TEAM A",
+        "24": "GK"
+    },
+    "role_counts": {
+        "TEAM A": 9,
+        "TEAM B": 5,
+        "REF": 1,
+        "GK": 2,
+        "OOB": 6,
+        "UNK": 0
+    }
+}
