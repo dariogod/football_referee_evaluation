@@ -2,6 +2,8 @@
 /data/predictions/
 /models/
 
+compare_role_assignment/role_assingment_V2/test/
+
 # Mac OS
 .DS_Store
 
