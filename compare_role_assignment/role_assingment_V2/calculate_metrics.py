@@ -2,12 +2,13 @@
 """
 Script to calculate metrics for all 4 goodness methods from role assignment outputs.
 Calculates TP, FP, FN, TN, accuracy, precision, recall, and F1 scores for each role.
+Now supports multiple color spaces (rgb, lab, hsv) for each method.
 """
 
 import json
 import argparse
 from pathlib import Path
-from typing import Dict, List, Tuple, Any
+from typing import Dict, List, Tuple, Any, Set
 from collections import defaultdict
 import pandas as pd
 
@@ -28,6 +29,24 @@ def get_sngs_folders(test_dir: str = "test") -> List[Path]:
                 sngs_folders.append(folder)
     
     return sorted(sngs_folders)
+
+
+def discover_methods(folders: List[Path]) -> List[str]:
+    """Discover all available methods by scanning role assignment files."""
+    methods = set()
+    
+    for folder in folders:
+        role_files = list(folder.glob("role_assignments_*.json"))
+        for file in role_files:
+            # Extract method name from filename
+            # Format is: role_assignments_<method>.json
+            filename = file.stem  # Remove .json extension
+            if filename.startswith("role_assignments_"):
+                method = filename.replace("role_assignments_", "")
+                if method:  # Ensure method name is not empty
+                    methods.add(method)
+    
+    return sorted(list(methods))
 
 
 def load_role_assignments(json_path: Path) -> Dict[str, List[Dict[str, Any]]]:
@@ -107,12 +126,15 @@ def calculate_metrics(tp: int, fp: int, fn: int, tn: int) -> Dict[str, float]:
     }
 
 
-def process_method_data(folders: List[Path], method: str) -> Dict[str, Dict[str, float]]:
-    """Process all folders for a specific method and calculate aggregated metrics."""
+def process_method_data(folders: List[Path], method: str) -> Dict[str, Dict[str, Dict[str, float]]]:
+    """Process all folders for a specific method and calculate aggregated metrics for each color space."""
     
-    # Aggregate data across all folders
-    all_gt_roles = []
-    all_pred_roles = []
+    # Define color spaces
+    color_spaces = ["rgb", "lab", "hsv"]
+    
+    # Aggregate data across all folders for each color space
+    all_gt_roles = {cs: [] for cs in color_spaces}
+    all_pred_roles = {cs: [] for cs in color_spaces}
     
     folders_processed = 0
     
@@ -129,79 +151,155 @@ def process_method_data(folders: List[Path], method: str) -> Dict[str, Dict[str,
         for frame_id, frame_data in data.items():
             for person in frame_data:
                 gt_role = normalize_role(person['gt_role'])
-                pred_role = normalize_role(person['pred_role'])
                 
-                # Only include known roles
-                if gt_role != "unknown" and pred_role != "unknown":
-                    all_gt_roles.append(gt_role)
-                    all_pred_roles.append(pred_role)
+                # Handle both old format (string) and new format (dict)
+                if isinstance(person['pred_role'], str):
+                    # Old format - use the same prediction for all color spaces
+                    pred_role = normalize_role(person['pred_role'])
+                    for cs in color_spaces:
+                        if gt_role != "unknown" and pred_role != "unknown":
+                            all_gt_roles[cs].append(gt_role)
+                            all_pred_roles[cs].append(pred_role)
+                else:
+                    # New format - extract prediction for each color space
+                    for cs in color_spaces:
+                        if cs in person['pred_role']:
+                            pred_role = normalize_role(person['pred_role'][cs])
+                            # Only include known roles
+                            if gt_role != "unknown" and pred_role != "unknown":
+                                all_gt_roles[cs].append(gt_role)
+                                all_pred_roles[cs].append(pred_role)
         
         folders_processed += 1
     
-    print(f"  Processed {folders_processed} folders, {len(all_gt_roles)} total predictions")
+    print(f"  Processed {folders_processed} folders")
     
-    # Calculate metrics for each role
-    roles = ["player", "goalkeeper", "referee"]
-    role_metrics = {}
+    # Calculate metrics for each color space
+    color_space_metrics = {}
     
-    for role in roles:
-        tp, fp, fn, tn = calculate_confusion_matrix(all_gt_roles, all_pred_roles, role)
-        role_metrics[role] = calculate_metrics(tp, fp, fn, tn)
+    for cs in color_spaces:
+        if len(all_gt_roles[cs]) == 0:
+            continue
+            
+        print(f"    Color space {cs}: {len(all_gt_roles[cs])} total predictions")
+        
+        # Calculate metrics for each role
+        roles = ["player", "goalkeeper", "referee"]
+        role_metrics = {}
+        
+        for role in roles:
+            tp, fp, fn, tn = calculate_confusion_matrix(all_gt_roles[cs], all_pred_roles[cs], role)
+            role_metrics[role] = calculate_metrics(tp, fp, fn, tn)
+        
+        # Calculate metrics for "outlier" class (goalkeeper + referee vs player)
+        outlier_gt_roles = ["outlier" if role in ["goalkeeper", "referee"] else role for role in all_gt_roles[cs]]
+        outlier_pred_roles = ["outlier" if role in ["goalkeeper", "referee"] else role for role in all_pred_roles[cs]]
+        tp, fp, fn, tn = calculate_confusion_matrix(outlier_gt_roles, outlier_pred_roles, "outlier")
+        role_metrics["outlier"] = calculate_metrics(tp, fp, fn, tn)
+        
+        # Calculate overall metrics (micro-average)
+        total_tp = sum(role_metrics[role]['TP'] for role in roles)
+        total_fp = sum(role_metrics[role]['FP'] for role in roles)
+        total_fn = sum(role_metrics[role]['FN'] for role in roles)
+        total_tn = sum(role_metrics[role]['TN'] for role in roles)
+        
+        role_metrics['All'] = calculate_metrics(total_tp, total_fp, total_fn, total_tn)
+        
+        color_space_metrics[cs] = role_metrics
     
-    # Calculate metrics for "outlier" class (goalkeeper + referee vs player)
-    outlier_gt_roles = ["outlier" if role in ["goalkeeper", "referee"] else role for role in all_gt_roles]
-    outlier_pred_roles = ["outlier" if role in ["goalkeeper", "referee"] else role for role in all_pred_roles]
-    tp, fp, fn, tn = calculate_confusion_matrix(outlier_gt_roles, outlier_pred_roles, "outlier")
-    role_metrics["outlier"] = calculate_metrics(tp, fp, fn, tn)
-    
-    # Calculate overall metrics (micro-average)
-    total_tp = sum(role_metrics[role]['TP'] for role in roles)
-    total_fp = sum(role_metrics[role]['FP'] for role in roles)
-    total_fn = sum(role_metrics[role]['FN'] for role in roles)
-    total_tn = sum(role_metrics[role]['TN'] for role in roles)
-    
-    role_metrics['All'] = calculate_metrics(total_tp, total_fp, total_fn, total_tn)
-    
-    return role_metrics
+    return color_space_metrics
 
 
-def print_results_table(results: Dict[str, Dict[str, Dict[str, float]]]):
-    """Print results in a clean table format."""
+def write_results_table(results: Dict[str, Dict[str, Dict[str, Dict[str, float]]]], output_file: str = "results.txt"):
+    """Write results in a clean table format to a file."""
     
     methods = list(results.keys())
     roles = ["player", "outlier", "goalkeeper", "referee", "All"]
     metrics = ['TP', 'FP', 'FN', 'TN', 'Accuracy', 'Precision', 'Recall', 'F1']
+    color_spaces = ["rgb", "lab", "hsv"]
     
-    for method in methods:
-        print(f"\n{'='*80}")
-        print(f"METHOD: {method.upper()}")
-        print(f"{'='*80}")
+    with open(output_file, 'w') as f:
+        for method in methods:
+            f.write(f"\n{'='*80}\n")
+            f.write(f"METHOD: {method.upper()}\n")
+            f.write(f"{'='*80}\n")
+            
+            # Process each color space for this method
+            for cs in color_spaces:
+                if cs not in results[method]:
+                    continue
+                    
+                f.write(f"\nColor Space: {cs.upper()}\n")
+                f.write(f"{'-'*80}\n")
+                
+                # Create DataFrame for this method and color space
+                data = []
+                for role in roles:
+                    row = [role]
+                    for metric in metrics:
+                        value = results[method][cs][role][metric]
+                        if metric in ['TP', 'FP', 'FN', 'TN']:
+                            row.append(f"{int(value)}")
+                        else:
+                            row.append(f"{value:.4f}")
+                    data.append(row)
+                
+                df = pd.DataFrame(data, columns=['Role'] + metrics)
+                f.write(df.to_string(index=False) + "\n")
         
-        # Create DataFrame for this method
-        data = []
-        for role in roles:
-            row = [role]
-            for metric in metrics:
-                value = results[method][role][metric]
-                if metric in ['TP', 'FP', 'FN', 'TN']:
-                    row.append(f"{int(value)}")
-                else:
-                    row.append(f"{value:.4f}")
-            data.append(row)
+        # Write summary comparison table for each color space
+        for cs in color_spaces:
+            f.write(f"\n{'='*80}\n")
+            f.write(f"SUMMARY COMPARISON - {cs.upper()} (F1 Scores)\n")
+            f.write(f"{'='*80}\n")
+            
+            summary_data = []
+            for method in methods:
+                if cs in results[method]:
+                    row = [method]
+                    for role in ["player", "outlier", "goalkeeper", "referee", "All"]:
+                        f1_score = results[method][cs][role]['F1']
+                        row.append(f"{f1_score:.4f}")
+                    summary_data.append(row)
+            
+            if summary_data:
+                summary_df = pd.DataFrame(summary_data, columns=['Method', 'Player', 'Outlier', 'Goalkeeper', 'Referee', 'All'])
+                f.write(summary_df.to_string(index=False) + "\n")
         
-        df = pd.DataFrame(data, columns=['Role'] + metrics)
-        print(df.to_string(index=False))
+        # Write overall summary comparison table (best color space for each method)
+        f.write(f"\n{'='*80}\n")
+        f.write("BEST COLOR SPACE BY METHOD (Overall F1 Score)\n")
+        f.write(f"{'='*80}\n")
+        
+        best_cs_data = []
+        for method in methods:
+            best_f1 = 0
+            best_cs = ""
+            for cs in color_spaces:
+                if cs in results[method]:
+                    f1 = results[method][cs]['All']['F1']
+                    if f1 > best_f1:
+                        best_f1 = f1
+                        best_cs = cs
+            
+            if best_cs:
+                row = [method, best_cs, f"{best_f1:.4f}"]
+                # Add F1 scores for each role with the best color space
+                for role in ["player", "outlier", "goalkeeper", "referee"]:
+                    f1_score = results[method][best_cs][role]['F1']
+                    row.append(f"{f1_score:.4f}")
+                best_cs_data.append(row)
+        
+        if best_cs_data:
+            best_cs_df = pd.DataFrame(best_cs_data, columns=['Method', 'Best CS', 'Overall F1', 'Player F1', 'Outlier F1', 'Goalkeeper F1', 'Referee F1'])
+            f.write(best_cs_df.to_string(index=False) + "\n")
 
 
 def main():
     """Main function to calculate metrics for all methods."""
-    parser = argparse.ArgumentParser(description='Calculate metrics for all goodness methods')
+    parser = argparse.ArgumentParser(description='Calculate metrics for all goodness methods with multiple color spaces')
     parser.add_argument('--test_dir', default='test',
                        help='Path to the test directory (default: test)')
-    parser.add_argument('--methods', nargs='+', 
-                       choices=['silhouette', 'calinski_harabasz', 'davies_bouldin', 'inertia'],
-                       default=['silhouette', 'calinski_harabasz', 'davies_bouldin', 'inertia'],
-                       help='Goodness methods to analyze (default: all methods)')
     
     args = parser.parse_args()
     
@@ -215,31 +313,25 @@ def main():
     print(f"Found {len(sngs_folders)} SNGS folders to analyze")
     print(f"Folders: {[folder.name for folder in sngs_folders]}")
     
+    # Discover available methods
+    methods = discover_methods(sngs_folders)
+    
+    if not methods:
+        print("No role assignment files found in the SNGS folders")
+        return
+    
+    print(f"\nDiscovered {len(methods)} method(s): {', '.join(methods)}")
+    
     # Process each method
     results = {}
     
-    for method in args.methods:
+    for method in methods:
         print(f"\nProcessing method: {method}")
         results[method] = process_method_data(sngs_folders, method)
     
     # Print results
-    print_results_table(results)
-    
-    # Summary comparison table
-    print(f"\n{'='*80}")
-    print("SUMMARY COMPARISON (F1 Scores)")
-    print(f"{'='*80}")
-    
-    summary_data = []
-    for method in args.methods:
-        row = [method]
-        for role in ["player", "outlier", "goalkeeper", "referee", "All"]:
-            f1_score = results[method][role]['F1']
-            row.append(f"{f1_score:.4f}")
-        summary_data.append(row)
-    
-    summary_df = pd.DataFrame(summary_data, columns=['Method', 'Player', 'Outlier', 'Goalkeeper', 'Referee', 'All'])
-    print(summary_df.to_string(index=False))
+    write_results_table(results)
+    print(f"\nResults written to results.txt")
 
 
 if __name__ == "__main__":

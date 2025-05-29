@@ -22,4 +22,8 @@ class PersonWithJerseyColor(Person):
     jersey_color: RGBColor255
 
 class PersonWithRole(Person):
-    pred_role: Literal["referee", "goalkeeper", "player_left", "player_right", "unknown"] 
+    pred_role: dict[str, str] = {
+        "rgb": "unknown",
+        "lab": "unknown",
+        "hsv": "unknown"
+    }
