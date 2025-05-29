@@ -1,0 +1,21 @@
+[
+  {
+    "id": "3145008721",
+    "track_id": 25,
+    "bbox": [
+      1314,
+      438,
+      56,
+      153
+    ],
+    "true_role": "goalkeeper",
+    "true_jersey": null,
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.617361545562744,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  }
+]

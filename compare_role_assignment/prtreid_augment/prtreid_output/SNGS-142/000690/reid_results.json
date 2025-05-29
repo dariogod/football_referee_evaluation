@@ -1,0 +1,116 @@
+[
+  {
+    "id": "3142011970",
+    "track_id": 14,
+    "bbox": [
+      1277,
+      626,
+      59,
+      158
+    ],
+    "true_role": "player",
+    "true_jersey": "9",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.46736478805542,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3142011971",
+    "track_id": 19,
+    "bbox": [
+      270,
+      586,
+      118,
+      125
+    ],
+    "true_role": "player",
+    "true_jersey": "4",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.6854171752929688,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3142011972",
+    "track_id": 20,
+    "bbox": [
+      560,
+      485,
+      98,
+      108
+    ],
+    "true_role": "player",
+    "true_jersey": "14",
+    "true_team": "left",
+    "predicted_role": "player",
+    "role_confidence": 3.6573801040649414,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3142011973",
+    "track_id": 23,
+    "bbox": [
+      797,
+      478,
+      74,
+      101
+    ],
+    "true_role": "player",
+    "true_jersey": "93",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.5458788871765137,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3142011974",
+    "track_id": 24,
+    "bbox": [
+      784,
+      520,
+      50,
+      79
+    ],
+    "true_role": "player",
+    "true_jersey": "50",
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.8333652019500732,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  },
+  {
+    "id": "3142011975",
+    "track_id": 25,
+    "bbox": [
+      1347,
+      479,
+      59,
+      104
+    ],
+    "true_role": "goalkeeper",
+    "true_jersey": null,
+    "true_team": "right",
+    "predicted_role": "player",
+    "role_confidence": 3.169116735458374,
+    "embedding_shape": [
+      1,
+      256
+    ]
+  }
+]
