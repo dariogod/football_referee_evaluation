@@ -18,7 +18,11 @@ from role_assigner_methods import (
     DynamicKMeansCalinski,
     DynamicKMeansDaviesBouldin,
     DynamicKMeansInertia,
-    HDBSCANRoleAssigner
+    HDBSCANRoleAssigner,
+    DBScanRoleAssigner,
+    DBScanMinEps,
+    DBScanMaxEps,
+    DBScanAvgEps
 )
 
 
@@ -28,7 +32,11 @@ METHOD_CLASSES: Dict[str, Type[BaseRoleAssigner]] = {
     'dynamic_kmeans_calinski_harabasz': DynamicKMeansCalinski,
     'dynamic_kmeans_davies_bouldin': DynamicKMeansDaviesBouldin,
     'dynamic_kmeans_inertia': DynamicKMeansInertia,
-    'hdbscan': HDBSCANRoleAssigner
+    'hdbscan': HDBSCANRoleAssigner,
+    'dbscan': DBScanRoleAssigner,
+    'dbscan_min_eps': DBScanMinEps,
+    'dbscan_max_eps': DBScanMaxEps,
+    'dbscan_avg_eps': DBScanAvgEps
 }
 
 
