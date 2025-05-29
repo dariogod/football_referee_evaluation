@@ -3,6 +3,9 @@
 /models/
 
 compare_role_assignment/role_assingment_V2/test/
+compare_role_assignment/prtreid_augment/prtreid_output/
+compare_role_assignment/prtreid_augment/augmented_output/
+compare_role_assignment/prtreid_augment/test/
 
 # Mac OS
 .DS_Store
