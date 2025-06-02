@@ -12,6 +12,15 @@ from scipy.interpolate import griddata
 from matplotlib.image import imread
 import math
 
+# KDE parameters (same as ground truth script)
+KDE_THRESHOLD = 0.05
+KDE_BANDWIDTH_ADJUSTMENT = 1.5
+KDE_LEVELS = 10
+
+# Define pitch dimensions in meters
+PITCH_LENGTH = 105  # meters
+PITCH_WIDTH = 68    # meters
+
 # Base path for test directories
 base_path = "data/predictions/SoccerNet/SN-GSR-2025/test"
 model = "yolo" # "yolo" or "dfine"
@@ -35,6 +44,10 @@ pitch_height = 0
 duel_distances = []
 duel_angles = []
 
+# Initialize frame counters
+total_frames = 0
+frames_with_referee = 0
+
 # Find all SNGS-XXX folders in the test directory
 sngs_folders = glob.glob(os.path.join(base_path, "SNGS-*"))
 
@@ -57,9 +70,13 @@ for sngs_folder in sngs_folders:
     
     # Extract metrics from results
     for frame_id, frame_data in results.items():
+        total_frames += 1
+        
         if frame_data is None:
             continue
-    
+        
+        frames_with_referee += 1
+        
         # Track if referee is inside rectangle
         inside_rectangle_counts[frame_data["inside_rectangle"]] += 1
         
@@ -75,9 +92,15 @@ for sngs_folder in sngs_folders:
             scale_y = y_max / 68
             scale = (scale_x + scale_y) / 2
             
-            # Store position
-            referee_positions_x.append(x)
-            referee_positions_y.append(y)
+            # Convert pixel coordinates to meter coordinates 
+            # Assuming the evaluation uses image coordinates with (0,0) at top-left
+            # Convert to pitch coordinates with (0,0) at bottom-left, scaled to meters
+            ref_x_meters = (x / x_max) * PITCH_LENGTH
+            ref_y_meters = (y / y_max) * PITCH_WIDTH 
+            
+            # Store position in meters
+            referee_positions_x.append(ref_x_meters)
+            referee_positions_y.append(ref_y_meters)
             
             # Update pitch dimensions
             pitch_width = max(pitch_width, x_max)
@@ -89,12 +112,12 @@ for sngs_folder in sngs_folders:
             for duel in frame_data["duels"]:
                 # Calculate referee distance if not present
                 if "referee_distance" not in duel and "player_1" in duel and "player_2" in duel:
-                    # Calculate center point of the duel
+                    # Calculate center point of the duel (in pixels)
                     duel_x = (duel["player_1"]["x"] + duel["player_2"]["x"]) / 2
                     duel_y = (duel["player_1"]["y"] + duel["player_2"]["y"]) / 2
                     
-                    # Calculate distance from referee to duel center
-                    dx = duel_x - x
+                    # Calculate distance from referee to duel center in pixels, then convert to meters
+                    dx = duel_x - x  # Using original pixel coordinates
                     dy = duel_y - y
                     duel["referee_distance"] = math.sqrt(dx**2 + dy**2) / scale
                     filtered_duels.append(duel)
@@ -128,6 +151,20 @@ for sngs_folder in sngs_folders:
 
 print(f"Processed {processed_files} evaluation files")
 print(f"Total data points: {len(referee_distances)} distances, {len(referee_angles)} angles")
+
+# Print statistics similar to ground truth script
+print("\n" + "="*60)
+print("EVALUATION STATISTICS")
+print("="*60)
+print(f"Processed files: {processed_files}")
+print(f"Total frames: {total_frames}")
+print(f"Frames with referee detected: {frames_with_referee}")
+if total_frames > 0:
+    percentage = (frames_with_referee / total_frames) * 100
+    print(f"Percentage with referee detected: {percentage:.2f}%")
+print(f"Distance measurements: {len(referee_distances)}")
+print(f"Angle measurements: {len(referee_angles)}")
+print("="*60)
 
 # Create plots using aggregated data
 plt.figure(figsize=(15, 10))
@@ -213,34 +250,130 @@ plt.close()
 
 # 3. Create heatmap of referee positions
 if referee_positions_x and referee_positions_y:
-    # Alternative heatmap using seaborn's kdeplot (smoother representation)
+    # 3a. Create heatmap of referee positions (ORIGINAL)
     plt.figure(figsize=(14, 10))
     ax = plt.subplot(1, 1, 1)
     
     # Use the soccer pitch image as background
-    pitch_img = imread('src/utils/pitch.png')
-    ax.imshow(pitch_img, extent=[0, pitch_width, pitch_height, 0])
+    if os.path.exists('src/utils/pitch_2.png'):
+        pitch_img = imread('src/utils/pitch_2.png')
+        # Assume the pitch image dimensions match the meter coordinates
+        ax.imshow(pitch_img, extent=[0, PITCH_LENGTH, PITCH_WIDTH, 0])
     
-    # Create kernel density estimate plot
-    sns.kdeplot(
+    # Create kernel density estimate plot using original data only
+    kde_plot = sns.kdeplot(
         x=referee_positions_x,
         y=referee_positions_y,
         cmap="YlOrRd",
         fill=True,
         alpha=0.7,
-        levels=5,
-        thresh=0.3
+        levels=KDE_LEVELS,
+        thresh=KDE_THRESHOLD,
+        bw_adjust=KDE_BANDWIDTH_ADJUSTMENT
     )
     
-    plt.xlim(0, pitch_width)
-    plt.ylim(0, pitch_height)
+    plt.xlim(0, PITCH_LENGTH)
+    plt.ylim(0, PITCH_WIDTH)
     plt.gca().invert_yaxis()  # Invert y-axis to match image coordinates
     
-    plt.title('Referee Position Density Map (KDE) - Aggregated', fontsize=16)
-    plt.xlabel('X Position (pixels)')
-    plt.ylabel('Y Position (pixels)')
+    plt.xlabel('X Position (meters)', fontsize=20)
+    plt.ylabel('Y Position (meters)', fontsize=20)
+    plt.xticks(fontsize=16)
+    plt.yticks(fontsize=16)
     
-    plt.savefig(os.path.join(output_dir, 'aggregated_referee_position_kde.png'), dpi=300)
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, 'aggregated_referee_position_kde_original.png'), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    # 3b. Create heatmap of referee positions (SYMMETRICALLY ADJUSTED)
+    plt.figure(figsize=(14, 10))
+    ax = plt.subplot(1, 1, 1)
+    
+    # Create symmetrical data by adding 180-degree rotated positions
+    symmetrical_x = []
+    symmetrical_y = []
+    
+    # Add original positions
+    symmetrical_x.extend(referee_positions_x)
+    symmetrical_y.extend(referee_positions_y)
+    
+    # Add 180-degree rotated positions around the center of the pitch
+    for x, y in zip(referee_positions_x, referee_positions_y):
+        # Rotate 180 degrees around center (52.5, 34)
+        rotated_x = PITCH_LENGTH - x
+        rotated_y = PITCH_WIDTH - y
+        symmetrical_x.append(rotated_x)
+        symmetrical_y.append(rotated_y)
+    
+    # Use the soccer pitch image as background
+    if os.path.exists('src/utils/pitch_2.png'):
+        pitch_img = imread('src/utils/pitch_2.png')
+        # Assume the pitch image dimensions match the meter coordinates
+        ax.imshow(pitch_img, extent=[0, PITCH_LENGTH, PITCH_WIDTH, 0])
+    
+    # Create kernel density estimate plot using symmetrical data
+    kde_plot = sns.kdeplot(
+        x=symmetrical_x,
+        y=symmetrical_y,
+        cmap="YlOrRd",
+        fill=True,
+        alpha=0.7,
+        levels=KDE_LEVELS,
+        thresh=KDE_THRESHOLD,
+        bw_adjust=KDE_BANDWIDTH_ADJUSTMENT
+    )
+    
+    plt.xlim(0, PITCH_LENGTH)
+    plt.ylim(0, PITCH_WIDTH)
+    plt.gca().invert_yaxis()  # Invert y-axis to match image coordinates
+    
+    plt.xlabel('X Position (meters)', fontsize=20)
+    plt.ylabel('Y Position (meters)', fontsize=20)
+    plt.xticks(fontsize=16)
+    plt.yticks(fontsize=16)
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, 'aggregated_referee_position_kde_symmetrical.png'), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    # 3c. Create scatter plot of raw referee positions
+    plt.figure(figsize=(14, 10))
+    ax = plt.subplot(1, 1, 1)
+    
+    # Create symmetrical data by adding 180-degree rotated positions
+    symmetrical_x = []
+    symmetrical_y = []
+    
+    # Add original positions
+    symmetrical_x.extend(referee_positions_x)
+    symmetrical_y.extend(referee_positions_y)
+    
+    # Add 180-degree rotated positions around the center of the pitch
+    for x, y in zip(referee_positions_x, referee_positions_y):
+        # Rotate 180 degrees around center (52.5, 34)
+        rotated_x = PITCH_LENGTH - x
+        rotated_y = PITCH_WIDTH - y
+        symmetrical_x.append(rotated_x)
+        symmetrical_y.append(rotated_y)
+    
+    # Use the soccer pitch image as background
+    if os.path.exists('src/utils/pitch_2.png'):
+        pitch_img = imread('src/utils/pitch_2.png')
+        # Assume the pitch image dimensions match the meter coordinates
+        ax.imshow(pitch_img, extent=[0, PITCH_LENGTH, PITCH_WIDTH, 0])
+    
+    # Create scatter plot of all referee positions
+    plt.scatter(symmetrical_x, symmetrical_y, alpha=0.4, s=8, c='red', edgecolors='darkred', linewidth=0.2)
+    
+    plt.xlim(0, PITCH_LENGTH)
+    plt.ylim(0, PITCH_WIDTH)
+    plt.gca().invert_yaxis()  # Invert y-axis to match image coordinates
+    
+    plt.title(f'Raw Referee Positions Scatter Plot - Symmetrical Distribution (n={len(symmetrical_x)}) - Evaluation Data', fontsize=16)
+    plt.xlabel('X Position (meters)')
+    plt.ylabel('Y Position (meters)')
+    
+    plt.savefig(os.path.join(output_dir, 'aggregated_referee_positions_scatter.png'), dpi=300)
     plt.close()
 
 # NEW: Fit curve on distance distribution

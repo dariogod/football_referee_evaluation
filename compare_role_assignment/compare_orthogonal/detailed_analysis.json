@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "prtreid_only": 2329,
+    "dbscan_only": 871,
+    "both_correct": 44076,
+    "both_wrong": 1196,
+    "prtreid_accuracy": 95.7356824558508,
+    "dbscan_accuracy": 92.72776035649447
+  },
+  "role_analysis": {
+    "player": {
+      "total": 42641,
+      "prtreid_correct": 42309,
+      "dbscan_correct": 41862,
+      "both_correct": 41568,
+      "prtreid_accuracy": 99.22140662742432,
+      "dbscan_accuracy": 98.17311976736005
+    },
+    "referee": {
+      "total": 4098,
+      "prtreid_correct": 3136,
+      "dbscan_correct": 3085,
+      "both_correct": 2508,
+      "prtreid_accuracy": 76.52513421181064,
+      "dbscan_accuracy": 75.28062469497316
+    },
+    "goalkeeper": {
+      "total": 1733,
+      "prtreid_correct": 960,
+      "dbscan_correct": 0,
+      "both_correct": 0,
+      "prtreid_accuracy": 55.39526832083092,
+      "dbscan_accuracy": 0.0
+    }
+  },
+  "total_detections": 48472,
+  "methodology": {
+    "role_simplification": "player_left and player_right simplified to player",
+    "models_compared": [
+      "PRTReid (mapped predictions)",
+      "DBSCAN (LAB color space)"
+    ],
+    "correctness_criteria": "Exact match with ground truth role"
+  }
+}

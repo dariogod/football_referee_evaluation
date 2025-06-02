@@ -159,7 +159,7 @@ def print_class_distribution(y_true, y_pred):
 
 if __name__ == "__main__":
 
-    confidence_threshold = 3.564
+    confidence_threshold = 0
 
     # Define base directory
     base_dir = "prtreid_output"

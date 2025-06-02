@@ -11,6 +11,8 @@ print("Processing SoccerNet test set...")
 test_folders = get_test_folders()
 
 for folder in test_folders:
+    # if folder.name not in ["SNGS-199", "SNGS-200"]:
+    #     continue
     print(f"Processing folder: {folder.name}")
     
     # Convert annotations to Person objects

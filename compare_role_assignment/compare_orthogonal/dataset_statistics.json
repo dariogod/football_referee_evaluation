@@ -1,0 +1,260 @@
+{
+  "total_clips": 49,
+  "total_frames": 3675,
+  "total_detections": 52892,
+  "clips_with_missing_prtreid": 0,
+  "detections_with_missing_prtreid": 0,
+  "role_distribution": {
+    "player_left": 23169,
+    "player_right": 23285,
+    "referee": 4492,
+    "goalkeeper": 1946
+  },
+  "clips_summary": {
+    "SNGS-116": {
+      "frames": 75,
+      "detections": 1076,
+      "missing_prtreid": 0
+    },
+    "SNGS-117": {
+      "frames": 75,
+      "detections": 837,
+      "missing_prtreid": 0
+    },
+    "SNGS-118": {
+      "frames": 75,
+      "detections": 1013,
+      "missing_prtreid": 0
+    },
+    "SNGS-119": {
+      "frames": 75,
+      "detections": 775,
+      "missing_prtreid": 0
+    },
+    "SNGS-120": {
+      "frames": 75,
+      "detections": 1108,
+      "missing_prtreid": 0
+    },
+    "SNGS-121": {
+      "frames": 75,
+      "detections": 1074,
+      "missing_prtreid": 0
+    },
+    "SNGS-122": {
+      "frames": 75,
+      "detections": 1090,
+      "missing_prtreid": 0
+    },
+    "SNGS-123": {
+      "frames": 75,
+      "detections": 1178,
+      "missing_prtreid": 0
+    },
+    "SNGS-124": {
+      "frames": 75,
+      "detections": 893,
+      "missing_prtreid": 0
+    },
+    "SNGS-125": {
+      "frames": 75,
+      "detections": 858,
+      "missing_prtreid": 0
+    },
+    "SNGS-126": {
+      "frames": 75,
+      "detections": 985,
+      "missing_prtreid": 0
+    },
+    "SNGS-127": {
+      "frames": 75,
+      "detections": 1383,
+      "missing_prtreid": 0
+    },
+    "SNGS-128": {
+      "frames": 75,
+      "detections": 1335,
+      "missing_prtreid": 0
+    },
+    "SNGS-129": {
+      "frames": 75,
+      "detections": 1158,
+      "missing_prtreid": 0
+    },
+    "SNGS-130": {
+      "frames": 75,
+      "detections": 1084,
+      "missing_prtreid": 0
+    },
+    "SNGS-131": {
+      "frames": 75,
+      "detections": 1331,
+      "missing_prtreid": 0
+    },
+    "SNGS-132": {
+      "frames": 75,
+      "detections": 1068,
+      "missing_prtreid": 0
+    },
+    "SNGS-133": {
+      "frames": 75,
+      "detections": 1110,
+      "missing_prtreid": 0
+    },
+    "SNGS-134": {
+      "frames": 75,
+      "detections": 838,
+      "missing_prtreid": 0
+    },
+    "SNGS-135": {
+      "frames": 75,
+      "detections": 1180,
+      "missing_prtreid": 0
+    },
+    "SNGS-136": {
+      "frames": 75,
+      "detections": 841,
+      "missing_prtreid": 0
+    },
+    "SNGS-137": {
+      "frames": 75,
+      "detections": 838,
+      "missing_prtreid": 0
+    },
+    "SNGS-138": {
+      "frames": 75,
+      "detections": 1184,
+      "missing_prtreid": 0
+    },
+    "SNGS-139": {
+      "frames": 75,
+      "detections": 983,
+      "missing_prtreid": 0
+    },
+    "SNGS-140": {
+      "frames": 75,
+      "detections": 1256,
+      "missing_prtreid": 0
+    },
+    "SNGS-141": {
+      "frames": 75,
+      "detections": 974,
+      "missing_prtreid": 0
+    },
+    "SNGS-142": {
+      "frames": 75,
+      "detections": 1029,
+      "missing_prtreid": 0
+    },
+    "SNGS-143": {
+      "frames": 75,
+      "detections": 681,
+      "missing_prtreid": 0
+    },
+    "SNGS-144": {
+      "frames": 75,
+      "detections": 920,
+      "missing_prtreid": 0
+    },
+    "SNGS-145": {
+      "frames": 75,
+      "detections": 879,
+      "missing_prtreid": 0
+    },
+    "SNGS-146": {
+      "frames": 75,
+      "detections": 664,
+      "missing_prtreid": 0
+    },
+    "SNGS-147": {
+      "frames": 75,
+      "detections": 560,
+      "missing_prtreid": 0
+    },
+    "SNGS-148": {
+      "frames": 75,
+      "detections": 943,
+      "missing_prtreid": 0
+    },
+    "SNGS-149": {
+      "frames": 75,
+      "detections": 982,
+      "missing_prtreid": 0
+    },
+    "SNGS-150": {
+      "frames": 75,
+      "detections": 1029,
+      "missing_prtreid": 0
+    },
+    "SNGS-187": {
+      "frames": 75,
+      "detections": 1399,
+      "missing_prtreid": 0
+    },
+    "SNGS-188": {
+      "frames": 75,
+      "detections": 1643,
+      "missing_prtreid": 0
+    },
+    "SNGS-189": {
+      "frames": 75,
+      "detections": 1202,
+      "missing_prtreid": 0
+    },
+    "SNGS-190": {
+      "frames": 75,
+      "detections": 1102,
+      "missing_prtreid": 0
+    },
+    "SNGS-191": {
+      "frames": 75,
+      "detections": 1165,
+      "missing_prtreid": 0
+    },
+    "SNGS-192": {
+      "frames": 75,
+      "detections": 1088,
+      "missing_prtreid": 0
+    },
+    "SNGS-193": {
+      "frames": 75,
+      "detections": 1170,
+      "missing_prtreid": 0
+    },
+    "SNGS-194": {
+      "frames": 75,
+      "detections": 1446,
+      "missing_prtreid": 0
+    },
+    "SNGS-195": {
+      "frames": 75,
+      "detections": 1274,
+      "missing_prtreid": 0
+    },
+    "SNGS-196": {
+      "frames": 75,
+      "detections": 1068,
+      "missing_prtreid": 0
+    },
+    "SNGS-197": {
+      "frames": 75,
+      "detections": 1310,
+      "missing_prtreid": 0
+    },
+    "SNGS-198": {
+      "frames": 75,
+      "detections": 1390,
+      "missing_prtreid": 0
+    },
+    "SNGS-199": {
+      "frames": 75,
+      "detections": 1326,
+      "missing_prtreid": 0
+    },
+    "SNGS-200": {
+      "frames": 75,
+      "detections": 1172,
+      "missing_prtreid": 0
+    }
+  }
+}

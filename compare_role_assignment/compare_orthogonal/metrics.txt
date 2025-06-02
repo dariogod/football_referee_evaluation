@@ -1,0 +1,103 @@
+FOOTBALL REFEREE EVALUATION - ROLE CLASSIFICATION METRICS
+============================================================
+Excluded datasets: SNGS-125, SNGS-190
+Classes evaluated: player, goalkeeper, referee
+
+Total predictions for dbscan_rgb: 50932
+
+DBSCAN_RGB CONFUSION MATRIX:
+============================================================
+Actual\Predicted  goalkeeper      player     referee
+----------------------------------------------------
+goalkeeper              246        1582          12
+player                  256       44397         131
+referee                  69        2343        1896
+----------------------------------------------------
+Total         571       48322        2039
+
+Overall Accuracy: 0.9137
+
+DBSCAN_RGB METRICS:
+================================================================================
+Class        TP     FP     FN     TN     Accuracy   Precision  Recall   F1      
+--------------------------------------------------------------------------------
+player       44397  3925   387    2223   0.9153     0.9188     0.9914   0.9537  
+goalkeeper   246    325    1594   48767  0.9623     0.4308     0.1337   0.2041  
+referee      1896   143    2412   46481  0.9498     0.9299     0.4401   0.5974  
+
+Total predictions for dbscan_lab: 50932
+
+DBSCAN_LAB CONFUSION MATRIX:
+============================================================
+Actual\Predicted  goalkeeper      player     referee
+----------------------------------------------------
+goalkeeper              520        1300          20
+player                  382       44126         276
+referee                 100        1087        3121
+----------------------------------------------------
+Total        1002       46513        3417
+
+Overall Accuracy: 0.9379
+
+DBSCAN_LAB METRICS:
+================================================================================
+Class        TP     FP     FN     TN     Accuracy   Precision  Recall   F1      
+--------------------------------------------------------------------------------
+player       44126  2387   658    3761   0.9402     0.9487     0.9853   0.9666  
+goalkeeper   520    482    1320   48610  0.9646     0.5190     0.2826   0.3659  
+referee      3121   296    1187   46328  0.9709     0.9134     0.7245   0.8080  
+
+Total predictions for dbscan_hsv: 50932
+
+DBSCAN_HSV CONFUSION MATRIX:
+============================================================
+Actual\Predicted  goalkeeper      player     referee
+----------------------------------------------------
+goalkeeper              150        1690           0
+player                  663       43561         560
+referee                 166        3324         818
+----------------------------------------------------
+Total         979       48575        1378
+
+Overall Accuracy: 0.8743
+
+DBSCAN_HSV METRICS:
+================================================================================
+Class        TP     FP     FN     TN     Accuracy   Precision  Recall   F1      
+--------------------------------------------------------------------------------
+player       43561  5014   1223   1134   0.8775     0.8968     0.9727   0.9332  
+goalkeeper   150    829    1690   48263  0.9505     0.1532     0.0815   0.1064  
+referee      818    560    3490   46064  0.9205     0.5936     0.1899   0.2877  
+
+Total predictions for prtreid: 50747
+
+PRTREID CONFUSION MATRIX:
+============================================================
+Actual\Predicted  goalkeeper      player     referee
+----------------------------------------------------
+goalkeeper             1030         708          66
+player                  218       44424          33
+referee                  37        1041        3190
+----------------------------------------------------
+Total        1285       46173        3289
+
+Overall Accuracy: 0.9586
+
+PRTREID METRICS:
+================================================================================
+Class        TP     FP     FN     TN     Accuracy   Precision  Recall   F1      
+--------------------------------------------------------------------------------
+player       44424  1749   251    4323   0.9606     0.9621     0.9944   0.9780  
+goalkeeper   1030   255    774    48688  0.9797     0.8016     0.5710   0.6669  
+referee      3190   99     1078   46380  0.9768     0.9699     0.7474   0.8443  
+
+
+SUMMARY STATISTICS:
+========================================
+dbscan_rgb: 50932 total predictions
+dbscan_lab: 50932 total predictions
+dbscan_hsv: 50932 total predictions
+prtreid: 50747 total predictions
+
+Datasets included: 47
+Datasets excluded: 2

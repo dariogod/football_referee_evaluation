@@ -1,0 +1,276 @@
+CLUSTERING ANALYSIS REPORT
+==================================================
+
+SUMMARY STATISTICS:
+Frames analyzed: 50
+Total player colors: 564
+Total cluster centers: 100
+Total reassigned unclassified: 9
+Total non-reassigned unclassified: 73
+Reassignment success rate: 11.0%
+
+NON-REASSIGNED COLOR ANALYSIS:
+RGB ranges for non-reassigned:
+  Red: 88.0 - 211.0
+  Green: 39.0 - 213.0
+  Blue: 44.0 - 215.0
+
+Average non-reassigned color (RGB):
+  (163.7, 155.7, 151.1)
+
+Standard deviation of non-reassigned colors:
+  (27.8, 44.0, 52.3)
+
+CLUSTER CENTER ANALYSIS:
+Average cluster center (RGB):
+  (153.3, 117.8, 114.4)
+
+FRAME-BY-FRAME BREAKDOWN:
+Frame 1: 000010.jpg
+  Players: 16, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(179, 177, 192)]
+
+Frame 2: 000020.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(177, 175, 191), (198, 202, 204)]
+
+Frame 3: 000030.jpg
+  Players: 16, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(179, 177, 193)]
+
+Frame 4: 000060.jpg
+  Players: 17, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(161, 152, 151)]
+
+Frame 5: 000080.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(178, 175, 193), (106, 58, 52)]
+
+Frame 6: 000090.jpg
+  Players: 16, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(211, 209, 212)]
+
+Frame 7: 000100.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(104, 47, 44), (192, 193, 197)]
+
+Frame 8: 000130.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 1, Non-reassigned: 2
+  Non-reassigned colors: [(174, 171, 159), (161, 153, 152)]
+
+Frame 9: 000140.jpg
+  Players: 16, Clusters: 2
+  Reassigned: 1, Non-reassigned: 1
+  Non-reassigned colors: [(137, 39, 48)]
+
+Frame 10: 000150.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(199, 195, 207), (201, 192, 202)]
+
+Frame 11: 000160.jpg
+  Players: 17, Clusters: 2
+  Reassigned: 1, Non-reassigned: 0
+
+Frame 12: 000180.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(185, 190, 188)]
+
+Frame 13: 000200.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(179, 173, 177)]
+
+Frame 14: 000210.jpg
+  Players: 14, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(202, 200, 203)]
+
+Frame 15: 000250.jpg
+  Players: 14, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(194, 197, 204)]
+
+Frame 16: 000260.jpg
+  Players: 13, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(195, 199, 204)]
+
+Frame 17: 000280.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(141, 60, 52)]
+
+Frame 18: 000290.jpg
+  Players: 16, Clusters: 2
+  Reassigned: 1, Non-reassigned: 0
+
+Frame 19: 000300.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 1, Non-reassigned: 1
+  Non-reassigned colors: [(178, 180, 186)]
+
+Frame 20: 000310.jpg
+  Players: 14, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(164, 166, 145), (137, 68, 59)]
+
+Frame 21: 000320.jpg
+  Players: 14, Clusters: 2
+  Reassigned: 1, Non-reassigned: 2
+  Non-reassigned colors: [(181, 183, 189), (163, 161, 156)]
+
+Frame 22: 000330.jpg
+  Players: 15, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(177, 180, 186), (127, 57, 46)]
+
+Frame 23: 000340.jpg
+  Players: 16, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(177, 182, 184)]
+
+Frame 24: 000360.jpg
+  Players: 14, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(143, 67, 58)]
+
+Frame 25: 000370.jpg
+  Players: 12, Clusters: 2
+  Reassigned: 0, Non-reassigned: 3
+  Non-reassigned colors: [(177, 180, 181), (141, 67, 57), (122, 146, 73)]
+
+Frame 26: 000380.jpg
+  Players: 12, Clusters: 2
+  Reassigned: 1, Non-reassigned: 2
+  Non-reassigned colors: [(121, 147, 74), (187, 188, 192)]
+
+Frame 27: 000390.jpg
+  Players: 11, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(183, 184, 187), (134, 64, 51)]
+
+Frame 28: 000400.jpg
+  Players: 11, Clusters: 2
+  Reassigned: 1, Non-reassigned: 1
+  Non-reassigned colors: [(186, 189, 191)]
+
+Frame 29: 000410.jpg
+  Players: 11, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(146, 141, 129)]
+
+Frame 30: 000430.jpg
+  Players: 8, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(207, 209, 209), (151, 151, 137)]
+
+Frame 31: 000440.jpg
+  Players: 7, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(209, 213, 215), (157, 145, 132)]
+
+Frame 32: 000460.jpg
+  Players: 7, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(144, 140, 127)]
+
+Frame 33: 000470.jpg
+  Players: 5, Clusters: 2
+  Reassigned: 0, Non-reassigned: 3
+  Non-reassigned colors: [(200, 204, 208), (172, 172, 177), (139, 134, 124)]
+
+Frame 34: 000480.jpg
+  Players: 5, Clusters: 2
+  Reassigned: 0, Non-reassigned: 3
+  Non-reassigned colors: [(171, 171, 177), (88, 87, 57), (145, 146, 132)]
+
+Frame 35: 000490.jpg
+  Players: 5, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(126, 153, 72), (138, 138, 126)]
+
+Frame 36: 000500.jpg
+  Players: 4, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(177, 177, 183), (124, 125, 113)]
+
+Frame 37: 000510.jpg
+  Players: 4, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(204, 208, 211), (158, 156, 159)]
+
+Frame 38: 000520.jpg
+  Players: 4, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(171, 170, 176), (136, 138, 125)]
+
+Frame 39: 000530.jpg
+  Players: 5, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(201, 205, 208), (150, 147, 135)]
+
+Frame 40: 000550.jpg
+  Players: 4, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(178, 177, 183)]
+
+Frame 41: 000560.jpg
+  Players: 5, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(136, 130, 115)]
+
+Frame 42: 000570.jpg
+  Players: 5, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(121, 112, 96)]
+
+Frame 43: 000580.jpg
+  Players: 4, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(166, 165, 169), (133, 125, 107)]
+
+Frame 44: 000590.jpg
+  Players: 5, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(149, 142, 127)]
+
+Frame 45: 000600.jpg
+  Players: 6, Clusters: 2
+  Reassigned: 0, Non-reassigned: 2
+  Non-reassigned colors: [(183, 189, 193), (179, 183, 183)]
+
+Frame 46: 000610.jpg
+  Players: 10, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(168, 176, 181)]
+
+Frame 47: 000620.jpg
+  Players: 12, Clusters: 2
+  Reassigned: 1, Non-reassigned: 1
+  Non-reassigned colors: [(174, 181, 185)]
+
+Frame 48: 000630.jpg
+  Players: 13, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(179, 186, 189)]
+
+Frame 49: 000640.jpg
+  Players: 14, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(176, 181, 184)]
+
+Frame 50: 000680.jpg
+  Players: 12, Clusters: 2
+  Reassigned: 0, Non-reassigned: 1
+  Non-reassigned colors: [(142, 145, 145)]
+

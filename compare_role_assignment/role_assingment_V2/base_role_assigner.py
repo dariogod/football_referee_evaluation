@@ -125,18 +125,11 @@ class BaseRoleAssigner(ABC):
         """Assign default roles when clustering is not possible."""
         result = []
         for person in persons_with_color:
-            if person.pitch_coord is None:
-                result.append(PersonWithRole(**person.dict(), pred_role={
-                    "rgb": "unknown",
-                    "lab": "unknown", 
-                    "hsv": "unknown"
-                }))
-            else:
-                result.append(PersonWithRole(**person.dict(), pred_role={
-                    "rgb": "referee",
-                    "lab": "referee",
-                    "hsv": "referee"
-                }))
+            result.append(PersonWithRole(**person.dict(), pred_role={
+                "rgb": "player",
+                "lab": "player", 
+                "hsv": "player"
+            }))
         return result
     
     def _determine_left_right_clusters(self, valid_persons: List[PersonWithJerseyColor],
@@ -178,7 +171,7 @@ class BaseRoleAssigner(ABC):
         
         for person in persons_with_color:
             # Initialize pred_role dict
-            pred_role = {"rgb": "unknown", "lab": "unknown", "hsv": "unknown"}
+            pred_role = {"rgb": "player", "lab": "player", "hsv": "player"}
             
             if person.pitch_coord is None or person.jersey_color is None:
                 # No pitch coordinates or jersey color, assign as unknown for all color spaces
@@ -210,10 +203,10 @@ class BaseRoleAssigner(ABC):
                                     else:
                                         pred_role[color_space] = "player_right"
                                 else:
-                                    pred_role[color_space] = "referee"
+                                    pred_role[color_space] = "player"
                             except ValueError:
                                 # person_idx not in non_outlier_indices, treat as referee
-                                pred_role[color_space] = "referee"
+                                pred_role[color_space] = "player"
                     
                     result.append(PersonWithRole(**person.dict(), pred_role=pred_role))
         

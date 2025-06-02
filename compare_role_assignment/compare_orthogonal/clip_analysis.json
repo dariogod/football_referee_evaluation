@@ -1,0 +1,890 @@
+{
+  "clip_analysis": {
+    "SNGS-122": {
+      "total": 1090,
+      "prtreid_correct": 1078,
+      "dbscan_correct": 1026,
+      "both_correct": 1026,
+      "both_wrong": 12,
+      "prtreid_accuracy": 98.89908256880734,
+      "dbscan_accuracy": 94.12844036697248,
+      "accuracy_difference": 4.77064220183486,
+      "prtreid_only_correct": 52,
+      "dbscan_only_correct": 0
+    },
+    "SNGS-130": {
+      "total": 1084,
+      "prtreid_correct": 1038,
+      "dbscan_correct": 1014,
+      "both_correct": 1013,
+      "both_wrong": 45,
+      "prtreid_accuracy": 95.75645756457564,
+      "dbscan_accuracy": 93.54243542435424,
+      "accuracy_difference": 2.2140221402214024,
+      "prtreid_only_correct": 25,
+      "dbscan_only_correct": 1
+    },
+    "SNGS-124": {
+      "total": 893,
+      "prtreid_correct": 866,
+      "dbscan_correct": 823,
+      "both_correct": 823,
+      "both_wrong": 27,
+      "prtreid_accuracy": 96.976483762598,
+      "dbscan_accuracy": 92.1612541993281,
+      "accuracy_difference": 4.815229563269895,
+      "prtreid_only_correct": 43,
+      "dbscan_only_correct": 0
+    },
+    "SNGS-138": {
+      "total": 1184,
+      "prtreid_correct": 1178,
+      "dbscan_correct": 1131,
+      "both_correct": 1126,
+      "both_wrong": 1,
+      "prtreid_accuracy": 99.49324324324324,
+      "dbscan_accuracy": 95.52364864864865,
+      "accuracy_difference": 3.9695945945945965,
+      "prtreid_only_correct": 52,
+      "dbscan_only_correct": 5
+    },
+    "SNGS-146": {
+      "total": 664,
+      "prtreid_correct": 657,
+      "dbscan_correct": 579,
+      "both_correct": 572,
+      "both_wrong": 0,
+      "prtreid_accuracy": 98.94578313253012,
+      "dbscan_accuracy": 87.19879518072288,
+      "accuracy_difference": 11.746987951807242,
+      "prtreid_only_correct": 85,
+      "dbscan_only_correct": 7
+    },
+    "SNGS-148": {
+      "total": 943,
+      "prtreid_correct": 930,
+      "dbscan_correct": 920,
+      "both_correct": 908,
+      "both_wrong": 1,
+      "prtreid_accuracy": 98.62142099681867,
+      "dbscan_accuracy": 97.5609756097561,
+      "accuracy_difference": 1.0604453870625719,
+      "prtreid_only_correct": 22,
+      "dbscan_only_correct": 12
+    },
+    "SNGS-193": {
+      "total": 1170,
+      "prtreid_correct": 1079,
+      "dbscan_correct": 1061,
+      "both_correct": 1017,
+      "both_wrong": 47,
+      "prtreid_accuracy": 92.22222222222223,
+      "dbscan_accuracy": 90.68376068376068,
+      "accuracy_difference": 1.5384615384615472,
+      "prtreid_only_correct": 62,
+      "dbscan_only_correct": 44
+    },
+    "SNGS-126": {
+      "total": 985,
+      "prtreid_correct": 972,
+      "dbscan_correct": 895,
+      "both_correct": 895,
+      "both_wrong": 13,
+      "prtreid_accuracy": 98.68020304568527,
+      "dbscan_accuracy": 90.86294416243655,
+      "accuracy_difference": 7.817258883248726,
+      "prtreid_only_correct": 77,
+      "dbscan_only_correct": 0
+    },
+    "SNGS-188": {
+      "total": 1643,
+      "prtreid_correct": 1540,
+      "dbscan_correct": 1501,
+      "both_correct": 1461,
+      "both_wrong": 63,
+      "prtreid_accuracy": 93.73097991479001,
+      "dbscan_accuracy": 91.3572732805843,
+      "accuracy_difference": 2.3737066342057176,
+      "prtreid_only_correct": 79,
+      "dbscan_only_correct": 40
+    },
+    "SNGS-121": {
+      "total": 1074,
+      "prtreid_correct": 1071,
+      "dbscan_correct": 1021,
+      "both_correct": 1018,
+      "both_wrong": 0,
+      "prtreid_accuracy": 99.72067039106145,
+      "dbscan_accuracy": 95.06517690875232,
+      "accuracy_difference": 4.655493482309126,
+      "prtreid_only_correct": 53,
+      "dbscan_only_correct": 3
+    },
+    "SNGS-189": {
+      "total": 1202,
+      "prtreid_correct": 1079,
+      "dbscan_correct": 1091,
+      "both_correct": 1029,
+      "both_wrong": 61,
+      "prtreid_accuracy": 89.76705490848586,
+      "dbscan_accuracy": 90.76539101497504,
+      "accuracy_difference": -0.9983361064891767,
+      "prtreid_only_correct": 50,
+      "dbscan_only_correct": 62
+    },
+    "SNGS-141": {
+      "total": 974,
+      "prtreid_correct": 926,
+      "dbscan_correct": 923,
+      "both_correct": 915,
+      "both_wrong": 40,
+      "prtreid_accuracy": 95.07186858316223,
+      "dbscan_accuracy": 94.76386036960986,
+      "accuracy_difference": 0.3080082135523696,
+      "prtreid_only_correct": 11,
+      "dbscan_only_correct": 8
+    },
+    "SNGS-192": {
+      "total": 1088,
+      "prtreid_correct": 983,
+      "dbscan_correct": 966,
+      "both_correct": 925,
+      "both_wrong": 64,
+      "prtreid_accuracy": 90.34926470588235,
+      "dbscan_accuracy": 88.78676470588235,
+      "accuracy_difference": 1.5625,
+      "prtreid_only_correct": 58,
+      "dbscan_only_correct": 41
+    },
+    "SNGS-145": {
+      "total": 879,
+      "prtreid_correct": 815,
+      "dbscan_correct": 800,
+      "both_correct": 748,
+      "both_wrong": 12,
+      "prtreid_accuracy": 92.71899886234357,
+      "dbscan_accuracy": 91.01251422070534,
+      "accuracy_difference": 1.7064846416382267,
+      "prtreid_only_correct": 67,
+      "dbscan_only_correct": 52
+    },
+    "SNGS-198": {
+      "total": 1390,
+      "prtreid_correct": 1246,
+      "dbscan_correct": 1251,
+      "both_correct": 1183,
+      "both_wrong": 76,
+      "prtreid_accuracy": 89.64028776978418,
+      "dbscan_accuracy": 90.0,
+      "accuracy_difference": -0.3597122302158198,
+      "prtreid_only_correct": 63,
+      "dbscan_only_correct": 68
+    },
+    "SNGS-199": {
+      "total": 38,
+      "prtreid_correct": 37,
+      "dbscan_correct": 36,
+      "both_correct": 35,
+      "both_wrong": 0,
+      "prtreid_accuracy": 97.36842105263158,
+      "dbscan_accuracy": 94.73684210526315,
+      "accuracy_difference": 2.631578947368425,
+      "prtreid_only_correct": 2,
+      "dbscan_only_correct": 1
+    },
+    "SNGS-139": {
+      "total": 983,
+      "prtreid_correct": 979,
+      "dbscan_correct": 920,
+      "both_correct": 918,
+      "both_wrong": 2,
+      "prtreid_accuracy": 99.59308240081384,
+      "dbscan_accuracy": 93.5910478128179,
+      "accuracy_difference": 6.0020345879959365,
+      "prtreid_only_correct": 61,
+      "dbscan_only_correct": 2
+    },
+    "SNGS-194": {
+      "total": 1446,
+      "prtreid_correct": 1317,
+      "dbscan_correct": 1241,
+      "both_correct": 1178,
+      "both_wrong": 66,
+      "prtreid_accuracy": 91.07883817427386,
+      "dbscan_accuracy": 85.82295988934993,
+      "accuracy_difference": 5.255878284923924,
+      "prtreid_only_correct": 139,
+      "dbscan_only_correct": 63
+    },
+    "SNGS-196": {
+      "total": 1068,
+      "prtreid_correct": 972,
+      "dbscan_correct": 944,
+      "both_correct": 880,
+      "both_wrong": 32,
+      "prtreid_accuracy": 91.01123595505618,
+      "dbscan_accuracy": 88.38951310861424,
+      "accuracy_difference": 2.6217228464419406,
+      "prtreid_only_correct": 92,
+      "dbscan_only_correct": 64
+    },
+    "SNGS-116": {
+      "total": 1076,
+      "prtreid_correct": 1036,
+      "dbscan_correct": 1006,
+      "both_correct": 1005,
+      "both_wrong": 39,
+      "prtreid_accuracy": 96.28252788104089,
+      "dbscan_accuracy": 93.49442379182156,
+      "accuracy_difference": 2.788104089219331,
+      "prtreid_only_correct": 31,
+      "dbscan_only_correct": 1
+    },
+    "SNGS-144": {
+      "total": 920,
+      "prtreid_correct": 875,
+      "dbscan_correct": 838,
+      "both_correct": 823,
+      "both_wrong": 30,
+      "prtreid_accuracy": 95.1086956521739,
+      "dbscan_accuracy": 91.08695652173913,
+      "accuracy_difference": 4.021739130434781,
+      "prtreid_only_correct": 52,
+      "dbscan_only_correct": 15
+    },
+    "SNGS-136": {
+      "total": 841,
+      "prtreid_correct": 791,
+      "dbscan_correct": 774,
+      "both_correct": 771,
+      "both_wrong": 47,
+      "prtreid_accuracy": 94.05469678953627,
+      "dbscan_accuracy": 92.0332936979786,
+      "accuracy_difference": 2.0214030915576586,
+      "prtreid_only_correct": 20,
+      "dbscan_only_correct": 3
+    },
+    "SNGS-117": {
+      "total": 837,
+      "prtreid_correct": 831,
+      "dbscan_correct": 777,
+      "both_correct": 777,
+      "both_wrong": 6,
+      "prtreid_accuracy": 99.2831541218638,
+      "dbscan_accuracy": 92.831541218638,
+      "accuracy_difference": 6.451612903225808,
+      "prtreid_only_correct": 54,
+      "dbscan_only_correct": 0
+    },
+    "SNGS-195": {
+      "total": 1274,
+      "prtreid_correct": 1119,
+      "dbscan_correct": 1182,
+      "both_correct": 1082,
+      "both_wrong": 55,
+      "prtreid_accuracy": 87.83359497645212,
+      "dbscan_accuracy": 92.77864992150707,
+      "accuracy_difference": -4.945054945054949,
+      "prtreid_only_correct": 37,
+      "dbscan_only_correct": 100
+    },
+    "SNGS-143": {
+      "total": 681,
+      "prtreid_correct": 642,
+      "dbscan_correct": 600,
+      "both_correct": 590,
+      "both_wrong": 29,
+      "prtreid_accuracy": 94.27312775330397,
+      "dbscan_accuracy": 88.10572687224669,
+      "accuracy_difference": 6.167400881057276,
+      "prtreid_only_correct": 52,
+      "dbscan_only_correct": 10
+    },
+    "SNGS-197": {
+      "total": 1310,
+      "prtreid_correct": 1217,
+      "dbscan_correct": 1189,
+      "both_correct": 1148,
+      "both_wrong": 52,
+      "prtreid_accuracy": 92.90076335877863,
+      "dbscan_accuracy": 90.76335877862596,
+      "accuracy_difference": 2.137404580152676,
+      "prtreid_only_correct": 69,
+      "dbscan_only_correct": 41
+    },
+    "SNGS-140": {
+      "total": 1256,
+      "prtreid_correct": 1255,
+      "dbscan_correct": 1178,
+      "both_correct": 1178,
+      "both_wrong": 1,
+      "prtreid_accuracy": 99.92038216560509,
+      "dbscan_accuracy": 93.78980891719745,
+      "accuracy_difference": 6.130573248407643,
+      "prtreid_only_correct": 77,
+      "dbscan_only_correct": 0
+    },
+    "SNGS-133": {
+      "total": 1110,
+      "prtreid_correct": 1089,
+      "dbscan_correct": 1066,
+      "both_correct": 1048,
+      "both_wrong": 3,
+      "prtreid_accuracy": 98.1081081081081,
+      "dbscan_accuracy": 96.03603603603604,
+      "accuracy_difference": 2.0720720720720607,
+      "prtreid_only_correct": 41,
+      "dbscan_only_correct": 18
+    },
+    "SNGS-191": {
+      "total": 1165,
+      "prtreid_correct": 1085,
+      "dbscan_correct": 1069,
+      "both_correct": 1034,
+      "both_wrong": 45,
+      "prtreid_accuracy": 93.13304721030042,
+      "dbscan_accuracy": 91.7596566523605,
+      "accuracy_difference": 1.3733905579399135,
+      "prtreid_only_correct": 51,
+      "dbscan_only_correct": 35
+    },
+    "SNGS-129": {
+      "total": 1158,
+      "prtreid_correct": 1136,
+      "dbscan_correct": 1067,
+      "both_correct": 1066,
+      "both_wrong": 21,
+      "prtreid_accuracy": 98.10017271157167,
+      "dbscan_accuracy": 92.14162348877375,
+      "accuracy_difference": 5.958549222797927,
+      "prtreid_only_correct": 70,
+      "dbscan_only_correct": 1
+    },
+    "SNGS-128": {
+      "total": 1335,
+      "prtreid_correct": 1329,
+      "dbscan_correct": 1313,
+      "both_correct": 1312,
+      "both_wrong": 5,
+      "prtreid_accuracy": 99.5505617977528,
+      "dbscan_accuracy": 98.35205992509364,
+      "accuracy_difference": 1.1985018726591647,
+      "prtreid_only_correct": 17,
+      "dbscan_only_correct": 1
+    },
+    "SNGS-134": {
+      "total": 838,
+      "prtreid_correct": 835,
+      "dbscan_correct": 769,
+      "both_correct": 767,
+      "both_wrong": 1,
+      "prtreid_accuracy": 99.64200477326969,
+      "dbscan_accuracy": 91.76610978520287,
+      "accuracy_difference": 7.875894988066818,
+      "prtreid_only_correct": 68,
+      "dbscan_only_correct": 2
+    },
+    "SNGS-123": {
+      "total": 1178,
+      "prtreid_correct": 1167,
+      "dbscan_correct": 1100,
+      "both_correct": 1100,
+      "both_wrong": 11,
+      "prtreid_accuracy": 99.06621392190152,
+      "dbscan_accuracy": 93.3786078098472,
+      "accuracy_difference": 5.6876061120543255,
+      "prtreid_only_correct": 67,
+      "dbscan_only_correct": 0
+    },
+    "SNGS-135": {
+      "total": 1180,
+      "prtreid_correct": 1122,
+      "dbscan_correct": 1114,
+      "both_correct": 1107,
+      "both_wrong": 51,
+      "prtreid_accuracy": 95.08474576271186,
+      "dbscan_accuracy": 94.40677966101696,
+      "accuracy_difference": 0.6779661016949063,
+      "prtreid_only_correct": 15,
+      "dbscan_only_correct": 7
+    },
+    "SNGS-131": {
+      "total": 1331,
+      "prtreid_correct": 1329,
+      "dbscan_correct": 1254,
+      "both_correct": 1254,
+      "both_wrong": 2,
+      "prtreid_accuracy": 99.84973703981969,
+      "dbscan_accuracy": 94.21487603305785,
+      "accuracy_difference": 5.634861006761838,
+      "prtreid_only_correct": 75,
+      "dbscan_only_correct": 0
+    },
+    "SNGS-120": {
+      "total": 1108,
+      "prtreid_correct": 1098,
+      "dbscan_correct": 1058,
+      "both_correct": 1057,
+      "both_wrong": 9,
+      "prtreid_accuracy": 99.09747292418773,
+      "dbscan_accuracy": 95.48736462093864,
+      "accuracy_difference": 3.610108303249092,
+      "prtreid_only_correct": 41,
+      "dbscan_only_correct": 1
+    },
+    "SNGS-149": {
+      "total": 982,
+      "prtreid_correct": 959,
+      "dbscan_correct": 947,
+      "both_correct": 938,
+      "both_wrong": 14,
+      "prtreid_accuracy": 97.65784114052953,
+      "dbscan_accuracy": 96.43584521384929,
+      "accuracy_difference": 1.2219959266802363,
+      "prtreid_only_correct": 21,
+      "dbscan_only_correct": 9
+    },
+    "SNGS-137": {
+      "total": 838,
+      "prtreid_correct": 816,
+      "dbscan_correct": 790,
+      "both_correct": 788,
+      "both_wrong": 20,
+      "prtreid_accuracy": 97.3747016706444,
+      "dbscan_accuracy": 94.27207637231504,
+      "accuracy_difference": 3.1026252983293574,
+      "prtreid_only_correct": 28,
+      "dbscan_only_correct": 2
+    },
+    "SNGS-187": {
+      "total": 1399,
+      "prtreid_correct": 1279,
+      "dbscan_correct": 1257,
+      "both_correct": 1210,
+      "both_wrong": 73,
+      "prtreid_accuracy": 91.42244460328807,
+      "dbscan_accuracy": 89.84989278055754,
+      "accuracy_difference": 1.5725518227305315,
+      "prtreid_only_correct": 69,
+      "dbscan_only_correct": 47
+    },
+    "SNGS-142": {
+      "total": 1029,
+      "prtreid_correct": 1000,
+      "dbscan_correct": 961,
+      "both_correct": 949,
+      "both_wrong": 17,
+      "prtreid_accuracy": 97.18172983479107,
+      "dbscan_accuracy": 93.39164237123421,
+      "accuracy_difference": 3.7900874635568584,
+      "prtreid_only_correct": 51,
+      "dbscan_only_correct": 12
+    },
+    "SNGS-118": {
+      "total": 1013,
+      "prtreid_correct": 1006,
+      "dbscan_correct": 941,
+      "both_correct": 941,
+      "both_wrong": 7,
+      "prtreid_accuracy": 99.30898321816387,
+      "dbscan_accuracy": 92.8923988153998,
+      "accuracy_difference": 6.416584402764073,
+      "prtreid_only_correct": 65,
+      "dbscan_only_correct": 0
+    },
+    "SNGS-127": {
+      "total": 1383,
+      "prtreid_correct": 1374,
+      "dbscan_correct": 1373,
+      "both_correct": 1367,
+      "both_wrong": 3,
+      "prtreid_accuracy": 99.34924078091106,
+      "dbscan_accuracy": 99.2769342010123,
+      "accuracy_difference": 0.07230657989876477,
+      "prtreid_only_correct": 7,
+      "dbscan_only_correct": 6
+    },
+    "SNGS-132": {
+      "total": 1068,
+      "prtreid_correct": 967,
+      "dbscan_correct": 1002,
+      "both_correct": 933,
+      "both_wrong": 32,
+      "prtreid_accuracy": 90.54307116104869,
+      "dbscan_accuracy": 93.82022471910112,
+      "accuracy_difference": -3.277153558052433,
+      "prtreid_only_correct": 34,
+      "dbscan_only_correct": 69
+    },
+    "SNGS-119": {
+      "total": 775,
+      "prtreid_correct": 769,
+      "dbscan_correct": 717,
+      "both_correct": 716,
+      "both_wrong": 5,
+      "prtreid_accuracy": 99.22580645161291,
+      "dbscan_accuracy": 92.51612903225806,
+      "accuracy_difference": 6.709677419354847,
+      "prtreid_only_correct": 53,
+      "dbscan_only_correct": 1
+    },
+    "SNGS-147": {
+      "total": 560,
+      "prtreid_correct": 552,
+      "dbscan_correct": 502,
+      "both_correct": 496,
+      "both_wrong": 2,
+      "prtreid_accuracy": 98.57142857142858,
+      "dbscan_accuracy": 89.64285714285715,
+      "accuracy_difference": 8.92857142857143,
+      "prtreid_only_correct": 56,
+      "dbscan_only_correct": 6
+    },
+    "SNGS-150": {
+      "total": 1029,
+      "prtreid_correct": 964,
+      "dbscan_correct": 960,
+      "both_correct": 949,
+      "both_wrong": 54,
+      "prtreid_accuracy": 93.68318756073857,
+      "dbscan_accuracy": 93.29446064139941,
+      "accuracy_difference": 0.38872691933916315,
+      "prtreid_only_correct": 15,
+      "dbscan_only_correct": 11
+    }
+  },
+  "significant_differences": {
+    "prtreid_better": [
+      {
+        "clip": "SNGS-146",
+        "prtreid_accuracy": 98.94578313253012,
+        "dbscan_accuracy": 87.19879518072288,
+        "difference": 11.746987951807242,
+        "total_detections": 664
+      }
+    ],
+    "dbscan_better": [],
+    "similar_performance": [
+      {
+        "clip": "SNGS-122",
+        "prtreid_accuracy": 98.89908256880734,
+        "dbscan_accuracy": 94.12844036697248,
+        "difference": 4.77064220183486,
+        "total_detections": 1090
+      },
+      {
+        "clip": "SNGS-130",
+        "prtreid_accuracy": 95.75645756457564,
+        "dbscan_accuracy": 93.54243542435424,
+        "difference": 2.2140221402214024,
+        "total_detections": 1084
+      },
+      {
+        "clip": "SNGS-124",
+        "prtreid_accuracy": 96.976483762598,
+        "dbscan_accuracy": 92.1612541993281,
+        "difference": 4.815229563269895,
+        "total_detections": 893
+      },
+      {
+        "clip": "SNGS-138",
+        "prtreid_accuracy": 99.49324324324324,
+        "dbscan_accuracy": 95.52364864864865,
+        "difference": 3.9695945945945965,
+        "total_detections": 1184
+      },
+      {
+        "clip": "SNGS-148",
+        "prtreid_accuracy": 98.62142099681867,
+        "dbscan_accuracy": 97.5609756097561,
+        "difference": 1.0604453870625719,
+        "total_detections": 943
+      },
+      {
+        "clip": "SNGS-193",
+        "prtreid_accuracy": 92.22222222222223,
+        "dbscan_accuracy": 90.68376068376068,
+        "difference": 1.5384615384615472,
+        "total_detections": 1170
+      },
+      {
+        "clip": "SNGS-126",
+        "prtreid_accuracy": 98.68020304568527,
+        "dbscan_accuracy": 90.86294416243655,
+        "difference": 7.817258883248726,
+        "total_detections": 985
+      },
+      {
+        "clip": "SNGS-188",
+        "prtreid_accuracy": 93.73097991479001,
+        "dbscan_accuracy": 91.3572732805843,
+        "difference": 2.3737066342057176,
+        "total_detections": 1643
+      },
+      {
+        "clip": "SNGS-121",
+        "prtreid_accuracy": 99.72067039106145,
+        "dbscan_accuracy": 95.06517690875232,
+        "difference": 4.655493482309126,
+        "total_detections": 1074
+      },
+      {
+        "clip": "SNGS-189",
+        "prtreid_accuracy": 89.76705490848586,
+        "dbscan_accuracy": 90.76539101497504,
+        "difference": -0.9983361064891767,
+        "total_detections": 1202
+      },
+      {
+        "clip": "SNGS-141",
+        "prtreid_accuracy": 95.07186858316223,
+        "dbscan_accuracy": 94.76386036960986,
+        "difference": 0.3080082135523696,
+        "total_detections": 974
+      },
+      {
+        "clip": "SNGS-192",
+        "prtreid_accuracy": 90.34926470588235,
+        "dbscan_accuracy": 88.78676470588235,
+        "difference": 1.5625,
+        "total_detections": 1088
+      },
+      {
+        "clip": "SNGS-145",
+        "prtreid_accuracy": 92.71899886234357,
+        "dbscan_accuracy": 91.01251422070534,
+        "difference": 1.7064846416382267,
+        "total_detections": 879
+      },
+      {
+        "clip": "SNGS-198",
+        "prtreid_accuracy": 89.64028776978418,
+        "dbscan_accuracy": 90.0,
+        "difference": -0.3597122302158198,
+        "total_detections": 1390
+      },
+      {
+        "clip": "SNGS-199",
+        "prtreid_accuracy": 97.36842105263158,
+        "dbscan_accuracy": 94.73684210526315,
+        "difference": 2.631578947368425,
+        "total_detections": 38
+      },
+      {
+        "clip": "SNGS-139",
+        "prtreid_accuracy": 99.59308240081384,
+        "dbscan_accuracy": 93.5910478128179,
+        "difference": 6.0020345879959365,
+        "total_detections": 983
+      },
+      {
+        "clip": "SNGS-194",
+        "prtreid_accuracy": 91.07883817427386,
+        "dbscan_accuracy": 85.82295988934993,
+        "difference": 5.255878284923924,
+        "total_detections": 1446
+      },
+      {
+        "clip": "SNGS-196",
+        "prtreid_accuracy": 91.01123595505618,
+        "dbscan_accuracy": 88.38951310861424,
+        "difference": 2.6217228464419406,
+        "total_detections": 1068
+      },
+      {
+        "clip": "SNGS-116",
+        "prtreid_accuracy": 96.28252788104089,
+        "dbscan_accuracy": 93.49442379182156,
+        "difference": 2.788104089219331,
+        "total_detections": 1076
+      },
+      {
+        "clip": "SNGS-144",
+        "prtreid_accuracy": 95.1086956521739,
+        "dbscan_accuracy": 91.08695652173913,
+        "difference": 4.021739130434781,
+        "total_detections": 920
+      },
+      {
+        "clip": "SNGS-136",
+        "prtreid_accuracy": 94.05469678953627,
+        "dbscan_accuracy": 92.0332936979786,
+        "difference": 2.0214030915576586,
+        "total_detections": 841
+      },
+      {
+        "clip": "SNGS-117",
+        "prtreid_accuracy": 99.2831541218638,
+        "dbscan_accuracy": 92.831541218638,
+        "difference": 6.451612903225808,
+        "total_detections": 837
+      },
+      {
+        "clip": "SNGS-195",
+        "prtreid_accuracy": 87.83359497645212,
+        "dbscan_accuracy": 92.77864992150707,
+        "difference": -4.945054945054949,
+        "total_detections": 1274
+      },
+      {
+        "clip": "SNGS-143",
+        "prtreid_accuracy": 94.27312775330397,
+        "dbscan_accuracy": 88.10572687224669,
+        "difference": 6.167400881057276,
+        "total_detections": 681
+      },
+      {
+        "clip": "SNGS-197",
+        "prtreid_accuracy": 92.90076335877863,
+        "dbscan_accuracy": 90.76335877862596,
+        "difference": 2.137404580152676,
+        "total_detections": 1310
+      },
+      {
+        "clip": "SNGS-140",
+        "prtreid_accuracy": 99.92038216560509,
+        "dbscan_accuracy": 93.78980891719745,
+        "difference": 6.130573248407643,
+        "total_detections": 1256
+      },
+      {
+        "clip": "SNGS-133",
+        "prtreid_accuracy": 98.1081081081081,
+        "dbscan_accuracy": 96.03603603603604,
+        "difference": 2.0720720720720607,
+        "total_detections": 1110
+      },
+      {
+        "clip": "SNGS-191",
+        "prtreid_accuracy": 93.13304721030042,
+        "dbscan_accuracy": 91.7596566523605,
+        "difference": 1.3733905579399135,
+        "total_detections": 1165
+      },
+      {
+        "clip": "SNGS-129",
+        "prtreid_accuracy": 98.10017271157167,
+        "dbscan_accuracy": 92.14162348877375,
+        "difference": 5.958549222797927,
+        "total_detections": 1158
+      },
+      {
+        "clip": "SNGS-128",
+        "prtreid_accuracy": 99.5505617977528,
+        "dbscan_accuracy": 98.35205992509364,
+        "difference": 1.1985018726591647,
+        "total_detections": 1335
+      },
+      {
+        "clip": "SNGS-134",
+        "prtreid_accuracy": 99.64200477326969,
+        "dbscan_accuracy": 91.76610978520287,
+        "difference": 7.875894988066818,
+        "total_detections": 838
+      },
+      {
+        "clip": "SNGS-123",
+        "prtreid_accuracy": 99.06621392190152,
+        "dbscan_accuracy": 93.3786078098472,
+        "difference": 5.6876061120543255,
+        "total_detections": 1178
+      },
+      {
+        "clip": "SNGS-135",
+        "prtreid_accuracy": 95.08474576271186,
+        "dbscan_accuracy": 94.40677966101696,
+        "difference": 0.6779661016949063,
+        "total_detections": 1180
+      },
+      {
+        "clip": "SNGS-131",
+        "prtreid_accuracy": 99.84973703981969,
+        "dbscan_accuracy": 94.21487603305785,
+        "difference": 5.634861006761838,
+        "total_detections": 1331
+      },
+      {
+        "clip": "SNGS-120",
+        "prtreid_accuracy": 99.09747292418773,
+        "dbscan_accuracy": 95.48736462093864,
+        "difference": 3.610108303249092,
+        "total_detections": 1108
+      },
+      {
+        "clip": "SNGS-149",
+        "prtreid_accuracy": 97.65784114052953,
+        "dbscan_accuracy": 96.43584521384929,
+        "difference": 1.2219959266802363,
+        "total_detections": 982
+      },
+      {
+        "clip": "SNGS-137",
+        "prtreid_accuracy": 97.3747016706444,
+        "dbscan_accuracy": 94.27207637231504,
+        "difference": 3.1026252983293574,
+        "total_detections": 838
+      },
+      {
+        "clip": "SNGS-187",
+        "prtreid_accuracy": 91.42244460328807,
+        "dbscan_accuracy": 89.84989278055754,
+        "difference": 1.5725518227305315,
+        "total_detections": 1399
+      },
+      {
+        "clip": "SNGS-142",
+        "prtreid_accuracy": 97.18172983479107,
+        "dbscan_accuracy": 93.39164237123421,
+        "difference": 3.7900874635568584,
+        "total_detections": 1029
+      },
+      {
+        "clip": "SNGS-118",
+        "prtreid_accuracy": 99.30898321816387,
+        "dbscan_accuracy": 92.8923988153998,
+        "difference": 6.416584402764073,
+        "total_detections": 1013
+      },
+      {
+        "clip": "SNGS-127",
+        "prtreid_accuracy": 99.34924078091106,
+        "dbscan_accuracy": 99.2769342010123,
+        "difference": 0.07230657989876477,
+        "total_detections": 1383
+      },
+      {
+        "clip": "SNGS-132",
+        "prtreid_accuracy": 90.54307116104869,
+        "dbscan_accuracy": 93.82022471910112,
+        "difference": -3.277153558052433,
+        "total_detections": 1068
+      },
+      {
+        "clip": "SNGS-119",
+        "prtreid_accuracy": 99.22580645161291,
+        "dbscan_accuracy": 92.51612903225806,
+        "difference": 6.709677419354847,
+        "total_detections": 775
+      },
+      {
+        "clip": "SNGS-147",
+        "prtreid_accuracy": 98.57142857142858,
+        "dbscan_accuracy": 89.64285714285715,
+        "difference": 8.92857142857143,
+        "total_detections": 560
+      },
+      {
+        "clip": "SNGS-150",
+        "prtreid_accuracy": 93.68318756073857,
+        "dbscan_accuracy": 93.29446064139941,
+        "difference": 0.38872691933916315,
+        "total_detections": 1029
+      }
+    ]
+  },
+  "threshold_used": 10.0,
+  "excluded_clips": [
+    "SNGS-125",
+    "SNGS-190"
+  ]
+}
