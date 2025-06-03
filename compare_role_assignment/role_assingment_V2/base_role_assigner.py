@@ -4,6 +4,8 @@ from typing import List, Tuple, Set
 from custom_types import PersonWithJerseyColor, PersonWithRole
 from color_conversions import rgb_to_lab, RGBColor255
 from skimage import color
+import matplotlib.pyplot as plt
+import os
 
 
 class BaseRoleAssigner(ABC):
@@ -11,6 +13,7 @@ class BaseRoleAssigner(ABC):
     
     def __init__(self):
         self.method_name = self.__class__.__name__
+        self.current_frame_number = None  # Track current frame for plotting
     
     @abstractmethod
     def perform_clustering(self, valid_persons: List[PersonWithJerseyColor], 
@@ -28,8 +31,91 @@ class BaseRoleAssigner(ABC):
         """
         pass
     
+    def plot_clustering_results(self, X_colors_rgb: np.ndarray, X_colors_lab: np.ndarray, 
+                               all_outlier_indices: Set[int], non_outlier_indices: List[int], 
+                               labels: np.ndarray, left_cluster: int, right_cluster: int):
+        """
+        Plot clustering results for LAB colorspace using cluster center colors.
+        
+        Args:
+            X_colors_rgb: RGB color array (for calculating cluster centers)
+            X_colors_lab: LAB color array (for plotting coordinates)
+            all_outlier_indices: Set of outlier indices
+            non_outlier_indices: List of non-outlier indices
+            labels: Cluster labels for non-outliers
+            left_cluster: Cluster label for left team
+            right_cluster: Cluster label for right team
+        """
+        fig = plt.figure(figsize=(12, 8))
+        ax = fig.add_subplot(111, projection='3d')
+        
+        # Normalize RGB colors for matplotlib (0-1 range)
+        rgb_normalized = X_colors_rgb / 255.0
+        
+        # Plot outliers with crosses
+        if all_outlier_indices:
+            outlier_indices_list = list(all_outlier_indices)
+            outlier_colors = rgb_normalized[outlier_indices_list]
+            outlier_lab = X_colors_lab[outlier_indices_list]
+            
+            ax.scatter(outlier_lab[:, 2], outlier_lab[:, 1], outlier_lab[:, 0],  # b, a, L
+                      c=outlier_colors, marker='x', s=100, label='Outliers', 
+                      linewidths=2)
+        
+        # Calculate cluster centers and plot teams with cluster center colors
+        if len(non_outlier_indices) > 0 and len(labels) > 0:
+            # Get indices for first cluster (left team)
+            first_cluster_mask = labels == left_cluster
+            if np.any(first_cluster_mask):
+                first_cluster_indices = np.array(non_outlier_indices)[first_cluster_mask]
+                first_cluster_lab = X_colors_lab[first_cluster_indices]
+                
+                # Calculate cluster center in RGB space and normalize
+                first_cluster_rgb = X_colors_rgb[first_cluster_indices]
+                first_cluster_center_rgb = np.mean(first_cluster_rgb, axis=0) / 255.0
+                
+                ax.scatter(first_cluster_lab[:, 2], first_cluster_lab[:, 1], first_cluster_lab[:, 0],  # b, a, L
+                          c=[first_cluster_center_rgb], marker='o', s=80, label='Team A', 
+                          edgecolors='black', linewidths=0.5)
+            
+            # Get indices for second cluster (right team)
+            second_cluster_mask = labels == right_cluster  
+            if np.any(second_cluster_mask):
+                second_cluster_indices = np.array(non_outlier_indices)[second_cluster_mask]
+                second_cluster_lab = X_colors_lab[second_cluster_indices]
+                
+                # Calculate cluster center in RGB space and normalize
+                second_cluster_rgb = X_colors_rgb[second_cluster_indices]
+                second_cluster_center_rgb = np.mean(second_cluster_rgb, axis=0) / 255.0
+                
+                ax.scatter(second_cluster_lab[:, 2], second_cluster_lab[:, 1], second_cluster_lab[:, 0],  # b, a, L
+                          c=[second_cluster_center_rgb], marker='o', s=80, label='Team B', 
+                          edgecolors='black', linewidths=0.5)
+        
+        # Set labels and title
+        ax.set_xlabel('b* (Blue-Yellow)')
+        ax.set_ylabel('a* (Green-Red)')
+        ax.set_zlabel('L* (Lightness)')
+        
+        # Add legend
+        ax.legend()
+        
+        # Set viewing angle for best visualization
+        ax.view_init(elev=20, azim=45)
+        
+        # Create output directory and save plot
+        output_dir = f"clustering_plots_{self.method_name}"
+        os.makedirs(output_dir, exist_ok=True)
+        
+        output_path = os.path.join(output_dir, f"frame_{self.current_frame_number:03d}_lab_clustering.png")
+        plt.savefig(output_path, dpi=300, bbox_inches='tight')
+        plt.show()
+        
+        print(f"Saved clustering plot to: {output_path}")
+    
     def assign_roles(self, full_image: np.ndarray, 
-                    persons_with_color: List[PersonWithJerseyColor]) -> List[PersonWithRole]:
+                    persons_with_color: List[PersonWithJerseyColor],
+                    frame_number: int = None) -> List[PersonWithRole]:
         """
         Assign roles to persons using clustering on jersey colors.
         Position is only used to distinguish between left and right teams.
@@ -38,7 +124,11 @@ class BaseRoleAssigner(ABC):
         Args:
             full_image: The full image array (not used but kept for compatibility)
             persons_with_color: List of persons with jersey colors
+            frame_number: Optional frame number for plotting purposes
         """
+        # Set current frame number for plotting
+        self.current_frame_number = frame_number
+        
         if not persons_with_color:
             return []
         
@@ -84,6 +174,7 @@ class BaseRoleAssigner(ABC):
         
         for color_space, X_colors in [("rgb", X_colors_rgb), ("lab", X_colors_lab), ("hsv", X_colors_hsv)]:
             try:
+                print(f"Performing clustering for {color_space} space")
                 best_n_outliers, all_outlier_indices, labels = self.perform_clustering(
                     valid_persons, X_colors)
                 
@@ -105,6 +196,13 @@ class BaseRoleAssigner(ABC):
                     "left_cluster": left_cluster,
                     "right_cluster": right_cluster
                 }
+                
+                # Plot clustering results for LAB colorspace on frame 10
+                if color_space == "lab" and frame_number == 10:
+                    self.plot_clustering_results(
+                        X_colors_rgb, X_colors_lab, all_outlier_indices, 
+                        non_outlier_indices, labels, left_cluster, right_cluster
+                    )
                 
             except Exception as e:
                 print(f"Error with method {self.method_name} in {color_space} space: {e}")

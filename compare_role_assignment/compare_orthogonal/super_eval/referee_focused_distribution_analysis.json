@@ -1,0 +1,378 @@
+{
+  "clip_statistics": {
+    "SNGS-116": {
+      "total_referee": 60,
+      "prtreid_correct": 59,
+      "dbscan_correct": 55,
+      "prtreid_accuracy": 98.33333333333333,
+      "dbscan_accuracy": 91.66666666666666
+    },
+    "SNGS-117": {
+      "total_referee": 83,
+      "prtreid_correct": 82,
+      "dbscan_correct": 54,
+      "prtreid_accuracy": 98.79518072289156,
+      "dbscan_accuracy": 65.06024096385542
+    },
+    "SNGS-118": {
+      "total_referee": 75,
+      "prtreid_correct": 75,
+      "dbscan_correct": 70,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 93.33333333333333
+    },
+    "SNGS-119": {
+      "total_referee": 69,
+      "prtreid_correct": 68,
+      "dbscan_correct": 55,
+      "prtreid_accuracy": 98.55072463768117,
+      "dbscan_accuracy": 79.71014492753623
+    },
+    "SNGS-120": {
+      "total_referee": 109,
+      "prtreid_correct": 108,
+      "dbscan_correct": 93,
+      "prtreid_accuracy": 99.08256880733946,
+      "dbscan_accuracy": 85.3211009174312
+    },
+    "SNGS-121": {
+      "total_referee": 70,
+      "prtreid_correct": 70,
+      "dbscan_correct": 61,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 87.14285714285714
+    },
+    "SNGS-122": {
+      "total_referee": 78,
+      "prtreid_correct": 78,
+      "dbscan_correct": 54,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 69.23076923076923
+    },
+    "SNGS-123": {
+      "total_referee": 86,
+      "prtreid_correct": 86,
+      "dbscan_correct": 71,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 82.55813953488372
+    },
+    "SNGS-124": {
+      "total_referee": 81,
+      "prtreid_correct": 79,
+      "dbscan_correct": 55,
+      "prtreid_accuracy": 97.53086419753086,
+      "dbscan_accuracy": 67.90123456790124
+    },
+    "SNGS-125": {
+      "total_referee": 67,
+      "prtreid_correct": 65,
+      "dbscan_correct": 2,
+      "prtreid_accuracy": 97.01492537313433,
+      "dbscan_accuracy": 2.9850746268656714
+    },
+    "SNGS-126": {
+      "total_referee": 100,
+      "prtreid_correct": 99,
+      "dbscan_correct": 81,
+      "prtreid_accuracy": 99.0,
+      "dbscan_accuracy": 81.0
+    },
+    "SNGS-127": {
+      "total_referee": 113,
+      "prtreid_correct": 106,
+      "dbscan_correct": 104,
+      "prtreid_accuracy": 93.80530973451327,
+      "dbscan_accuracy": 92.03539823008849
+    },
+    "SNGS-128": {
+      "total_referee": 122,
+      "prtreid_correct": 122,
+      "dbscan_correct": 113,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 92.62295081967213
+    },
+    "SNGS-129": {
+      "total_referee": 86,
+      "prtreid_correct": 86,
+      "dbscan_correct": 71,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 82.55813953488372
+    },
+    "SNGS-130": {
+      "total_referee": 75,
+      "prtreid_correct": 75,
+      "dbscan_correct": 74,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 98.66666666666667
+    },
+    "SNGS-131": {
+      "total_referee": 105,
+      "prtreid_correct": 105,
+      "dbscan_correct": 98,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 93.33333333333333
+    },
+    "SNGS-132": {
+      "total_referee": 101,
+      "prtreid_correct": 99,
+      "dbscan_correct": 72,
+      "prtreid_accuracy": 98.01980198019803,
+      "dbscan_accuracy": 71.28712871287128
+    },
+    "SNGS-133": {
+      "total_referee": 140,
+      "prtreid_correct": 140,
+      "dbscan_correct": 109,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 77.85714285714286
+    },
+    "SNGS-134": {
+      "total_referee": 97,
+      "prtreid_correct": 97,
+      "dbscan_correct": 52,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 53.608247422680414
+    },
+    "SNGS-135": {
+      "total_referee": 92,
+      "prtreid_correct": 91,
+      "dbscan_correct": 82,
+      "prtreid_accuracy": 98.91304347826086,
+      "dbscan_accuracy": 89.13043478260869
+    },
+    "SNGS-136": {
+      "total_referee": 67,
+      "prtreid_correct": 66,
+      "dbscan_correct": 54,
+      "prtreid_accuracy": 98.50746268656717,
+      "dbscan_accuracy": 80.59701492537313
+    },
+    "SNGS-137": {
+      "total_referee": 53,
+      "prtreid_correct": 52,
+      "dbscan_correct": 47,
+      "prtreid_accuracy": 98.11320754716981,
+      "dbscan_accuracy": 88.67924528301887
+    },
+    "SNGS-138": {
+      "total_referee": 120,
+      "prtreid_correct": 119,
+      "dbscan_correct": 90,
+      "prtreid_accuracy": 99.16666666666667,
+      "dbscan_accuracy": 75.0
+    },
+    "SNGS-139": {
+      "total_referee": 49,
+      "prtreid_correct": 49,
+      "dbscan_correct": 44,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 89.79591836734694
+    },
+    "SNGS-140": {
+      "total_referee": 62,
+      "prtreid_correct": 61,
+      "dbscan_correct": 51,
+      "prtreid_accuracy": 98.38709677419355,
+      "dbscan_accuracy": 82.25806451612904
+    },
+    "SNGS-141": {
+      "total_referee": 41,
+      "prtreid_correct": 40,
+      "dbscan_correct": 36,
+      "prtreid_accuracy": 97.5609756097561,
+      "dbscan_accuracy": 87.8048780487805
+    },
+    "SNGS-142": {
+      "total_referee": 81,
+      "prtreid_correct": 80,
+      "dbscan_correct": 70,
+      "prtreid_accuracy": 98.76543209876543,
+      "dbscan_accuracy": 86.41975308641975
+    },
+    "SNGS-143": {
+      "total_referee": 54,
+      "prtreid_correct": 54,
+      "dbscan_correct": 29,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 53.70370370370371
+    },
+    "SNGS-144": {
+      "total_referee": 96,
+      "prtreid_correct": 96,
+      "dbscan_correct": 65,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 67.70833333333334
+    },
+    "SNGS-145": {
+      "total_referee": 70,
+      "prtreid_correct": 68,
+      "dbscan_correct": 47,
+      "prtreid_accuracy": 97.14285714285714,
+      "dbscan_accuracy": 67.14285714285714
+    },
+    "SNGS-146": {
+      "total_referee": 56,
+      "prtreid_correct": 56,
+      "dbscan_correct": 34,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 60.71428571428571
+    },
+    "SNGS-147": {
+      "total_referee": 32,
+      "prtreid_correct": 30,
+      "dbscan_correct": 30,
+      "prtreid_accuracy": 93.75,
+      "dbscan_accuracy": 93.75
+    },
+    "SNGS-148": {
+      "total_referee": 103,
+      "prtreid_correct": 103,
+      "dbscan_correct": 98,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 95.14563106796116
+    },
+    "SNGS-149": {
+      "total_referee": 108,
+      "prtreid_correct": 108,
+      "dbscan_correct": 102,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 94.44444444444444
+    },
+    "SNGS-150": {
+      "total_referee": 111,
+      "prtreid_correct": 110,
+      "dbscan_correct": 96,
+      "prtreid_accuracy": 99.09909909909909,
+      "dbscan_accuracy": 86.48648648648648
+    },
+    "SNGS-187": {
+      "total_referee": 82,
+      "prtreid_correct": 12,
+      "dbscan_correct": 52,
+      "prtreid_accuracy": 14.634146341463413,
+      "dbscan_accuracy": 63.41463414634146
+    },
+    "SNGS-188": {
+      "total_referee": 137,
+      "prtreid_correct": 43,
+      "dbscan_correct": 47,
+      "prtreid_accuracy": 31.386861313868614,
+      "dbscan_accuracy": 34.306569343065696
+    },
+    "SNGS-189": {
+      "total_referee": 117,
+      "prtreid_correct": 35,
+      "dbscan_correct": 74,
+      "prtreid_accuracy": 29.914529914529915,
+      "dbscan_accuracy": 63.24786324786324
+    },
+    "SNGS-190": {
+      "total_referee": 117,
+      "prtreid_correct": 46,
+      "dbscan_correct": 57,
+      "prtreid_accuracy": 39.31623931623932,
+      "dbscan_accuracy": 48.717948717948715
+    },
+    "SNGS-191": {
+      "total_referee": 72,
+      "prtreid_correct": 15,
+      "dbscan_correct": 39,
+      "prtreid_accuracy": 20.833333333333336,
+      "dbscan_accuracy": 54.166666666666664
+    },
+    "SNGS-192": {
+      "total_referee": 129,
+      "prtreid_correct": 38,
+      "dbscan_correct": 52,
+      "prtreid_accuracy": 29.457364341085274,
+      "dbscan_accuracy": 40.310077519379846
+    },
+    "SNGS-193": {
+      "total_referee": 96,
+      "prtreid_correct": 25,
+      "dbscan_correct": 52,
+      "prtreid_accuracy": 26.041666666666668,
+      "dbscan_accuracy": 54.166666666666664
+    },
+    "SNGS-194": {
+      "total_referee": 123,
+      "prtreid_correct": 24,
+      "dbscan_correct": 64,
+      "prtreid_accuracy": 19.51219512195122,
+      "dbscan_accuracy": 52.03252032520326
+    },
+    "SNGS-195": {
+      "total_referee": 142,
+      "prtreid_correct": 26,
+      "dbscan_correct": 108,
+      "prtreid_accuracy": 18.30985915492958,
+      "dbscan_accuracy": 76.05633802816901
+    },
+    "SNGS-196": {
+      "total_referee": 121,
+      "prtreid_correct": 38,
+      "dbscan_correct": 67,
+      "prtreid_accuracy": 31.40495867768595,
+      "dbscan_accuracy": 55.371900826446286
+    },
+    "SNGS-197": {
+      "total_referee": 105,
+      "prtreid_correct": 24,
+      "dbscan_correct": 43,
+      "prtreid_accuracy": 22.857142857142858,
+      "dbscan_accuracy": 40.95238095238095
+    },
+    "SNGS-198": {
+      "total_referee": 129,
+      "prtreid_correct": 39,
+      "dbscan_correct": 80,
+      "prtreid_accuracy": 30.23255813953488,
+      "dbscan_accuracy": 62.01550387596899
+    },
+    "SNGS-199": {
+      "total_referee": 69,
+      "prtreid_correct": 5,
+      "dbscan_correct": 50,
+      "prtreid_accuracy": 7.246376811594203,
+      "dbscan_accuracy": 72.46376811594203
+    },
+    "SNGS-200": {
+      "total_referee": 141,
+      "prtreid_correct": 49,
+      "dbscan_correct": 76,
+      "prtreid_accuracy": 34.751773049645394,
+      "dbscan_accuracy": 53.90070921985816
+    }
+  },
+  "plot_summary": {
+    "total_clips_in_plot": 49,
+    "total_referee_detections_in_plot": 4492,
+    "avg_prtreid_accuracy_plot": 77.86607254958425,
+    "avg_dbscan_accuracy_plot": 72.19965649069569,
+    "accuracy_difference_plot": 5.666416058888558
+  },
+  "overall_statistical_measures": {
+    "prtreid": {
+      "mean": 77.86607254958425,
+      "median": 98.50746268656717,
+      "variance": 1145.0957085754128,
+      "std_dev": 33.83926282553172,
+      "min": 7.246376811594203,
+      "max": 100.0
+    },
+    "dbscan": {
+      "mean": 72.19965649069569,
+      "median": 76.05633802816901,
+      "variance": 383.5224830216127,
+      "std_dev": 19.583730058944663,
+      "min": 2.9850746268656714,
+      "max": 98.66666666666667
+    },
+    "differences": {
+      "mean_diff": 5.666416058888558,
+      "median_diff": 22.451124658398157,
+      "variance_diff": 761.5732255538001
+    }
+  },
+  "excluded_clips": []
+}

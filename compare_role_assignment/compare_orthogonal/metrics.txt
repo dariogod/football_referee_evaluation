@@ -1,103 +1,105 @@
 FOOTBALL REFEREE EVALUATION - ROLE CLASSIFICATION METRICS
 ============================================================
-Excluded datasets: SNGS-125, SNGS-190
+Excluded datasets: 
 Classes evaluated: player, goalkeeper, referee
 
-Total predictions for dbscan_rgb: 50932
+Total predictions for dbscan_rgb: 52892
 
 DBSCAN_RGB CONFUSION MATRIX:
 ============================================================
 Actual\Predicted  goalkeeper      player     referee
 ----------------------------------------------------
-goalkeeper              246        1582          12
-player                  256       44397         131
-referee                  69        2343        1896
+goalkeeper              285        1649          12
+player                  270       46047         137
+referee                  72        2469        1951
 ----------------------------------------------------
-Total         571       48322        2039
+Total         627       50165        2100
 
-Overall Accuracy: 0.9137
+Overall Accuracy: 0.9129
 
 DBSCAN_RGB METRICS:
 ================================================================================
 Class        TP     FP     FN     TN     Accuracy   Precision  Recall   F1      
 --------------------------------------------------------------------------------
-player       44397  3925   387    2223   0.9153     0.9188     0.9914   0.9537  
-goalkeeper   246    325    1594   48767  0.9623     0.4308     0.1337   0.2041  
-referee      1896   143    2412   46481  0.9498     0.9299     0.4401   0.5974  
+player       46047  4118   407    2320   0.9144     0.9179     0.9912   0.9532  
+goalkeeper   285    342    1661   50604  0.9621     0.4545     0.1465   0.2215  
+referee      1951   149    2541   48251  0.9491     0.9290     0.4343   0.5919  
 
-Total predictions for dbscan_lab: 50932
+Total predictions for dbscan_lab: 52892
 
 DBSCAN_LAB CONFUSION MATRIX:
 ============================================================
 Actual\Predicted  goalkeeper      player     referee
 ----------------------------------------------------
-goalkeeper              520        1300          20
-player                  382       44126         276
-referee                 100        1087        3121
+goalkeeper              562        1364          20
+player                  399       45773         282
+referee                 102        1210        3180
 ----------------------------------------------------
-Total        1002       46513        3417
+Total        1063       48347        3482
 
-Overall Accuracy: 0.9379
+Overall Accuracy: 0.9362
 
 DBSCAN_LAB METRICS:
 ================================================================================
 Class        TP     FP     FN     TN     Accuracy   Precision  Recall   F1      
 --------------------------------------------------------------------------------
-player       44126  2387   658    3761   0.9402     0.9487     0.9853   0.9666  
-goalkeeper   520    482    1320   48610  0.9646     0.5190     0.2826   0.3659  
-referee      3121   296    1187   46328  0.9709     0.9134     0.7245   0.8080  
+player       45773  2574   681    3864   0.9385     0.9468     0.9853   0.9657  
+goalkeeper   562    501    1384   50445  0.9644     0.5287     0.2888   0.3735  
+referee      3180   302    1312   48098  0.9695     0.9133     0.7079   0.7976  
 
-Total predictions for dbscan_hsv: 50932
+Total predictions for dbscan_hsv: 52892
 
 DBSCAN_HSV CONFUSION MATRIX:
 ============================================================
 Actual\Predicted  goalkeeper      player     referee
 ----------------------------------------------------
-goalkeeper              150        1690           0
-player                  663       43561         560
-referee                 166        3324         818
+goalkeeper              154        1792           0
+player                  669       45218         567
+referee                 166        3505         821
 ----------------------------------------------------
-Total         979       48575        1378
+Total         989       50515        1388
 
-Overall Accuracy: 0.8743
+Overall Accuracy: 0.8733
 
 DBSCAN_HSV METRICS:
 ================================================================================
 Class        TP     FP     FN     TN     Accuracy   Precision  Recall   F1      
 --------------------------------------------------------------------------------
-player       43561  5014   1223   1134   0.8775     0.8968     0.9727   0.9332  
-goalkeeper   150    829    1690   48263  0.9505     0.1532     0.0815   0.1064  
-referee      818    560    3490   46064  0.9205     0.5936     0.1899   0.2877  
+player       45218  5297   1236   1141   0.8765     0.8951     0.9734   0.9326  
+goalkeeper   154    835    1792   50111  0.9503     0.1557     0.0791   0.1049  
+referee      821    567    3671   47833  0.9199     0.5915     0.1828   0.2793  
 
-Total predictions for prtreid: 50747
+Total predictions for prtreid: 52892
 
 PRTREID CONFUSION MATRIX:
 ============================================================
-Actual\Predicted  goalkeeper      player     referee
-----------------------------------------------------
-goalkeeper             1030         708          66
-player                  218       44424          33
-referee                  37        1041        3190
-----------------------------------------------------
-Total        1285       46173        3289
+Actual\Predicted  goalkeeper      playerplayer_unknown     referee     unknown
+------------------------------------------------------------------------------
+goalkeeper             1069         746           0          92          39
+player                  218       46093           0          34         109
+player_unknown            0           0           0           0           0
+referee                  38           0        1113        3301          40
+unknown                   0           0           0           0           0
+------------------------------------------------------------------------------
+Total        1325       46839        1113        3427         188
 
-Overall Accuracy: 0.9586
+Overall Accuracy: 0.9541
 
 PRTREID METRICS:
 ================================================================================
 Class        TP     FP     FN     TN     Accuracy   Precision  Recall   F1      
 --------------------------------------------------------------------------------
-player       44424  1749   251    4323   0.9606     0.9621     0.9944   0.9780  
-goalkeeper   1030   255    774    48688  0.9797     0.8016     0.5710   0.6669  
-referee      3190   99     1078   46380  0.9768     0.9699     0.7474   0.8443  
+player       46093  746    361    5692   0.9791     0.9841     0.9922   0.9881  
+goalkeeper   1069   256    877    50690  0.9786     0.8068     0.5493   0.6536  
+referee      3301   126    1191   48274  0.9751     0.9632     0.7349   0.8337  
 
 
 SUMMARY STATISTICS:
 ========================================
-dbscan_rgb: 50932 total predictions
-dbscan_lab: 50932 total predictions
-dbscan_hsv: 50932 total predictions
-prtreid: 50747 total predictions
+dbscan_rgb: 52892 total predictions
+dbscan_lab: 52892 total predictions
+dbscan_hsv: 52892 total predictions
+prtreid: 52892 total predictions
 
-Datasets included: 47
-Datasets excluded: 2
+Datasets included: 49
+Datasets excluded: 0

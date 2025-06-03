@@ -28,6 +28,8 @@ def extract_predictions_and_ground_truth(data, exclude_datasets=None):
         'prtreid': {'gt': [], 'pred': []}
     }
     
+    NO_PREDICTION_PLACEHOLDER = '_NO_PRED_'
+
     for dataset_id, dataset_data in data.items():
         if dataset_id in exclude_datasets:
             print(f"Excluding dataset: {dataset_id}")
@@ -38,22 +40,28 @@ def extract_predictions_and_ground_truth(data, exclude_datasets=None):
                 gt_role = normalize_role(detection['gt_role'])
                 
                 # DBSCAN predictions
-                dbscan_preds = detection.get('dbscan_pred_role', {})
+                dbscan_pred_role_dict = detection.get('dbscan_pred_role', {})
                 for color_space in ['rgb', 'lab', 'hsv']:
-                    if color_space in dbscan_preds:
-                        pred_role = normalize_role(dbscan_preds[color_space])
-                        results[f'dbscan_{color_space}']['gt'].append(gt_role)
-                        results[f'dbscan_{color_space}']['pred'].append(pred_role)
+                    dbscan_final_pred = NO_PREDICTION_PLACEHOLDER
+                    if color_space in dbscan_pred_role_dict:
+                        pred_val = dbscan_pred_role_dict.get(color_space)
+                        if pred_val is not None:
+                            dbscan_final_pred = normalize_role(pred_val)
+                    
+                    results[f'dbscan_{color_space}']['gt'].append(gt_role)
+                    results[f'dbscan_{color_space}']['pred'].append(dbscan_final_pred)
                 
                 # PRTREID predictions
-                if 'prtreid_data' in detection:
-                    prtreid_pred = detection['prtreid_data'].get('predicted_role')
-                    if prtreid_pred in ["other", "ball"]:
-                        continue
-                    if prtreid_pred:
-                        pred_role = normalize_role(prtreid_pred)
-                        results['prtreid']['gt'].append(gt_role)
-                        results['prtreid']['pred'].append(pred_role)
+                prtreid_data = detection.get('prtreid_data')
+                prtreid_final_pred = NO_PREDICTION_PLACEHOLDER
+
+                if prtreid_data is not None:
+                    prtreid_mapped_val = prtreid_data.get('mapped_predicted_role')
+                    if prtreid_mapped_val is not None:
+                        prtreid_final_pred = normalize_role(prtreid_mapped_val)
+                
+                results['prtreid']['gt'].append(gt_role)
+                results['prtreid']['pred'].append(prtreid_final_pred)
     
     return results
 
@@ -133,7 +141,7 @@ def main():
     data = load_data(data_file)
     
     # Exclude specified datasets
-    exclude_datasets = ['SNGS-125', 'SNGS-190']
+    exclude_datasets = []
     
     # Extract predictions and ground truth
     results = extract_predictions_and_ground_truth(data, exclude_datasets)

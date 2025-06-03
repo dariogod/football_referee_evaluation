@@ -13,7 +13,7 @@ def simplify_role(role: str) -> str:
         return 'player'
     return role
 
-def load_combined_dataset(file_path: str = "compare_role_assignment/compare_orthogonal/combined_role_predictions.json") -> Dict:
+def load_combined_dataset(file_path: str = "compare_role_assignment/compare_orthogonal/combined_role_predictions_updated.json") -> Dict:
     """Load the combined dataset from JSON file."""
     with open(file_path, 'r') as f:
         return json.load(f)
@@ -51,14 +51,19 @@ def analyze_predictions(dataset: Dict, exclude_clips: List[str] = None) -> Tuple
             for detection in frame_data:
                 # Simplify roles
                 gt_role_simplified = simplify_role(detection['gt_role'])
-                dbscan_lab_simplified = simplify_role(detection['dbscan_pred_role']['lab'])
                 
+                # DBSCAN (LAB)
+                dbscan_pred_dict = detection.get('dbscan_pred_role', {})
+                dbscan_lab_pred_val = dbscan_pred_dict.get('lab')
+                dbscan_lab_simplified = simplify_role(dbscan_lab_pred_val) # simplify_role handles None
+
                 # For PRTReid, we need to handle the mapped prediction
-                prtreid_data = detection['prtreid_data']
+                prtreid_mapped_simplified = None # Default to None
+                prtreid_data = detection.get('prtreid_data')
                 if prtreid_data is not None:
-                    prtreid_mapped_simplified = simplify_role(prtreid_data['mapped_predicted_role'])
-                else:
-                    prtreid_mapped_simplified = None
+                    prtreid_mapped_pred_val = prtreid_data.get('mapped_predicted_role')
+                    if prtreid_mapped_pred_val is not None:
+                        prtreid_mapped_simplified = simplify_role(prtreid_mapped_pred_val)
                 
                 # Store detection info
                 detection_info = {
@@ -69,7 +74,7 @@ def analyze_predictions(dataset: Dict, exclude_clips: List[str] = None) -> Tuple
                     'gt_role': gt_role_simplified,
                     'dbscan_lab_pred': dbscan_lab_simplified,
                     'prtreid_pred': prtreid_mapped_simplified,
-                    'dbscan_correct': gt_role_simplified == dbscan_lab_simplified,
+                    'dbscan_correct': gt_role_simplified == dbscan_lab_simplified and dbscan_lab_simplified is not None,
                     'prtreid_correct': prtreid_mapped_simplified == gt_role_simplified if prtreid_mapped_simplified is not None else False
                 }
                 
@@ -550,7 +555,7 @@ def find_clips_with_significant_differences_by_role(clip_analysis: Dict, thresho
     
     return significant_clips
 
-def analyze_referee_clips(dataset_path: str = "compare_role_assignment/compare_orthogonal/combined_role_predictions.json", exclude_clips: List[str] = None):
+def analyze_referee_clips(dataset_path: str = "compare_role_assignment/compare_orthogonal/combined_role_predictions_updated.json", exclude_clips: List[str] = None):
     """Specific function to analyze referee clips and print SNGS-XXX clips with significant differences."""
     if exclude_clips is None:
         exclude_clips = []

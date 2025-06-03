@@ -1,0 +1,86 @@
+FOOTBALL REFEREE EVALUATION - SUPER EVALUATION SCRIPT
+SKLEARN-BASED ROLE CLASSIFICATION METRICS (Overall for 52892 detections)
+Excluded clips: None
+Classes considered for matrix: goalkeeper, player, referee
+'_NO_PRED_' used for missing/None predictions.
+
+Total predictions for prtreid: 52892
+
+PRTREID CONFUSION MATRIX (Overall):
+========================================================
+Actual\Predicted  goalkeeper      player     referee
+----------------------------------------------------
+goalkeeper             1069         746          92
+player                  218       46093          34
+referee                  38           0        3301
+----------------------------------------------------
+Overall Accuracy (for displayed classes): 0.9781
+
+PRTREID SKLEARN METRICS:
+==========================================================================================
+Class           TP     FP     FN     TN         Accuracy   Precision  Recall   F1      
+------------------------------------------------------------------------------------------
+goalkeeper      1069   256    877    50690      0.9786     0.8068     0.5493   0.6536  
+player          46093  746    361    5692       0.9791     0.9841     0.9922   0.9881  
+referee         3301   126    1191   48274      0.9751     0.9632     0.7349   0.8337  
+
+Total predictions for dbscan_lab: 52892
+
+DBSCAN_LAB CONFUSION MATRIX (Overall):
+========================================================
+Actual\Predicted  goalkeeper      player     referee
+----------------------------------------------------
+goalkeeper              562        1364          20
+player                  399       45773         282
+referee                 102        1210        3180
+----------------------------------------------------
+Overall Accuracy (for displayed classes): 0.9362
+
+DBSCAN_LAB SKLEARN METRICS:
+==========================================================================================
+Class           TP     FP     FN     TN         Accuracy   Precision  Recall   F1      
+------------------------------------------------------------------------------------------
+goalkeeper      562    501    1384   50445      0.9644     0.5287     0.2888   0.3735  
+player          45773  2574   681    3864       0.9385     0.9468     0.9853   0.9657  
+referee         3180   302    1312   48098      0.9695     0.9133     0.7079   0.7976  
+
+Total predictions for dbscan_rgb: 52892
+
+DBSCAN_RGB CONFUSION MATRIX (Overall):
+========================================================
+Actual\Predicted  goalkeeper      player     referee
+----------------------------------------------------
+goalkeeper              285        1649          12
+player                  270       46047         137
+referee                  72        2469        1951
+----------------------------------------------------
+Overall Accuracy (for displayed classes): 0.9129
+
+DBSCAN_RGB SKLEARN METRICS:
+==========================================================================================
+Class           TP     FP     FN     TN         Accuracy   Precision  Recall   F1      
+------------------------------------------------------------------------------------------
+goalkeeper      285    342    1661   50604      0.9621     0.4545     0.1465   0.2215  
+player          46047  4118   407    2320       0.9144     0.9179     0.9912   0.9532  
+referee         1951   149    2541   48251      0.9491     0.9290     0.4343   0.5919  
+
+Total predictions for dbscan_hsv: 52892
+
+DBSCAN_HSV CONFUSION MATRIX (Overall):
+========================================================
+Actual\Predicted  goalkeeper      player     referee
+----------------------------------------------------
+goalkeeper              154        1792           0
+player                  669       45218         567
+referee                 166        3505         821
+----------------------------------------------------
+Overall Accuracy (for displayed classes): 0.8733
+
+DBSCAN_HSV SKLEARN METRICS:
+==========================================================================================
+Class           TP     FP     FN     TN         Accuracy   Precision  Recall   F1      
+------------------------------------------------------------------------------------------
+goalkeeper      154    835    1792   50111      0.9503     0.1557     0.0791   0.1049  
+player          45218  5297   1236   1141       0.8765     0.8951     0.9734   0.9326  
+referee         821    567    3671   47833      0.9199     0.5915     0.1828   0.2793  
+Analysis saved to: compare_role_assignment/compare_orthogonal/super_eval/sklearn_detailed_metrics_by_class.json

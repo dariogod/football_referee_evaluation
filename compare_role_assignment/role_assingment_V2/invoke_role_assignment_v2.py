@@ -147,8 +147,9 @@ def process_folder(folder: Path, methods: List[str], verbose: bool = False):
                 # Convert to PersonWithJerseyColor objects
                 persons_with_color = convert_json_to_persons(frame_data)
                 
-                # Assign roles
-                persons_with_roles = role_assigner.assign_roles(dummy_image, persons_with_color)
+                # Assign roles with frame number for plotting
+                frame_number = int(frame_id)
+                persons_with_roles = role_assigner.assign_roles(dummy_image, persons_with_color, frame_number)
                 
                 # Store role assignments for this frame
                 frame_assignments = []

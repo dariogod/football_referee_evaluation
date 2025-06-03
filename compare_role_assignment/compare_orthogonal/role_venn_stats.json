@@ -1,32 +1,32 @@
 {
-  "player": {
-    "prtreid_only": 741,
-    "dbscan_only": 294,
-    "both_correct": 41568,
-    "both_wrong": 38,
-    "prtreid_accuracy": 99.22140662742432,
-    "dbscan_accuracy": 98.17311976736005,
-    "total_detections": 42641,
-    "agreement_rate": 97.5727586126029
-  },
   "referee": {
+    "prtreid_only": 725,
+    "dbscan_only": 656,
+    "both_correct": 2465,
+    "both_wrong": 462,
+    "prtreid_accuracy": 74.04828226555246,
+    "dbscan_accuracy": 72.44661095636026,
+    "total_detections": 4308,
+    "agreement_rate": 67.94336118848653
+  },
+  "player": {
     "prtreid_only": 628,
-    "dbscan_only": 577,
-    "both_correct": 2508,
-    "both_wrong": 385,
-    "prtreid_accuracy": 76.52513421181064,
-    "dbscan_accuracy": 75.28062469497316,
-    "total_detections": 4098,
-    "agreement_rate": 70.59541239629087
+    "dbscan_only": 330,
+    "both_correct": 43796,
+    "both_wrong": 30,
+    "prtreid_accuracy": 99.19614147909968,
+    "dbscan_accuracy": 98.53072525902108,
+    "total_detections": 44784,
+    "agreement_rate": 97.86084315827081
   },
   "goalkeeper": {
-    "prtreid_only": 960,
-    "dbscan_only": 0,
-    "both_correct": 0,
-    "both_wrong": 773,
-    "prtreid_accuracy": 55.39526832083092,
-    "dbscan_accuracy": 0.0,
-    "total_detections": 1733,
-    "agreement_rate": 44.60473167916907
+    "prtreid_only": 726,
+    "dbscan_only": 216,
+    "both_correct": 304,
+    "both_wrong": 594,
+    "prtreid_accuracy": 55.97826086956522,
+    "dbscan_accuracy": 28.26086956521739,
+    "total_detections": 1840,
+    "agreement_rate": 48.80434782608696
   }
 }

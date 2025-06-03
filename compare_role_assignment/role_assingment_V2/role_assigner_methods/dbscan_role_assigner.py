@@ -32,39 +32,7 @@ class DBScanRoleAssigner(BaseRoleAssigner):
         super().__init__()
     
     def _determine_optimal_clusters(self, data: np.ndarray, max_clusters: int = 7) -> int:
-        """Determine optimal number of clusters using elbow method."""
-        if len(data) < 2:
-            return 2
-            
-        # Limit max_clusters based on data size
-        max_clusters = min(max_clusters, len(data) - 1)
-        if max_clusters < 2:
-            return 2
-            
-        distortions = []
-        K = range(1, max_clusters + 1)
-        
-        for k in K:
-            kmeans = KMeans(n_clusters=k, n_init=10, random_state=42)
-            kmeans.fit(data)
-            distortions.append(kmeans.inertia_)
-        
-        # Calculate rate of decrease (approximate second derivative)
-        decreases = []
-        for i in range(len(distortions) - 1):
-            decreases.append(distortions[i] - distortions[i + 1])
-        
-        # Find elbow point - look for significant drop in improvement
-        elbow_point = 1  # Default
-        for i in range(len(decreases) - 1):
-            if decreases[i] / decreases[i + 1] > 1.5:  # Significant drop-off
-                elbow_point = i + 1
-                break
-        
-        # Ensure result is between 2-5
-        optimal_clusters = max(2, min(5, elbow_point + 1))
         return 2
-        return optimal_clusters
     
     def perform_clustering(self, valid_persons: List[PersonWithJerseyColor], 
                          X_colors: np.ndarray) -> Tuple[int, Set[int], np.ndarray]:

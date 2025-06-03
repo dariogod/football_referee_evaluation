@@ -1,39 +1,39 @@
 {
   "summary": {
-    "prtreid_only": 2329,
-    "dbscan_only": 871,
-    "both_correct": 44076,
-    "both_wrong": 1196,
-    "prtreid_accuracy": 95.7356824558508,
-    "dbscan_accuracy": 92.72776035649447
+    "prtreid_only": 2079,
+    "dbscan_only": 1202,
+    "both_correct": 46565,
+    "both_wrong": 1086,
+    "prtreid_accuracy": 95.5077358046022,
+    "dbscan_accuracy": 93.78583208984529
   },
   "role_analysis": {
-    "player": {
-      "total": 42641,
-      "prtreid_correct": 42309,
-      "dbscan_correct": 41862,
-      "both_correct": 41568,
-      "prtreid_accuracy": 99.22140662742432,
-      "dbscan_accuracy": 98.17311976736005
-    },
     "referee": {
-      "total": 4098,
-      "prtreid_correct": 3136,
-      "dbscan_correct": 3085,
-      "both_correct": 2508,
-      "prtreid_accuracy": 76.52513421181064,
-      "dbscan_accuracy": 75.28062469497316
+      "total": 4308,
+      "prtreid_correct": 3190,
+      "dbscan_correct": 3121,
+      "both_correct": 2465,
+      "prtreid_accuracy": 74.04828226555246,
+      "dbscan_accuracy": 72.44661095636026
+    },
+    "player": {
+      "total": 44784,
+      "prtreid_correct": 44424,
+      "dbscan_correct": 44126,
+      "both_correct": 43796,
+      "prtreid_accuracy": 99.19614147909968,
+      "dbscan_accuracy": 98.53072525902108
     },
     "goalkeeper": {
-      "total": 1733,
-      "prtreid_correct": 960,
-      "dbscan_correct": 0,
-      "both_correct": 0,
-      "prtreid_accuracy": 55.39526832083092,
-      "dbscan_accuracy": 0.0
+      "total": 1840,
+      "prtreid_correct": 1030,
+      "dbscan_correct": 520,
+      "both_correct": 304,
+      "prtreid_accuracy": 55.97826086956522,
+      "dbscan_accuracy": 28.26086956521739
     }
   },
-  "total_detections": 48472,
+  "total_detections": 50932,
   "methodology": {
     "role_simplification": "player_left and player_right simplified to player",
     "models_compared": [

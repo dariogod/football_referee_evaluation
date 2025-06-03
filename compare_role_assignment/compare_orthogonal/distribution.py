@@ -10,7 +10,7 @@ def simplify_role(role: str) -> str:
         return 'player'
     return role
 
-def load_combined_dataset(file_path: str = "compare_role_assignment/compare_orthogonal/combined_role_predictions.json") -> Dict:
+def load_combined_dataset(file_path: str = "compare_role_assignment/compare_orthogonal/combined_role_predictions_updated.json") -> Dict:
     """Load the combined dataset from JSON file."""
     with open(file_path, 'r') as f:
         return json.load(f)
@@ -47,17 +47,21 @@ def calculate_referee_accuracy_per_clip(dataset: Dict, exclude_clips: List[str] 
                 if gt_role_simplified != 'referee':
                     continue
                     
-                dbscan_lab_simplified = simplify_role(detection['dbscan_pred_role']['lab'])
+                # DBSCAN
+                dbscan_pred_dict = detection.get('dbscan_pred_role', {})
+                dbscan_lab_pred_val = dbscan_pred_dict.get('lab')
+                dbscan_lab_simplified = simplify_role(dbscan_lab_pred_val) # simplify_role handles None input gracefully
                 
                 # For PRTReid, handle the mapped prediction
-                prtreid_data = detection['prtreid_data']
+                prtreid_mapped_simplified = None # Default to None
+                prtreid_data = detection.get('prtreid_data')
                 if prtreid_data is not None:
-                    prtreid_mapped_simplified = simplify_role(prtreid_data['mapped_predicted_role'])
-                else:
-                    prtreid_mapped_simplified = None
+                    prtreid_mapped_pred_val = prtreid_data.get('mapped_predicted_role')
+                    if prtreid_mapped_pred_val is not None:
+                        prtreid_mapped_simplified = simplify_role(prtreid_mapped_pred_val)
                 
                 referee_detections.append({
-                    'dbscan_correct': gt_role_simplified == dbscan_lab_simplified,
+                    'dbscan_correct': gt_role_simplified == dbscan_lab_simplified and dbscan_lab_simplified is not None,
                     'prtreid_correct': prtreid_mapped_simplified == gt_role_simplified if prtreid_mapped_simplified is not None else False
                 })
         
