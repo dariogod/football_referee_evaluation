@@ -1,5 +1,7 @@
 /data/SoccerNet/
-/data/predictions/
+/data/predictions/**/*.mp4
+/data/predictions/**/*.jpg
+/data/predictions/**/*.png
 /models/
 
 compare_role_assignment/role_assingment_V2/test/

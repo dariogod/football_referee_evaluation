@@ -1,0 +1,374 @@
+[
+    {
+        "track_id": 3,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 5,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 8,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 10,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 11,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 13,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 14,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 16,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 17,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 528,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 513,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 535,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 46,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 558,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 563,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 571,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 70,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 71,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 82,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 83,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 96,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 608,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 614,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 119,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 631,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 633,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 635,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 131,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 643,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 646,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 145,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 149,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 156,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 169,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 170,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 175,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 177,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 192,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 200,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 220,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 230,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 234,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 257,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 276,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 290,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 372,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 398,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 421,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 442,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 490,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 499,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 501,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 1,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 2,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 6,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 7,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 9,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 12,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 538,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 552,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 555,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 45,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 48,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 520,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 89,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 111,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 623,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 137,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 143,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 161,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 173,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 188,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 209,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 302,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 328,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 340,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 343,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 357,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 367,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 401,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 405,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 418,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 430,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 470,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 4,
+        "role": "REF"
+    },
+    {
+        "track_id": 15,
+        "role": "REF"
+    },
+    {
+        "track_id": 79,
+        "role": "OOB"
+    },
+    {
+        "track_id": 109,
+        "role": "REF"
+    },
+    {
+        "track_id": 207,
+        "role": "GK"
+    },
+    {
+        "track_id": 316,
+        "role": "REF"
+    },
+    {
+        "track_id": 397,
+        "role": "OOB"
+    },
+    {
+        "track_id": 410,
+        "role": "OOB"
+    },
+    {
+        "track_id": 461,
+        "role": "REF"
+    }
+]

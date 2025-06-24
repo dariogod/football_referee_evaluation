@@ -1,0 +1,338 @@
+[
+    {
+        "track_id": 2,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 6,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 528,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 531,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 33,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 545,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 37,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 38,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 51,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 72,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 78,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 81,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 86,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 89,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 100,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 102,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 110,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 113,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 145,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 154,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 155,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 168,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 183,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 222,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 242,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 262,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 281,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 291,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 292,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 367,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 384,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 400,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 409,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 447,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 458,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 462,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 463,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 473,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 493,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 505,
+        "role": "TEAM A"
+    },
+    {
+        "track_id": 1,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 14,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 15,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 16,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 527,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 18,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 533,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 36,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 39,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 46,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 50,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 566,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 63,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 68,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 74,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 82,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 85,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 94,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 99,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 621,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 626,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 125,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 127,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 254,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 256,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 314,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 317,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 377,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 391,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 428,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 439,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 445,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 451,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 452,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 457,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 485,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 487,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 499,
+        "role": "TEAM B"
+    },
+    {
+        "track_id": 3,
+        "role": "GK"
+    },
+    {
+        "track_id": 76,
+        "role": "REF"
+    },
+    {
+        "track_id": 114,
+        "role": "REF"
+    },
+    {
+        "track_id": 223,
+        "role": "GK"
+    },
+    {
+        "track_id": 295,
+        "role": "REF"
+    },
+    {
+        "track_id": 460,
+        "role": "REF"
+    }
+]
