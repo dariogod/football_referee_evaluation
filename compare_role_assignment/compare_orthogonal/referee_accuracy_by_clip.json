@@ -203,6 +203,13 @@
       "prtreid_accuracy": 97.14285714285714,
       "dbscan_accuracy": 67.14285714285714
     },
+    "SNGS-146": {
+      "total_referee": 56,
+      "prtreid_correct": 56,
+      "dbscan_correct": 34,
+      "prtreid_accuracy": 100.0,
+      "dbscan_accuracy": 60.71428571428571
+    },
     "SNGS-147": {
       "total_referee": 32,
       "prtreid_correct": 30,
@@ -251,6 +258,13 @@
       "dbscan_correct": 74,
       "prtreid_accuracy": 29.914529914529915,
       "dbscan_accuracy": 63.24786324786324
+    },
+    "SNGS-190": {
+      "total_referee": 117,
+      "prtreid_correct": 46,
+      "dbscan_correct": 57,
+      "prtreid_accuracy": 39.31623931623932,
+      "dbscan_accuracy": 48.717948717948715
     },
     "SNGS-191": {
       "total_referee": 72,
@@ -324,38 +338,36 @@
     }
   },
   "summary": {
-    "total_clips": 46,
-    "total_referee_detections": 4252,
-    "avg_prtreid_accuracy": 77.80666065739683,
-    "avg_dbscan_accuracy": 74.46447519532582,
-    "accuracy_difference": 3.342185462071015
+    "total_clips": 48,
+    "total_referee_detections": 4425,
+    "avg_prtreid_accuracy": 77.46713811576029,
+    "avg_dbscan_accuracy": 73.64162694619215,
+    "accuracy_difference": 3.825511169568145
   },
   "statistical_measures": {
     "prtreid": {
-      "mean": 77.80666065739683,
+      "mean": 77.46713811576029,
       "median": 98.52909366212417,
-      "variance": 1169.3722820201765,
-      "std_dev": 34.196085770452974,
+      "variance": 1161.4952406468574,
+      "std_dev": 34.080716551253104,
       "min": 7.246376811594203,
       "max": 100.0
     },
     "dbscan": {
-      "mean": 74.46447519532582,
-      "median": 78.78364389233954,
-      "variance": 282.2036428327449,
-      "std_dev": 16.798917906601748,
+      "mean": 73.64162694619215,
+      "median": 76.95674044265593,
+      "variance": 287.6301161769233,
+      "std_dev": 16.959661440515944,
       "min": 34.306569343065696,
       "max": 98.66666666666667
     },
     "differences": {
-      "mean_diff": 3.342185462071015,
-      "median_diff": 19.745449769784628,
-      "variance_diff": 887.1686391874316
+      "mean_diff": 3.825511169568145,
+      "median_diff": 21.57235321946824,
+      "variance_diff": 873.865124469934
     }
   },
   "excluded_clips": [
-    "SNGS-125",
-    "SNGS-190",
-    "SNGS-146"
+    "SNGS-125"
   ]
 }

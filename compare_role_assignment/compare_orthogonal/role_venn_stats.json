@@ -9,16 +9,6 @@
     "total_detections": 4308,
     "agreement_rate": 67.94336118848653
   },
-  "player": {
-    "prtreid_only": 628,
-    "dbscan_only": 330,
-    "both_correct": 43796,
-    "both_wrong": 30,
-    "prtreid_accuracy": 99.19614147909968,
-    "dbscan_accuracy": 98.53072525902108,
-    "total_detections": 44784,
-    "agreement_rate": 97.86084315827081
-  },
   "goalkeeper": {
     "prtreid_only": 726,
     "dbscan_only": 216,
@@ -28,5 +18,15 @@
     "dbscan_accuracy": 28.26086956521739,
     "total_detections": 1840,
     "agreement_rate": 48.80434782608696
+  },
+  "player": {
+    "prtreid_only": 628,
+    "dbscan_only": 330,
+    "both_correct": 43796,
+    "both_wrong": 30,
+    "prtreid_accuracy": 99.19614147909968,
+    "dbscan_accuracy": 98.53072525902108,
+    "total_detections": 44784,
+    "agreement_rate": 97.86084315827081
   }
 }

@@ -549,6 +549,18 @@ if referee_positions_x and referee_positions_y:
         thresh=KDE_THRESHOLD,
         bw_adjust=KDE_BANDWIDTH_ADJUSTMENT
     )
+
+    # Store referee positions to JSON
+    referee_positions_data = {
+        'positions': [
+            {'x': x, 'y': y} 
+            for x, y in zip(referee_positions_x, referee_positions_y)
+        ]
+    }
+    
+    # Save to JSON file
+    with open(os.path.join(output_dir, 'referee_positions.json'), 'w') as f:
+        json.dump(referee_positions_data, f, indent=2)
     
     plt.xlim(0, PITCH_LENGTH)
     plt.ylim(0, PITCH_WIDTH)
@@ -754,9 +766,11 @@ if referee_positions_x and referee_positions_y and referee_movements and movemen
     )
     
     # Create vector field from movement data
-    # Create a 7×6 grid matrix (42 areas total)
-    rows = 15  # 7 rows across the width of the pitch
-    cols = 19  # 6 columns across the length of the pitch
+    # Create a grid with roughly 4x4 meter squares, ensuring symmetry around pitch center
+    # Pitch: 105m x 68m, center at (52.5, 34)
+    # Use odd numbers to ensure a center square exists
+    cols = 27  # 105m / 27 ≈ 3.89m per square (length direction)
+    rows = 17  # 68m / 17 = 4.0m per square (width direction)
     
     x_bins = np.linspace(0, PITCH_LENGTH, cols + 1)
     y_bins = np.linspace(0, PITCH_WIDTH, rows + 1)
@@ -775,11 +789,16 @@ if referee_positions_x and referee_positions_y and referee_movements and movemen
         
         # Ensure indices are within bounds
         if 0 <= x_idx < cols and 0 <= y_idx < rows:
-            movement_grid_x[y_idx, x_idx] += dx
-            movement_grid_y[y_idx, x_idx] += dy
-            movement_counts[y_idx, x_idx] += 1
-            # Add movement magnitude to track speed
-            movement_magnitudes[y_idx, x_idx] += math.sqrt(dx**2 + dy**2)
+            # Normalize the individual movement vector to unit length
+            movement_magnitude = math.sqrt(dx**2 + dy**2)
+            if movement_magnitude > 0:
+                normalized_dx = dx / movement_magnitude
+                normalized_dy = dy / movement_magnitude
+                movement_grid_x[y_idx, x_idx] += normalized_dx
+                movement_grid_y[y_idx, x_idx] += normalized_dy
+                movement_counts[y_idx, x_idx] += 1
+                # Add movement magnitude to track speed
+                movement_magnitudes[y_idx, x_idx] += movement_magnitude
     
     # Process symmetrical movements (180-degree rotated)
     for (start_x, start_y), (dx, dy) in zip(movement_positions, referee_movements):
@@ -795,11 +814,16 @@ if referee_positions_x and referee_positions_y and referee_movements and movemen
         
         # Ensure indices are within bounds
         if 0 <= x_idx < cols and 0 <= y_idx < rows:
-            movement_grid_x[y_idx, x_idx] += rotated_dx
-            movement_grid_y[y_idx, x_idx] += rotated_dy
-            movement_counts[y_idx, x_idx] += 1
-            # Add movement magnitude to track speed
-            movement_magnitudes[y_idx, x_idx] += math.sqrt(rotated_dx**2 + rotated_dy**2)
+            # Normalize the individual movement vector to unit length
+            movement_magnitude = math.sqrt(rotated_dx**2 + rotated_dy**2)
+            if movement_magnitude > 0:
+                normalized_rotated_dx = rotated_dx / movement_magnitude
+                normalized_rotated_dy = rotated_dy / movement_magnitude
+                movement_grid_x[y_idx, x_idx] += normalized_rotated_dx
+                movement_grid_y[y_idx, x_idx] += normalized_rotated_dy
+                movement_counts[y_idx, x_idx] += 1
+                # Add movement magnitude to track speed
+                movement_magnitudes[y_idx, x_idx] += movement_magnitude
     
     # Calculate average movement vectors and speeds for each grid cell
     avg_movement_x = np.divide(movement_grid_x, movement_counts, 
@@ -833,21 +857,17 @@ if referee_positions_x and referee_positions_y and referee_movements and movemen
     
     # Plot arrows for areas with sufficient movement data
     if np.any(arrow_mask):
-        # Normalize direction vectors to unit length
-        magnitudes = np.sqrt(avg_movement_x**2 + avg_movement_y**2)
-        normalized_x = np.divide(avg_movement_x, magnitudes, 
-                               out=np.zeros_like(avg_movement_x), where=magnitudes!=0)
-        normalized_y = np.divide(avg_movement_y, magnitudes, 
-                               out=np.zeros_like(avg_movement_y), where=magnitudes!=0)
+        # Use the average direction vectors directly (no second normalization)
+        # Arrow length now represents directional consistency:
+        # - Long arrows: consistent movement direction in that area
+        # - Short arrows: conflicting/scattered movement directions
         
-        # Use fixed arrow length for all vectors
-        fixed_arrow_length = 2.5  # Fixed length in meters for all arrows
+        # Scale arrows for better visibility (optional scaling factor)
+        scaling_factor = 3.0  # Adjust this to make arrows more visible
+        scaled_x = avg_movement_x * scaling_factor
+        scaled_y = avg_movement_y * scaling_factor
         
-        # Create scaled vectors for quiver (direction * fixed length)
-        scaled_x = normalized_x * fixed_arrow_length
-        scaled_y = normalized_y * fixed_arrow_length
-        
-        # Plot arrows with fixed head properties and consistent scale
+        # Plot arrows with variable length based on directional consistency
         # Use scale=1 so that vector magnitudes directly translate to arrow lengths
         ax.quiver(X_centers[arrow_mask], Y_centers[arrow_mask], 
                  scaled_x[arrow_mask], scaled_y[arrow_mask],

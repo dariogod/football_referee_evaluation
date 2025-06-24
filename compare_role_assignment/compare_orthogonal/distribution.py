@@ -277,7 +277,7 @@ def print_statistical_measures(stats: Dict):
 def main():
     """Main function to create referee accuracy distribution."""
     # Define clips to exclude
-    exclude_clips = ['SNGS-125', 'SNGS-190', 'SNGS-146']
+    exclude_clips = ['SNGS-125']
     
     print("Loading combined dataset...")
     dataset = load_combined_dataset()

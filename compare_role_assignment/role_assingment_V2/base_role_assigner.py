@@ -6,6 +6,7 @@ from color_conversions import rgb_to_lab, RGBColor255
 from skimage import color
 import matplotlib.pyplot as plt
 import os
+import json
 
 
 class BaseRoleAssigner(ABC):
@@ -111,7 +112,94 @@ class BaseRoleAssigner(ABC):
         plt.savefig(output_path, dpi=300, bbox_inches='tight')
         plt.show()
         
+        # Save coordinates data to JSON
+        coordinates_data = {
+            "frame_number": self.current_frame_number,
+            "method_name": self.method_name,
+            "color_space": "LAB",
+            "coordinates": []
+        }
+        
+        # Add outlier coordinates
+        if all_outlier_indices:
+            outlier_indices_list = list(all_outlier_indices)
+            outlier_lab = X_colors_lab[outlier_indices_list]
+            outlier_rgb = X_colors_rgb[outlier_indices_list]
+            
+            for i, idx in enumerate(outlier_indices_list):
+                coordinates_data["coordinates"].append({
+                    "person_index": int(idx),
+                    "cluster": "outlier",
+                    "role": "referee",
+                    "lab_coordinates": {
+                        "L": float(outlier_lab[i, 0]),
+                        "a": float(outlier_lab[i, 1]),
+                        "b": float(outlier_lab[i, 2])
+                    },
+                    "rgb_coordinates": {
+                        "r": int(outlier_rgb[i, 0]),
+                        "g": int(outlier_rgb[i, 1]),
+                        "b": int(outlier_rgb[i, 2])
+                    }
+                })
+        
+        # Add team coordinates
+        if len(non_outlier_indices) > 0 and len(labels) > 0:
+            # First cluster (left team)
+            first_cluster_mask = labels == left_cluster
+            if np.any(first_cluster_mask):
+                first_cluster_indices = np.array(non_outlier_indices)[first_cluster_mask]
+                first_cluster_lab = X_colors_lab[first_cluster_indices]
+                first_cluster_rgb = X_colors_rgb[first_cluster_indices]
+                
+                for i, idx in enumerate(first_cluster_indices):
+                    coordinates_data["coordinates"].append({
+                        "person_index": int(idx),
+                        "cluster": "team_a",
+                        "role": "player_left",
+                        "lab_coordinates": {
+                            "L": float(first_cluster_lab[i, 0]),
+                            "a": float(first_cluster_lab[i, 1]),
+                            "b": float(first_cluster_lab[i, 2])
+                        },
+                        "rgb_coordinates": {
+                            "r": int(first_cluster_rgb[i, 0]),
+                            "g": int(first_cluster_rgb[i, 1]),
+                            "b": int(first_cluster_rgb[i, 2])
+                        }
+                    })
+            
+            # Second cluster (right team)
+            second_cluster_mask = labels == right_cluster
+            if np.any(second_cluster_mask):
+                second_cluster_indices = np.array(non_outlier_indices)[second_cluster_mask]
+                second_cluster_lab = X_colors_lab[second_cluster_indices]
+                second_cluster_rgb = X_colors_rgb[second_cluster_indices]
+                
+                for i, idx in enumerate(second_cluster_indices):
+                    coordinates_data["coordinates"].append({
+                        "person_index": int(idx),
+                        "cluster": "team_b", 
+                        "role": "player_right",
+                        "lab_coordinates": {
+                            "L": float(second_cluster_lab[i, 0]),
+                            "a": float(second_cluster_lab[i, 1]),
+                            "b": float(second_cluster_lab[i, 2])
+                        },
+                        "rgb_coordinates": {
+                            "r": int(second_cluster_rgb[i, 0]),
+                            "g": int(second_cluster_rgb[i, 1]),
+                            "b": int(second_cluster_rgb[i, 2])
+                        }
+                    })
+        
+        # Save JSON file
+        json_output_path = os.path.join(output_dir, f"frame_{self.current_frame_number:03d}_lab_coordinates.json")
+        with open(json_output_path, 'w') as f:
+            json.dump(coordinates_data, f, indent=2)
+        
         print(f"Saved clustering plot to: {output_path}")
+        print(f"Saved coordinates data to: {json_output_path}")
     
     def assign_roles(self, full_image: np.ndarray, 
                     persons_with_color: List[PersonWithJerseyColor],

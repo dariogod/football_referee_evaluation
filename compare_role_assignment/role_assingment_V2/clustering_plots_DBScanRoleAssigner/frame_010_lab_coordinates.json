@@ -1,0 +1,232 @@
+{
+  "frame_number": 10,
+  "method_name": "DBScanRoleAssigner",
+  "color_space": "LAB",
+  "coordinates": [
+    {
+      "person_index": 0,
+      "cluster": "outlier",
+      "role": "referee",
+      "lab_coordinates": {
+        "L": 75.03600082199571,
+        "a": -10.540879713652584,
+        "b": 26.795881263094778
+      },
+      "rgb_coordinates": {
+        "r": 184,
+        "g": 189,
+        "b": 135
+      }
+    },
+    {
+      "person_index": 1,
+      "cluster": "outlier",
+      "role": "referee",
+      "lab_coordinates": {
+        "L": 34.89589790820642,
+        "a": 7.285934915103375,
+        "b": 2.0774811770582047
+      },
+      "rgb_coordinates": {
+        "r": 95,
+        "g": 78,
+        "b": 79
+      }
+    },
+    {
+      "person_index": 11,
+      "cluster": "outlier",
+      "role": "referee",
+      "lab_coordinates": {
+        "L": 32.04617503896307,
+        "a": -2.185913801664885,
+        "b": 7.897975440773131
+      },
+      "rgb_coordinates": {
+        "r": 77,
+        "g": 76,
+        "b": 63
+      }
+    },
+    {
+      "person_index": 2,
+      "cluster": "team_a",
+      "role": "player_left",
+      "lab_coordinates": {
+        "L": 89.93395711323306,
+        "a": -0.032652759982043644,
+        "b": 2.1926989620702164
+      },
+      "rgb_coordinates": {
+        "r": 228,
+        "g": 226,
+        "b": 222
+      }
+    },
+    {
+      "person_index": 4,
+      "cluster": "team_a",
+      "role": "player_left",
+      "lab_coordinates": {
+        "L": 91.01608325912194,
+        "a": 0.14191838264304701,
+        "b": 1.7006144597607298
+      },
+      "rgb_coordinates": {
+        "r": 231,
+        "g": 229,
+        "b": 226
+      }
+    },
+    {
+      "person_index": 6,
+      "cluster": "team_a",
+      "role": "player_left",
+      "lab_coordinates": {
+        "L": 87.40559270246258,
+        "a": -0.19791614287328896,
+        "b": 1.5947872893736337
+      },
+      "rgb_coordinates": {
+        "r": 220,
+        "g": 219,
+        "b": 216
+      }
+    },
+    {
+      "person_index": 7,
+      "cluster": "team_a",
+      "role": "player_left",
+      "lab_coordinates": {
+        "L": 80.99138230678844,
+        "a": -0.20932148276286977,
+        "b": 2.740392473979769
+      },
+      "rgb_coordinates": {
+        "r": 203,
+        "g": 201,
+        "b": 196
+      }
+    },
+    {
+      "person_index": 9,
+      "cluster": "team_a",
+      "role": "player_left",
+      "lab_coordinates": {
+        "L": 83.46247530875368,
+        "a": -0.72915359105441,
+        "b": 5.327077047446904
+      },
+      "rgb_coordinates": {
+        "r": 211,
+        "g": 208,
+        "b": 198
+      }
+    },
+    {
+      "person_index": 12,
+      "cluster": "team_a",
+      "role": "player_left",
+      "lab_coordinates": {
+        "L": 84.78639600695568,
+        "a": -0.8979507482102522,
+        "b": 2.4720591369247424
+      },
+      "rgb_coordinates": {
+        "r": 212,
+        "g": 212,
+        "b": 207
+      }
+    },
+    {
+      "person_index": 14,
+      "cluster": "team_a",
+      "role": "player_left",
+      "lab_coordinates": {
+        "L": 71.06933698157783,
+        "a": -0.38828103590010654,
+        "b": 2.1767111163328634
+      },
+      "rgb_coordinates": {
+        "r": 175,
+        "g": 174,
+        "b": 170
+      }
+    },
+    {
+      "person_index": 3,
+      "cluster": "team_b",
+      "role": "player_right",
+      "lab_coordinates": {
+        "L": 66.54093892776987,
+        "a": 23.59081785274303,
+        "b": 7.142116674977106
+      },
+      "rgb_coordinates": {
+        "r": 207,
+        "g": 146,
+        "b": 150
+      }
+    },
+    {
+      "person_index": 5,
+      "cluster": "team_b",
+      "role": "player_right",
+      "lab_coordinates": {
+        "L": 60.323927786012334,
+        "a": 21.557259692775,
+        "b": 10.463322156991218
+      },
+      "rgb_coordinates": {
+        "r": 188,
+        "g": 131,
+        "b": 128
+      }
+    },
+    {
+      "person_index": 8,
+      "cluster": "team_b",
+      "role": "player_right",
+      "lab_coordinates": {
+        "L": 64.18846188896912,
+        "a": 28.073534890852237,
+        "b": 12.863772182144228
+      },
+      "rgb_coordinates": {
+        "r": 210,
+        "g": 136,
+        "b": 134
+      }
+    },
+    {
+      "person_index": 10,
+      "cluster": "team_b",
+      "role": "player_right",
+      "lab_coordinates": {
+        "L": 56.48207641196623,
+        "a": 11.101504176234734,
+        "b": 13.842984791526591
+      },
+      "rgb_coordinates": {
+        "r": 163,
+        "g": 128,
+        "b": 112
+      }
+    },
+    {
+      "person_index": 13,
+      "cluster": "team_b",
+      "role": "player_right",
+      "lab_coordinates": {
+        "L": 54.38813600307812,
+        "a": 16.89165491090777,
+        "b": 11.52963382276102
+      },
+      "rgb_coordinates": {
+        "r": 165,
+        "g": 119,
+        "b": 111
+      }
+    }
+  ]
+}
